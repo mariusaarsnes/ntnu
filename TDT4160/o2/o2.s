@@ -14,16 +14,16 @@ SysTick_Handler:
 	LDR R7, [R0]
 	CMP R7, R4
 	BEQ handle_tenths
-		// Hvis tenths ikke er 9 skal den økes bitches!!
+		// Hvis tenths ikke er 9 skal den Ã¸kes
 		ADD R7, R7, R3
 		STR R7, [R0]
-		b systick_handler_end // siden tenths ikke var 9 skal ikke sekunder7minutter økes
+		b systick_handler_end // siden tenths ikke var 9 skal ikke sekunder/minutter Ã¸kes
 
 	handle_tenths:
 		MOV R7, #0
 		STR R7, [R0]
 
-		//  Håndtering av led, ganske likt som øving 1, EZ
+		//  HÃ¥ndtering av led, ganske likt som Ã¸ving 1
 		MOV R7, #1
 		LSL R7, #LED_PIN
 
@@ -43,7 +43,7 @@ SysTick_Handler:
 		LDR R7, [R1]
 		CMP R7, R5
 		BEQ handle_secs
-			// samme som med tenths.... bitches
+			// samme som med tenths.
 			ADD R7, R7, R3
 			STR R7, [R1]
 			B systick_handler_end
@@ -55,13 +55,12 @@ SysTick_Handler:
 			LDR R7, [R2]
 			CMP R7, R5
 			BEQ handle_mins
-				// samme gamle greia
 				ADD R7, R7, R3
 				STR R7, [R2]
 				B systick_handler_end
 
 			handle_mins:
-			// Må sette alt til null fordi klokka er jalla og viser ikke timer.. ugh
+			// MÃ¥ sette alt til null
 			MOV R7, #0
 			STR R7, [R0]
 			STR R7, [R1]
@@ -104,24 +103,24 @@ Start:
 # ledig: R7, R8, R9, R10, R11
 
 
-// Initiere den jævla klokka da...
+// Initiere klokka
 LDR R0, =SYSTICK_BASE
 MOV R1, #SYSTICK_CTRL
 MOV R3, 0b110
 STR R3, [R0,R1]
 
-// Sette opp kor ofte den interupten skal skje da...
+// Sette opp hvor ofte interrupts skal skje
 
 MOV R1, #SYSTICK_LOAD
 LDR R3, =FREQUENCY/10
 STR R3, [R0,R1]
 
-// Sette VAL til riktig verdi sånn at ting kan begynne å skje da bitches
+// Sette VAL til riktig verdi
 MOV R1, #SYSTICK_VAL
 STR R3, [R0,R1]
 
 
-// fikse interupt for knappen da G
+// fikser interrupt for knappen
 MOV R0, #GPIO_EXTIPSELH
 LDR R10, =GPIO_BASE
 
@@ -135,7 +134,7 @@ LSL R7, R6, #4
 ORR R8, R5, R7
 STR R8, [R10,R0]
 
-// Loking med EXTIFALL, bit 9 må settes til 1, pga det er porten til knappen
+// EXTIFALL, bit 9 mÃ¥ settes til 1, pga det er porten til knappen
 
 MOV R0,#1
 MOV R1,#GPIO_EXTIFALL
@@ -162,7 +161,7 @@ ORR R5,R4,R1
 STR R5,[R3]
 
 
-// Last inn riktige register for å kunne vise shit på klokka, se i topper av start for beskrivelse av register
+// Last inn riktige register for Ã¥ kunne vise siffer pÃ¥ klokka, se i toppen av START for beskrivelse av register
 LDR R0,=tenths
 LDR R1,=seconds
 LDR R2,=minutes
@@ -181,5 +180,5 @@ B loop
 
 
 
-NOP // Behold denne pÃ¥ bunnen av fila
+NOP // Behold denne pÃƒÂ¥ bunnen av fila
 

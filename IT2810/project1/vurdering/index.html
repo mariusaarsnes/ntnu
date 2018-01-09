@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!-- Dette er en side der jeg beskriver en ting jeg er takknemmelig for, nemlig min MacBook.
+Websiden styles med CSS og brukes FlexBox for blant annet de 3 kolonnene nederst, samt headeren.
+Javascript er implementert i alle knappene som presenterer en alert.
+Favicon er inkludert, også i ulike størrelser.
+Siden er sjekket med W3C markup validator og er testet på Chrome, Firefox og Safari.
+Css og javascript er i forskjellige filer. -->
+<head>
+  <title>Macbook</title>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/manifest.json">
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body class="body">
+  <div class="header">
+    <div class="leftHeader">
+      <input type="image" onClick="logoPressed()" alt="logo" class="logoHeaderImage" src="./assets/apple_logo.png"/>
+      <p class="headerTextSelected">Mac</p>
+      <p class="headerText">Support</p>
+    </div>
+    <div class="rightHeader">
+      <input type="image" onClick="buttonPressed()" alt="search" class="searchHeaderImage" src="./assets/search.png"/>
+      <input type="image" onClick="buttonPressed()" alt="store" class="storeHeaderImage"  src="./assets/shop.png"/>
+    </div>
+  </div>
+  <div class="content">
+    <div class="contentHeader">
+      <h1 class="contentMainHeader">MacBook Pro</h1>
+      <h2 class="contentSubHeader">Takknemmelighet til nye høyder</h2>
+      <img alt="" class="contentImage" src="./assets/macbook.png"/>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <h2 class="featureHeader">Lifesaver</h2>
+        <p class="contentText">Denne magiske vennen min har vært en lifesaver i gjennom studiene og livet generelt. Den er alltid der når jeg trenger den. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button onClick="buttonPressed()" class="button">Buy Now</button>
+      </div>
+      <div class="feature">
+        <h2 class="featureHeader">Fantastisk desgin</h2>
+        <p class="contentText">Det er Apple. Alt er pent. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aliqua.</p>
+        <button onClick="buttonPressed()" class="button">Buy Now</button>
+      </div>
+      <div class="feature">
+        <h2 class="featureHeader">Super levetid</h2>
+        <p class="contentText">Nå har jeg hatt denne i nesten 5 år og den er fortsatt en trofast powerhorse. Batteriet derimot... sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <button onClick="buttonPressed()" class="button">Buy Now</button>
+      </div>
+    </div>
+    <img alt="" class="contentImageBottom" src="./assets/macbook2.png"/>
+  </div>
+  <div class="footer">
+    <div class="footerContent">
+    </div>
+  </div>
+</body>
+</html>

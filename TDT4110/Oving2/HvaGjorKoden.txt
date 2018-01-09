@@ -1,0 +1,9 @@
+Hva gjør koden:
+
+a)	x og y kalles variabler. x er en integer, mens y er en string.
+
+b)	I input-funksjonen er det brukt både enkel og dobbel fnutt. Det er også brukt innrykk der hvor z blir definert.
+    I kodesnutten deles det også på en string-variabel (y), en må konvertere den til int først med bruk av int()-funksjon.
+    Eventuelt kreve at det brukeren skriver inn må være integer.
+
+c)	Det som blir skrevet ut i koden er a-verdien som er lik 6, og b-verdien som er lik 3.

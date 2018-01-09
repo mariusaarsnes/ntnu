@@ -1,0 +1,380 @@
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+  <link rel  = "stylesheet"
+        href = "http://www.idi.ntnu.no/emner/tdt4120/stylesheet.css"
+        type = "text/css">
+  <title>TDT4120 Algoritmer og datastrukturer: Løsningsforslag - Introduksjon</title>
+</head>
+<body leftmargin=0 rightmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+<!-- old colour=#fe7312 -->
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+  <tr>
+    <td class="container" colspan=2>
+      <table width=100% cellpadding=0 cellspacing=0 border=0>
+        <tr bgcolor="#eeeeff">
+          <td class="container" valign=top><img src="http://www.idi.ntnu.no/emner/tdt4120/images/heading_left.tdt4120.jpg"></td>
+          <td class="container" align=right style="text-align:right" valign=top><img src="http://www.idi.ntnu.no/emner/tdt4120/images/heading_right.jpg"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="container" align=left>
+      <img src="http://www.idi.ntnu.no/emner/tdt4120/images/pixel.gif" width=1 height=15>
+      <font color=#888888 face="Tahoma,Arial,Helvetica" size=-2>
+      Sist endret: 17.08.2010      </font>
+    </td>
+    <td class="container" align=right style="text-align: right;">
+      <img src="http://www.idi.ntnu.no/emner/tdt4120/images/pixel.gif" width=1 height=15>
+      <font color=#888888 face="Tahoma,Arial,Helvetica" size=-2>
+&nbsp      </font>
+    </td>
+  </tr>
+  <tr><td class="container">&nbsp;</td></tr>
+  <tr>
+    <td class="container" valign=top>
+      <table cellpadding=0 cellspacing=0 border=0>
+<tr><td class="menu"><img src="http://www.idi.ntnu.no/emner/tdt4120/images/pixel.gif"
+width=13 height=1></td><td class="menu">
+<table cellpadding=4 cellspacing=0 border=0>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/">Hovedside</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/faq.php">FAQ</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/beskjeder.php">Beskjeder</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/kalender/timeplan.php?studass=alle">Timeplan</a></td></tr>
+<tr><td class="menu"><a href="http://selje.idi.ntnu.no:1234/tdt4120/ukeplan.php#uke45">Ukeplan</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://selje.idi.ntnu.no:1234/tdt4120/">Øvinger</a></td></tr>
+<tr><td class="menu"><a href="http://selje.idi.ntnu.no:1234/tdt4120/gruppeoving.php">Gruppeøving</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/arkiv/eksamen.php">Eksamensoppgaver</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/pensum.php">Pensum</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/notater/">Notater</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/arkiv/kode/">Kode/koding</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/ordliste.php">Ordliste</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/kontakt.php">Kontakt</a></td></tr>
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no/emner/tdt4120/generelt/eksterne.php">Eksterne ressurser</a></td></tr>
+<tr><td class="menu"><a href="http://www.idi.ntnu.no">IDI</a></td></tr>
+<tr><td class="menu"><a href="http://www.ntnu.no">NTNU</a></td></tr>
+<tr><td class="menu"><a href="http://selje.idi.ntnu.no:1234/tdt4120/teori/2011_introduksjon/lf/?printable=on">Utskriftsversjon</a></td></tr>
+
+<tr><td class="menu"><font size=-3>&nbsp;</font></td></tr>
+<tr><td class="menu">steffe logget inn<br />
+
+    <a href="http://selje.idi.ntnu.no:1234/tdt4120/student/oversikt.php">Poengoversikt</a><br />
+</table>
+</td>
+<td class="menu">
+<img src="http://www.idi.ntnu.no/emner/tdt4120/images/pixel.gif"
+width=13 height=1>
+</td>
+</tr></table>
+    </td>
+    <td class="container" valign=top width=100%>
+      <table cellpadding=0 cellspacing=0 border=0 width=100%><tr><td valign=top>
+
+<!-- *****************
+       END OF HEADER
+     ***************** -->
+
+
+<h1>Løsningsforslag - Introduksjon</h1>
+<p>
+[<a href="http://selje.idi.ntnu.no:1234/tdt4120/teori/2011_introduksjon/">Oppgave</a>]
+[<a href="http://selje.idi.ntnu.no:1234/tdt4120/teori/2011_introduksjon/#levering">Levering</a>]
+[<a href="http://selje.idi.ntnu.no:1234/tdt4120/teori/2011_introduksjon/lf/">Løsningsforslag</a>]
+</p>
+
+<p><small>Innleveringsfrist: 09.09.2011 10:00</small></p>
+
+
+<p>
+Du er logget inn og får derfor se om du har svart riktig/feil på de
+enkelte oppgavene.<br />
+LF-svar er markert med <font color="green">grønt</font> og
+feil svar er markert med <font color="red">rødt</font>.
+</p>
+
+<p>
+Hvis dere er uenige i fasit, oppfordres dere til å diskutere dette på
+<a href="news://ntnu.fim.idi.algdat">algdats nyhetsgruppe</a>. Denne
+nyhetsgruppen har også et <a href="http://selje.idi.ntnu.no:1234/tdt4120/newsportal/thread.php?group=ntnu.fim.idi.algdat">webgrensesnitt</a>.
+</p>
+<form action="" method="post">
+<h2>Oppgave 1</h2><p><intro></intro></p>
+<!-- DELOPPGAVE 1a -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>a) <tekst>Hvilket alternativ beskriver best algoritmer og datastrukturer?</tekst> <i>(20 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar1"
+								value="1"  disabled="disabled" /> <alt>En algoritme brukes til å løse et enkelt problem. En datastruktur er en måte å koble sammen algoritmer for å løse mer komplekse problemer.<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar1"
+								value="2"  disabled="disabled" /> <alt>En algoritme er typisk et javaprogram. En datastruktur består typisk av prosessor, internminne og harddisk.<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar1"
+								value="3"  disabled="disabled" /> <alt>En algoritme er en punktvis og detaljert løsningsmetode. En datastruktur uttrykker innholdet og syntaksen i et dataprogram<br></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar1"
+								value="4"  checked="checked" disabled="disabled" /> <alt>En algoritme beskriver utvetydig hvordan et problem kan løses. Algoritmen lagrer data i (og henter data fra) datastrukturer.</alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Det er mulig å definere "algoritme" med noen små nyanser, men hovedidéen er som på side 5 i Cormen: En algoritme beskriver en spesifikk (utvetydig) beregningsprosedyre for å løse et gitt problem. Datastrukturer brukes til å organisere de dataene algoritmen skal jobbe med, se Cormen side 8.</lf></td>
+</tr>
+</table><h2>Oppgave 2</h2><p><intro></intro></p>
+<!-- DELOPPGAVE 2a -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>a) <tekst>I dette faget vil vi i hovedsak vurdere algoritmer ut fra...</tekst> <i>(20 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar2"
+								value="1"  disabled="disabled" /> <alt>hvor rask implementasjonen er.<br /></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar2"
+								value="2"  checked="checked" disabled="disabled" /> <alt>hvordan kjøretiden vokser når størrelsen på input går mot uendelig.<br /></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar2"
+								value="3"  disabled="disabled" /> <alt>kjøretiden for gjennomsnitts-input<br /></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar2"
+								value="4"  disabled="disabled" /> <alt>minnebruk for gjennomsnitts-input.<br /></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar2"
+								value="5"  disabled="disabled" /> <alt>hvor elegante de er.<br /></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Dette er hva asymptotisk notasjon beskriver, som i de fleste tilfeller er det mest interessante. Se Cormen s. 23 og 43, og i Kleinberg s. 30 og 35</lf></td>
+</tr>
+</table><h2>Oppgave 3</h2><p><intro></intro></p>
+<!-- DELOPPGAVE 3a -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>a) <tekst>Hva er en vanlig måte å representere grafer på i en datamaskin?</tekst> <i>(20 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar3"
+								value="1"  disabled="disabled" /> <alt>En liste over alle stier (med alle mulige lengder) man kan gå fra alle mulige hjørner.<br/></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar3"
+								value="2"  checked="checked" disabled="disabled" /> <alt>En nabomatrise, hvor et 1-tall med indeks i,j forteller at det går en kant mellom hjørnet med indeks i og hjørnet med indeks j.<br/></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar3"
+								value="3"  disabled="disabled" /> <alt>Det er ikke mulig å gjøre dette. Grafer er i minst to dimensjoner, mens datamaskiner kun kan holde endimensjonale data som enkle lister.<br /></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar3"
+								value="4"  disabled="disabled" /> <alt>Man tegner et bilde for datamaskinen ved help av ASCII-grafikk.<br /></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Nabomatrise og nabolister er de to vanligste måtene å representere grafer i datamaskiner. Arrays og lister kan selvsagt være n-dimensjonale.</lf></td>
+</tr>
+</table><h2>Oppgave 4</h2><p><intro><p>I denne oppgaven skal vi se på en variant av spillet <em>Nim</em>.Reglene for vår versjon er som følger:</p>
+
+<blockquote>To spillere skal etter tur plukke vekk
+fyrstikker fra en haug på
+bordet. Den som plukker opp den siste fyrstikken har tapt. Hver
+spiller må plukke opp minst én fyrstikk i hver runde og kan maksimalt
+plukke opp seks fyrstikker.</blockquote>
+
+</intro></p>
+<!-- DELOPPGAVE 4a -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>a) <tekst>Hvis det er 5 fyrstikker igjen, hvor mange må du ta for å vinne?</tekst> <i>(4 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar4"
+								value="1"  disabled="disabled" /> <alt>1<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar4"
+								value="2"  disabled="disabled" /> <alt>2<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar4"
+								value="3"  disabled="disabled" /> <alt>3<br></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar4"
+								value="4"  checked="checked" disabled="disabled" /> <alt>4<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar4"
+								value="5"  disabled="disabled" /> <alt>Det er umulig å garantere seier.<br></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Du må ta alle bortsett fra én (dvs. 4) slik at motstanderen blir tvunget til å ta den siste.</lf></td>
+</tr>
+</table><p><intro></intro></p>
+<!-- DELOPPGAVE 4b -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>b) <tekst>Hvis det er 9 fyrstikker igjen, hvor mange må du ta for å vinne?</tekst> <i>(4 %)</i></b></p>
+
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar5"
+								value="1"  checked="checked" disabled="disabled" /> <alt>1<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="2"  disabled="disabled" /> <alt>2<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="3"  disabled="disabled" /> <alt>3<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="4"  disabled="disabled" /> <alt>4<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="5"  disabled="disabled" /> <alt>5<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="6"  disabled="disabled" /> <alt>6<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar5"
+								value="7"  disabled="disabled" /> <alt>Det er umulig å garantere seier.<br></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Ved å ta bort én, sørger du for at motstanderen ikke kan ta alle de som er igjen, og at han eller hun ikke kan tvinge deg til å ta den siste.</lf></td>
+</tr>
+</table><p><intro></intro></p>
+<!-- DELOPPGAVE 4c -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>c) <tekst>Hvis det er 246 fyrstikker igjen og det er din tur, hvor mange fyrstikker må du ta for å vinne?<br/>(Tips: Finn en generell strategi.)</tekst> <i>(16 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar6"
+								value="1"  disabled="disabled" /> <alt>1<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar6"
+								value="2"  disabled="disabled" /> <alt>2<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar6"
+								value="3"  disabled="disabled" /> <alt>3<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar6"
+								value="4"  disabled="disabled" /> <alt>4<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar6"
+								value="5"  disabled="disabled" /> <alt>5<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar6"
+								value="6"  disabled="disabled" /> <alt>6<br></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar6"
+								value="7"  checked="checked" disabled="disabled" /> <alt>Det er umulig å garantere seier.<br></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Hvis motstanderen hver runde fjerner (7 - <antall fyrstikker du tok>) fyrstikker, vil totalen minke med 7 hver runde. Siden 246 % 7 = 1, vil du ende opp med å måtte ta siste fyrstikk.</lf></td>
+</tr>
+</table><p><intro></intro></p>
+<!-- DELOPPGAVE 4d -->
+<p><img src="http://www.idi.ntnu.no/emner/tdt4120/images/answer_good.gif" width=23 height=23 alt="[ riktig ]"><b>d) <tekst>Hvis det er 250 fyrstikker igjen og det er din tur, hvor mange fyrstikker må du ta for å vinne?<br />(Tips: Finn en generell strategi.)</tekst> <i>(16 %)</i></b></p>
+
+					<span style="">
+						<input type="radio" name="svar7"
+								value="1"  disabled="disabled" /> <alt>1<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar7"
+								value="2"  disabled="disabled" /> <alt>2<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar7"
+								value="3"  disabled="disabled" /> <alt>3<br></alt>
+					</span>
+					<span style="color: green; background-color: inherit; ">
+						<input type="radio" name="svar7"
+								value="4"  checked="checked" disabled="disabled" /> <alt>4<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar7"
+								value="5"  disabled="disabled" /> <alt>5<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar7"
+								value="6"  disabled="disabled" /> <alt>6<br></alt>
+					</span>
+					<span style="">
+						<input type="radio" name="svar7"
+								value="7"  disabled="disabled" /> <alt>Det er umulig å garantere seier.<br></alt>
+					</span></p>
+<table>
+<tr>
+    <td><i>Din&nbsp;kommentar:</i></td>
+    <td></td>
+</tr>
+<tr>
+    <td><i>LF-forklaring:</i></td>
+    <td><lf>Hvis du tar fire så er det 246 igjen. Hvis du siden sørger for å hele tiden ta så mange at de motstanderen nettopp tok og de du tar tilsammen blir 7 stykker, så vet du at at motstanderen blir sittende igjen med den siste, siden resten du får når du deler 246 med  er 1.</lf></td>
+</tr>
+</table></form>
+
+<!-- ****************
+       START FOOTER
+     **************** -->
+
+<br><br>
+      </td>
+      <td><img src="http://www.idi.ntnu.no/emner/tdt4120/images/pixel.gif"
+      width=30 height=1></td>
+      </tr></table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

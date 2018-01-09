@@ -1,0 +1,30 @@
+
+a)  Hvordan representerer datamaskiner tegn?
+    -   Datamaskiner representerer alt med tall, i form av bits og bytes.
+        Ascii eller unicode
+
+
+b)  Hvor mange bits trenger man får å representere et dobbeltpresisjonstall?
+    Hvor mange bytes? Hva er det minste desimaltallet (i absoluttverdi) som kan bli representert?
+    -   Man trenger 64 bits for å representere et dobbeltpresisjonstall, 8 bytes.
+        Det minste desimalet som kan bli representert er 2.2250738585072014e-308 (sys.float_info)
+
+c)  Hva er 18 i totallssystemet? Hva er 18 i 16 tallssystemet?
+    -   10010 (0*2^0 + 1*2^1 + 0*2^2 + 0*2^3 + 1*2^4 = 18) (totallsystemet)
+    -   12 (1*16^1 + 2*16^0 = 16+2 = 18) (sekstallsystemet)
+
+d)  Skriv OLE ved hjelp av ASCII.
+    -   79 76 69
+
+e)  Hva er en piksel, og hva er dens funksjon i datamaskinens sammenheng?
+    -   En pixel er et lite fargepunkt, som representerer en farge med RGB.
+        I datamaskinens sammenheng representerer pixel et punkt på skjermen; jo flere pixler jo bedre oppløsning.
+
+f)  Hva er forskjellen på analog og digital lyd? Hvordan kan vi gå fra den ene til den andre?
+    -   Analog: Et kontinuerlig signal hvor en variabel egenskap(f.eks amplitude eller frekvens)
+        representerer informasjonen som overføres
+    -   Digital: Et kontinuerlig signal hvor den variable egenskap er gitt av en diskret funksjon,
+        som gir verdier fra et definert og begrenset område (range)
+
+g)  Hva er metadata?
+    -   Metadata er data om data.

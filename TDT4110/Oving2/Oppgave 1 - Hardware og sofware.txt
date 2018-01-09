@@ -1,0 +1,18 @@
+Hardware og sofware
+
+a) 	Forskjellen på primær- og sekundærlagring er at primærlagring er midlertidig lagring av data, i RAM,
+	mens sekundærlagring er permanent lagring på disk.
+
+b)	På harddisk lagres ting permanent, du mister det ikke ved strømbrudd. 
+	I RAM lagres ikke ting permanent, du mister det som er i RAM om det ikke skrives over 
+    til harddisk og du opplever et strømbrudd eller andre feil.
+	SSD står for Solid State Drive og er en type harddisk hvor delene ikke er i bevegelse.
+
+c)	Fordi det er lett å kjøre elektroner gjennom det.
+
+d)	Bilde, lyd og tekst representeres av tall, (1 og 0). disse kan vises for brukeren ved hjelp av output-enheter som skjerm og høytalere.
+    Lagres i form av bytes.
+
+e)	32 000 bytes skal overføres: 2^3 bit er en byte --> (32 000 * 2^3)bit / 40s = 6400 bit/s
+
+f)	OS står for operativsystem. Det er den grunnleggende programvaren på pc'n.

@@ -1,0 +1,925 @@
+"ATH 255196 Kristendom religion og livssyn årsstudium","Alle"
+"ATH 255418 Interkulturell forståelse årsstudium","Alle"
+"ATH 255437 Musikk","Alle"
+"ATH 255480 Teologi","Alle"
+"ATH 255482 Kristendom religion og livssyn","Alle"
+"ATH 255752 Psykologi årsstudium","Alle"
+"ATH 255777 Musikk årsstudium","Alle"
+"ATH 255869 Interkulturell forståelse","Alle"
+"ATH 255876 Psykologi med religion og helse","Alle"
+"ATH 255936 Praktisk teologi","Alle"
+"AHO 189030 Arkitekt",12.3
+"AHO 189343 Industridesign",11.7
+"BDH 250050 Sykepleierutdanning",45.5
+"MF 190196 Kristendom/RLE","Alle"
+"MF 190242 Samfunnsfag","Alle"
+"MF 190418 Interkulturell kommunikasjon","Alle"
+"MF 190480 Teologi profesjonsstudium","Alle"
+"MF 190482 Religion kultur og samfunn","Alle"
+"MF 190927 Ungdom kultur og tro","Alle"
+"MF 190934 Lektor- og adjunktprogram","Alle"
+"MF 190936 Teologi","Alle"
+"DHS 251050 Sykepleierutdanning Oslo",48.3
+"DHS 251060 Vernepleierutdanning Rogaland",41.8
+"DHS 251080 Sosialt arbeid Oslo",49.1
+"DHS 251081 Sosialt arbeid deltid Oslo",42.4
+"DHS 251700 Ergoterapeututdanning Rogaland",32.6
+"DMMH 253130 Førskolelærerutdanning",36.3
+"DMMH 253131 Førskolelærer estetisk linje",39.1
+"DMMH 253132 Førskolelærer natur- og friluftslinje.",44
+"DMMH 253133 Førskolelærer deltid",46.2
+"DMMH 253529 Førskolelærer interkulturell linje","Alle"
+"FIH 258480 Teologi og misjon","Alle"
+"FIH 258626 Kristendom religion- og livssynskunnskap","Alle"
+"FIH 258777 Musikk","Alle"
+"HDH 252050 Sykepleierutdanning",46.1
+"HIAK 202050 Sykepleierutdanning",45.3
+"HIAK 202060 Vernepleierutdanning",47.4
+"HIAK 202061 Vernepleierutdanning deltid",39.3
+"HIAK 202063 Vernepleierutdanning deltid Bærum",39.9
+"HIAK 202082 Yrkesfaglærerutd. i medier og kommunikasjon","Alle"
+"HIAK 202105 Yrkesfaglærerutd. i service og samferdsel","Alle"
+"HIAK 202106 Yrkesfaglærerutd. i helse- og sosialfag deltid","Alle"
+"HIAK 202108 Yrkesfaglærerutd. i design-og håndverksfag deltid","Alle"
+"HIAK 202109 Yrkesfaglærerutd. i bygg og anleggsteknikk","Alle"
+"HIAK 202123 Yrkesfaglærerutd. i helse- og sosialfag","Alle"
+"HIAK 202124 Yrkesfaglærerutd. i restaurant- og matfag","Alle"
+"HIAK 202126 Yrkesfaglærerutd. i design-og håndverksfag","Alle"
+"HIAK 202127 Yrkesfaglærerutd. i elektrofag","Alle"
+"HIAK 202129 Yrkesfaglærerutd. i teknikk og industriell prod.","Alle"
+"HIAK 202405 Produktdesign","Alle"
+"HIAK 202408 Samfunnsernæring",49.7
+"HIAK 202696 Trafikklærerutdanning","Alle"
+"HIAK 202876 Læringspsykologi med vekt på adferdsanalyse",48.4
+"HIAK 202896 Husøkonomi og serviceledelse","Alle"
+"HIAK 202897 Kostøkonomi ernæring og ledelse","Alle"
+"HIB 203003 Ingeniør bygg","Alle"
+"HIB 203004 Ingeniør data","Alle"
+"HIB 203006 Ingeniør elkraftteknikk","Alle"
+"HIB 203009 Ingeniør kjemi","Alle"
+"HIB 203011 Ingeniør marinteknikk",43.8
+"HIB 203012 Ingeniør maskinteknikk",39.8
+"HIB 203017 Ingeniør automatisering","Alle"
+"HIB 203024 Ingeniør elektronikk","Alle"
+"HIB 203028 Ingeniør kommunikasjonssystemer","Alle"
+"HIB 203045 Ingeniør produksjonsteknikk","Alle"
+"HIB 203050 Sykepleierutdanning",41.2
+"HIB 203060 Vernepleierutdanning",38.2
+"HIB 203080 Sosialt arbeid",45.8
+"HIB 203096 Ingeniør undervannsteknologi",44.8
+"HIB 203130 Førskolelærerutdanning","Alle"
+"HIB 203132 Førskolelærerutd. med vekt på kunstfag","Alle"
+"HIB 203133 Førskolelærerutd m/vekt på natur og friluftsliv",34.8
+"HIB 203203 Folkehelsearbeid",45.5
+"HIB 203369 Økonomi og administrasjon",46.6
+"HIB 203395 Informasjonsteknologi","Alle"
+"HIB 203440 Idrett faglærerutdanning",44.7
+"HIB 203466 Tegnspråk og tolking","Alle"
+"HIB 203547 Grunnskolelærer 1.-7. trinn m/kroppsøving",40.5
+"HIB 203548 Grunnskolelærer 1.-7. trinn med musikk","Alle"
+"HIB 203550 Grunnskolelærer 1.-7. trinn m/samfunnsfag","Alle"
+"HIB 203551 Grunnskolelærer 1.-7. trinn med engelsk","Alle"
+"HIB 203557 Grunnskolelærer 1.-7. trinn m/naturfag","Alle"
+"HIB 203559 Grunnskolelærer 1.-7. trinn med RLE","Alle"
+"HIB 203599 Grunnskolelærer 1.-7. trinn med mat og helse",44.3
+"HIB 203618 Drama",39.2
+"HIB 203655 Grunnskolelærer 5.-10. trinn med matematikk",43.8
+"HIB 203657 Grunnskolelærer 5.-10. trinn med samfunnsfag",44.7
+"HIB 203658 Grunnskolelærer 5.-10. trinn med norsk",40.4
+"HIB 203659 Grunnskolelærer 5.-10. trinn med mat og helse",43.5
+"HIB 203660 Grunnskolelærer 5.-10. trinn med musikk","Alle"
+"HIB 203667 Musikk",46.3
+"HIB 203700 Ergoterapeututdanning",42.5
+"HIB 203701 Radiografutdanning",36.2
+"HIB 203702 Bioingeniørutdanning",42.3
+"HIB 203703 Fysioterapeututdanning",49.7
+"HIB 203753 Landmåling og eiendomsdesign",35.6
+"HIB 203822 Ingeniør energiteknologi",45.5
+"HIBU 205004 Ingeniør data  Kongsberg","Alle"
+"HIBU 205005 Ingeniør elektro Kongsberg","Alle"
+"HIBU 205012 Ingeniør maskin Kongsberg","Alle"
+"HIBU 205050 Sykepleier Drammen",30.4
+"HIBU 205155 Lysdesign Drammen","Alle"
+"HIBU 205160 Økonomi og administrasjon1-årig Kongsberg","Alle"
+"HIBU 205162 Økonomi og administrasjon 1-årig Hønefoss.","Alle"
+"HIBU 205246 Juss årsstudium Hønefoss",43.8
+"HIBU 205251 Visuell kommunikasjon Drammen",43.8
+"HIBU 205291 Økonomi og ledelse - siviløkonom Kongsberg","Alle"
+"HIBU 205317 Reiselivsledelse Hønefoss","Alle"
+"HIBU 205345 Økonomi og ledelse - siviløkonom Hønefoss","Alle"
+"HIBU 205370 Dynamisk webdesign Hønefoss","Alle"
+"HIBU 205395 IT og informasjonssystemer Hønefoss","Alle"
+"HIBU 205404 Økonomi og administrasjon Kongsberg",29.1
+"HIBU 205414 Økonomi og administrasjon Hønefoss","Alle"
+"HIBU 205526 Juss Hønefoss",45.2
+"HIBU 205547 Grunnskolelærer 1.-7. trinn Drammen","Alle"
+"HIBU 205620 IT og informasjonssystemer 1-årig Hønefoss","Alle"
+"HIBU 205623 Engelsk Hønefoss","Alle"
+"HIBU 205651 Grunnskolelærer 5.-10. trinn med språkfag Drammen","Alle"
+"HIBU 205655 Grunnskolelærer 5.-10. trinn med realfag Drammen","Alle"
+"HIBU 205657 Grunnskolelærer 5.-10. trinn med samfunnsfag Dr.","Alle"
+"HIBU 205672 Norsk Hønefoss","Alle"
+"HIBU 205701 Radiograf Drammen",30.8
+"HIBU 205867 Juss og ledelse Hønefoss",41.8
+"HIBU 205881 Statsvitenskap  Drammen",36.5
+"HIBU 205894 Optometri Kongsberg","Alle"
+"HIG 207003 Ingeniør bygg","Alle"
+"HIG 207004 Ingeniør data","Alle"
+"HIG 207005 Ingeniør elektro","Alle"
+"HIG 207012 Ingeniør maskin","Alle"
+"HIG 207046 Medieteknologi","Alle"
+"HIG 207050 Sykepleierutdanning",30.7
+"HIG 207051 Sykepleierutdanning deltid","Alle"
+"HIG 207052 Sykepleierutdanning deltid Gudbrandsdal","Alle"
+"HIG 207053 Sykepleierutdanning deltid Valdres","Alle"
+"HIG 207054 Sykepleierutdanning deltid Hadeland","Alle"
+"HIG 207098 Teknologidesign årsstudium deltid","Alle"
+"HIG 207099 Landmåling årsstudium fleksibel","Alle"
+"HIG 207102 Geografiske informasjonssystemer (GIS) års fleks","Alle"
+"HIG 207136 Mediemanagement årsstudium","Alle"
+"HIG 207149 Mediedesign",42
+"HIG 207160 Økonomi og ledelse årsstudium","Alle"
+"HIG 207188 Medie- og informasjonsteknologi årsstudium","Alle"
+"HIG 207248 Landmåling årsstudium","Alle"
+"HIG 207264 Medieproduksjon","Alle"
+"HIG 207369 Økonomi og ledelse","Alle"
+"HIG 207374 Drift av nettverk og datasystemer","Alle"
+"HIG 207395 Programvareutvikling","Alle"
+"HIG 207396 Geografiske informasjonssystemer (GIS) årsstudium","Alle"
+"HIG 207404 Økonomi og ledelse fleksibel","Alle"
+"HIG 207406 Geomatikk","Alle"
+"HIG 207429 Informasjonssikkerhet","Alle"
+"HIG 207602 Teknologidesign årsstudium","Alle"
+"HIG 207604 Medieproduksjon årsstudium","Alle"
+"HIG 207673 Spillprogrammering","Alle"
+"HIG 207701 Radiografutdanning","Alle"
+"HIG 207824 Teknologidesign og ledelse","Alle"
+"HIG 207838 Mediemanagement","Alle"
+"HIH 208035 Økonomi og ledelse","Alle"
+"HIH 208050 Sykepleierutdanning",38.2
+"HIH 208051 Sykepleierutdanning deltid","Alle"
+"HIH 208060 Vernepleierutdanning","Alle"
+"HIH 208070 Barnevernspedagogutdanning",35.2
+"HIH 208071 Barnevernspedagogutdanning deltid - Tromsø",40.7
+"HIH 208164 Økonomi og ledelse årsstudium","Alle"
+"HIH 208318 Regnskap og revisjon","Alle"
+"HIH 208350 Handel service og logistikk","Alle"
+"HIM 211050 Sykepleierutdanning studiegruppe Molde",30.3
+"HIM 211056 Sykepleierutdanning studiegruppe Kristiansund","Alle"
+"HIM 211060 Vernepleierutdanning",42.4
+"HIM 211164 Bedriftsøkonomi","Alle"
+"HIM 211185 Idrett",39.6
+"HIM 211189 Informasjonsbehandling","Alle"
+"HIM 211238 Statsvitenskap","Alle"
+"HIM 211246 Jus",39.1
+"HIM 211292 Logistikk og Supply Chain Management","Alle"
+"HIM 211318 Revisjon","Alle"
+"HIM 211369 Økonomi og administrasjon","Alle"
+"HIM 211370 IT og logistikk","Alle"
+"HIM 211404 Siviløkonom 1. avdeling",41
+"HIM 211432 Internasjonal logistikk Ålesund","Alle"
+"HIM 211488 Sport Management idrettsledelse",39.4
+"HIM 211627 Petroleumslogistikk deltid","Alle"
+"HIM 211841 Jus og administrasjon","Alle"
+"HIM 211866 Petroleumslogistikk Kristiansund",44.9
+"HIN 212003 Ingeniør Bygg","Alle"
+"HIN 212004 Ingeniør Datateknikk","Alle"
+"HIN 212005 Ingeniør Industriell Elektronikk","Alle"
+"HIN 212006 Ingeniør Elkraftteknikk","Alle"
+"HIN 212018 Ingeniør Prosessteknologi","Alle"
+"HIN 212027 Ingeniør Satelitteknologi","Alle"
+"HIN 212034 Ingeniør Industriteknikk","Alle"
+"HIN 212040 Ingeniør første studieår Alta","Alle"
+"HIN 212050 Sykepleierutdanning","Alle"
+"HIN 212075 Ingeniør Bygg nettbasert","Alle"
+"HIN 212076 Ingeniør Industriteknikk nettbasert","Alle"
+"HIN 212077 Ingeniør Prosessteknologi nettbasert","Alle"
+"HIN 212078 Ingeniør Datateknikk nettbasert","Alle"
+"HIN 212079 Ingeniør Elektro første år nettbasert","Alle"
+"HIN 212410 Økonomi og administrasjon","Alle"
+"HIN 212761 Elektroteknikk","Alle"
+"HIN 212804 Data/IT","Alle"
+"HIN 212805 Ingeniørdesign","Alle"
+"HIN 212806 Integrert bygningsteknologi","Alle"
+"HIN 212811 Industriell teknologi","Alle"
+"HIN 212814 Satelitteknologi","Alle"
+"HIN 212872 Internasjonal beredskap","Alle"
+"HINE 213130 Førskolelærer","Alle"
+"HINE 213131 Førskolelærerutdanning deltid samlingsbasert","Alle"
+"HINE 213170 Engelsk årsstudium 5-10","Alle"
+"HINE 213505 Kunst og håndverk 1-7","Alle"
+"HINE 213547 Grunnskolelærer  1-7","Alle"
+"HINE 213602 Design og bruk av digitale medier årsstudium Mo","Alle"
+"HINE 213620 Informasjonsteknologi årsstudium Mo i Rana","Alle"
+"HINE 213623 Engelsk årsstudium 1-7","Alle"
+"HINE 213642 Kunst og håndverk 5-10","Alle"
+"HINE 213651 Grunnskolelærer 5-10","Alle"
+"HINE 213655 Grunnskolelærer 5-10 Narvik","Alle"
+"HINE 213666 Naturfag samlingsbasert 5-10","Alle"
+"HINE 213667 Kreativt musikkarbeid årsstudium 5-10","Alle"
+"HINE 213680 Samfunnsfag samlingsbasert 5-10","Alle"
+"HINE 213777 Kreativt musikkarbeid årsstudium 1-7","Alle"
+"HINE 213796 Drama og teater årsstudium","Alle"
+"HINT 214050 Sykepleierutdanning Levanger",40.9
+"HINT 214058 Sykepleierutdanning Namsos","Alle"
+"HINT 214060 Vernepleierutdanning Namsos","Alle"
+"HINT 214130 Førskolelærerutdanning Levanger","Alle"
+"HINT 214185 Idrett Levanger",41.8
+"HINT 214240 Sosiologi Steinkjer","Alle"
+"HINT 214318 Revisjon Steinkjer","Alle"
+"HINT 214321 Husdyrfag velferd og produksjon Steinkjer","Alle"
+"HINT 214323 Utmarksforvaltning Steinkjer","Alle"
+"HINT 214369 Økonomi og administrasjon Steinkjer","Alle"
+"HINT 214388 Naturforvaltning Steinkjer","Alle"
+"HINT 214396 Geografi nettbasert Steinkjer","Alle"
+"HINT 214419 Kommunal økonomi og ledelse Steinkjer","Alle"
+"HINT 214421 Husdyrvelferd Steinkjer årsstudium","Alle"
+"HINT 214430 Multimedieteknologi Steinkjer","Alle"
+"HINT 214440 Kroppsøving og idrettsfag faglærerut. Levanger",45
+"HINT 214468 Grønn næringsutvikling Steinkjer","Alle"
+"HINT 214516 Regnskap Steinkjer","Alle"
+"HINT 214547 Grunnskolelærerutdanning 1.-7. trinn Levanger","Alle"
+"HINT 214605 Friluftsliv Levanger","Alle"
+"HINT 214623 Engelsk Levanger","Alle"
+"HINT 214639 Faglærerutd i musikk - rytmisk profil Levanger","Alle"
+"HINT 214642 Kunst og håndverk Levanger","Alle"
+"HINT 214649 Kroppsøving Levanger","Alle"
+"HINT 214651 Grunnskolelærerutdanning 5.-10. trinn Levanger","Alle"
+"HINT 214667 Musikk Levanger","Alle"
+"HINT 214673 Spill- og opplevelsesteknologi Steinkjer","Alle"
+"HINT 214680 Samfunnsfag Levanger","Alle"
+"HINT 214696 Trafikklærerutdanning Stjørdal",42.1
+"HINT 214749 Farmasiutdanning Namsos","Alle"
+"HSF 216005 Ingeniør elektro Førde","Alle"
+"HSF 216050 Sykepleierutdanning Førde start høst","Alle"
+"HSF 216052 Sykepleierutdanning Førde start vår","Alle"
+"HSF 216053 Sykepleierutdanning samlingsbasert deltid Førde","Alle"
+"HSF 216060 Vernepleierutdanning","Alle"
+"HSF 216070 Barnevernspedagogutdanning","Alle"
+"HSF 216080 Sosialt arbeid",32.2
+"HSF 216130 Førskolelærerutdanning","Alle"
+"HSF 216131 Førskolelærerutdanning samlingsbasert deltid","Alle"
+"HSF 216164 Bedriftsøkonomi","Alle"
+"HSF 216170 Engelsk","Alle"
+"HSF 216185 Idrett",38.2
+"HSF 216242 Samfunnsfag","Alle"
+"HSF 216246 Jus",34.6
+"HSF 216302 Friluftsliv","Alle"
+"HSF 216310 Landskapsplanlegging med landskapsarkitektur","Alle"
+"HSF 216330 Reiselivsledelse","Alle"
+"HSF 216351 Ungdomssosiologi","Alle"
+"HSF 216368 Eiendomsmegling","Alle"
+"HSF 216369 Økonomi og administrasjon","Alle"
+"HSF 216373 Naturfag","Alle"
+"HSF 216440 Idrett fysisk aktivitet og helse",40.7
+"HSF 216469 Geologi og geofare","Alle"
+"HSF 216481 Historie","Alle"
+"HSF 216485 Idrett og kroppsøving",32.1
+"HSF 216547 Grunnskulelærarutdanning 1.-7. trinn","Alle"
+"HSF 216548 Grunnskulelærarutdanning 1.-7. trinn saml/deltid","Alle"
+"HSF 216651 Grunnskulelærarutdanning 5.-10. trinn","Alle"
+"HSF 216754 Reiseliv","Alle"
+"HSF 216835 Fornybar energi","Alle"
+"HSF 216927 Sosiologi - ungdomssosiologi","Alle"
+"STAF 234196 Kristendom årsstudium","Alle"
+"STAF 234437 Musikk menighet og ledelse","Alle"
+"STAF 234480 Teologi og ledelse","Alle"
+"HSH 218002 Ingeniør brannsikkerhet Haugesund","Alle"
+"HSH 218012 Ingeniør maskin Haugesund","Alle"
+"HSH 218047 Ingeniør kvalitet HMS Haugesund","Alle"
+"HSH 218050 Sykepleierutdanning Stord",31.3
+"HSH 218056 Sykepleierutdanning Haugesund",31.5
+"HSH 218130 Førskolelærerutd. ordinær linje Stord","Alle"
+"HSH 218134 Førskolelærerutd. natur og friluftslinje Stord","Alle"
+"HSH 218157 Faglærerutdanning i musikk Stord","Alle"
+"HSH 218353 Maritim utdanning nautikk Haugesund",37.3
+"HSH 218369 Økonomi og administrasjon Haugesund","Alle"
+"HSH 218505 Kunst og håndverk Stord","Alle"
+"HSH 218547 Grunnskolelærerutdanning 1.-7. trinn","Alle"
+"HSH 218623 Engelsk Stord","Alle"
+"HSH 218649 Idrett/Kroppsøving Stord",34.4
+"HSH 218651 Grunnskolelærerutdanning 5.-10. trinn","Alle"
+"HSH 218680 Samfunnsfag Stord","Alle"
+"HIT 220003 Ingeniør bygg","Alle"
+"HIT 220006 Ingeniør elkraft","Alle"
+"HIT 220012 Ingeniør maskin","Alle"
+"HIT 220035 Økonomi og administrasjon 2 år Bø","Alle"
+"HIT 220050 Sykepleierutdanning",32.2
+"HIT 220051 Sykepleierutdanning deltid 4 år","Alle"
+"HIT 220060 Vernepleierutdanning",32.1
+"HIT 220061 Vernepleierutdanning deltid","Alle"
+"HIT 220070 Barnevern i et flerkulturelt samfunn",32.8
+"HIT 220090 Ingeniør informatikk og automatisering","Alle"
+"HIT 220130 Førskolelærerutdanning Notodden","Alle"
+"HIT 220131 Førskolelærer deltid - samlingsbasert  Notodden","Alle"
+"HIT 220132 Førskolelærerutdanning Drammen","Alle"
+"HIT 220133 Førskolelærerutdanning Porsgrunn","Alle"
+"HIT 220140 Faglærer i kroppsøving og idrettsfag Notodden","Alle"
+"HIT 220150 Faglærer i formgiving kunst og håndv. Notodden","Alle"
+"HIT 220164 Bedriftsøkonomi årsstudium Bø","Alle"
+"HIT 220167 Bedriftsøkonomi Porsgrunn",33.6
+"HIT 220170 Engelsk årsstudium Bø","Alle"
+"HIT 220172 Friluftsliv kultur og naturveiledning årsstud Bø","Alle"
+"HIT 220179 Historie årsstudium Bø","Alle"
+"HIT 220185 Idrett årsstudium Bø",34.3
+"HIT 220187 Informasjonsbehandling årsstudium  Bø","Alle"
+"HIT 220188 Informasjonsbehandling årsstudium Porsgrunn","Alle"
+"HIT 220210 Norsk årsstudium Bø","Alle"
+"HIT 220273 Kultur-arrangering formidling og forv. 2-årig","Alle"
+"HIT 220302 Friluftsliv kultur- og naturveiledning  Bø","Alle"
+"HIT 220308 Kultur-arrangering formidling og forvaltning Bø","Alle"
+"HIT 220317 Reiseliv Bø","Alle"
+"HIT 220318 Revisjon Bø","Alle"
+"HIT 220359 Internasjonal markedsføring Bø","Alle"
+"HIT 220368 Eiendomsmegling Bø",37.3
+"HIT 220369 Økonomi og administrasjon Bø","Alle"
+"HIT 220388 Økologi og naturressurser Bø","Alle"
+"HIT 220395 Informatikk Bø","Alle"
+"HIT 220400 Idéhistorie Bø","Alle"
+"HIT 220440 Idrettsvitenskap Bø","Alle"
+"HIT 220441 Visuelle kunstfag og design Notodden","Alle"
+"HIT 220442 Folkekunst Rauland","Alle"
+"HIT 220443 Folkemusikk Rauland","Alle"
+"HIT 220447 Natur og friluftsliv  Bø","Alle"
+"HIT 220448 Forurensing og miljø Bø","Alle"
+"HIT 220449 Informasjonssystemer Bø","Alle"
+"HIT 220463 Humanistiske fag Bø","Alle"
+"HIT 220505 Leire – kunst og design 1 Notodden","Alle"
+"HIT 220532 Form og design Notodden","Alle"
+"HIT 220547 Grunnskolelærer 1.-7. trinn Notodden","Alle"
+"HIT 220548 Grunnskolelærer 1.-7. trinn Porsgrunn","Alle"
+"HIT 220550 Grunnskolelærer 1.-7. trinn nettbasert","Alle"
+"HIT 220551 Grunnskolelærer 1.-7. trinn desentralisert","Alle"
+"HIT 220602 Digital mediedesign Notodden","Alle"
+"HIT 220605 Natur og friluftsliv årsstudium Bø","Alle"
+"HIT 220613 Historie deltid nett- og samlingsbasert","Alle"
+"HIT 220628 Folkekunst årsstudium Rauland","Alle"
+"HIT 220629 Folkemusikk årsstudium Rauland","Alle"
+"HIT 220630 Kunst og håndverk årsstudium Notodden","Alle"
+"HIT 220637 Tegning - bilde årsstudium Notodden","Alle"
+"HIT 220649 Kroppsøving og idrettsfag årsstudium Notodden","Alle"
+"HIT 220651 Grunnskolelærer 5.-10. trinn Porsgrunn","Alle"
+"HIT 220655 Grunnskolelærer 5.-10. Notodden og desentralisert","Alle"
+"HIT 220657 Grunnskolelærer 5.-10. trinn nettbasert","Alle"
+"HIT 220672 Norsk deltid nett og samlingsbasert Bø","Alle"
+"HIT 220688 Ingeniør gass- og energiteknologi","Alle"
+"HIT 220895 Innovasjon og entreprenørskap Bø","Alle"
+"HIT 220912 Spansk Bø","Alle"
+"HIVE 222004 Ingeniør datateknikk","Alle"
+"HIVE 222005 Ingeniør elektronikk","Alle"
+"HIVE 222012 Ingeniør produktdesign","Alle"
+"HIVE 222017 Ingeniør elektro-automasjon","Alle"
+"HIVE 222044 Skipsfart og logistikk","Alle"
+"HIVE 222050 Sykepleierutdanning",33.5
+"HIVE 222130 Førskolelærerutdanning","Alle"
+"HIVE 222131 Førskolelærerutdanning deltid","Alle"
+"HIVE 222164 Bedriftsøkonomi",33.8
+"HIVE 222170 Engelsk","Alle"
+"HIVE 222179 Historie årsstudium","Alle"
+"HIVE 222205 Matematikk","Alle"
+"HIVE 222240 Sosiologi årsstudium",35.6
+"HIVE 222242 Samfunnsfag","Alle"
+"HIVE 222318 Revisjon","Alle"
+"HIVE 222351 Ungdomskunnskap","Alle"
+"HIVE 222352 Maritim teknisk driftsledelse","Alle"
+"HIVE 222353 Nautikk","Alle"
+"HIVE 222369 Økonomi og administrasjon",36.7
+"HIVE 222412 Informasjonssystemer","Alle"
+"HIVE 222418 Internasjonal forståelse og samarbeid","Alle"
+"HIVE 222440 Idrett ernæring og helse",39.6
+"HIVE 222446 Mat og helse","Alle"
+"HIVE 222453 Informasjonssystemer og IT-ledelse","Alle"
+"HIVE 222481 Historie","Alle"
+"HIVE 222547 Grunnskolelærerutdanning 1.-7. trinn","Alle"
+"HIVE 222548 Grunnskolelærerutdanning 1.- 7. trinn trainee","Alle"
+"HIVE 222620 IKT i læring","Alle"
+"HIVE 222626 Religion livssyn og etikk","Alle"
+"HIVE 222642 Kunst og håndverk","Alle"
+"HIVE 222649 Idrett årsstudium",40.8
+"HIVE 222651 Grunnskolelærerutdanning 5.-10. trinn","Alle"
+"HIVE 222666 Naturfag","Alle"
+"HIVE 222667 Musikk","Alle"
+"HIVE 222672 Norsk","Alle"
+"HIVE 222796 Teater for barn og unge","Alle"
+"HIVE 222823 Ingeniør mikro- og nanoteknologi","Alle"
+"HIVE 222880 Sosiologi","Alle"
+"HIVE 222912 Spansk","Alle"
+"HIØ 224003 Ingeniør bygg Fredrikstad","Alle"
+"HIØ 224004 Ingeniør data Halden","Alle"
+"HIØ 224005 Ingeniør elektro Fredrikstad","Alle"
+"HIØ 224012 Ingeniør maskin Fredrikstad","Alle"
+"HIØ 224035 Økonomi og administrasjon Halden","Alle"
+"HIØ 224050 Sykepleierutdanning Fredrikstad",32.9
+"HIØ 224051 Sykepleierutdanning deltid Fredrikstad","Alle"
+"HIØ 224060 Vernepleierutdanning Fredrikstad",31.5
+"HIØ 224061 Vernepleierutdanning deltid Fredrikstad","Alle"
+"HIØ 224070 Barnevern Fredrikstad",37.9
+"HIØ 224080 Sosialt arbeid Fredrikstad",39.3
+"HIØ 224130 Førskolelærerutdanning Halden","Alle"
+"HIØ 224131 Førskolelærerutdanning deltid Halden","Alle"
+"HIØ 224170 Engelsk Halden","Alle"
+"HIØ 224210 Norsk Halden","Alle"
+"HIØ 224238 Statsvitenskap Halden","Alle"
+"HIØ 224244 Tysk Halden","Alle"
+"HIØ 224270 Informatikk -design/utvikl. av IT-systemer Halden","Alle"
+"HIØ 224318 Revisjon Halden","Alle"
+"HIØ 224398 Bedriftsøkonomi Halden","Alle"
+"HIØ 224453 Informasjonssystemer Halden","Alle"
+"HIØ 224455 Internasjonal kommunikasjon Halden","Alle"
+"HIØ 224474 Samfunn språk og kultur Halden","Alle"
+"HIØ 224505 Kunst og håndverk Halden","Alle"
+"HIØ 224547 Grunnskolelærerutdanning 1.-7. trinn Halden","Alle"
+"HIØ 224610 Fransk Halden","Alle"
+"HIØ 224620 Informasjonsteknologi Halden","Alle"
+"HIØ 224626 Religion livssyn og etikk Halden","Alle"
+"HIØ 224649 Kroppsøving og idrett Halden",33.5
+"HIØ 224651 Grunnskolelærerutdanning 5.-10. trinn Halden","Alle"
+"HIØ 224661 Matematikk Halden","Alle"
+"HIØ 224666 Naturfag Halden","Alle"
+"HIØ 224667 Musikk Halden","Alle"
+"HIØ 224680 Samfunnsfag Halden","Alle"
+"HIØ 224702 Bioingeniørutdanning Fredrikstad","Alle"
+"HIØ 224824 Ingeniør industriell design Fredrikstad","Alle"
+"HIØ 224845 Digital medieproduksjon Halden","Alle"
+"HIØ 224895 Innovasjon og prosjektledelse Fredrikstad",32.4
+"HIØ 224900 Arbeids- og velferdsfag Fredrikstad","Alle"
+"HIØ 224912 Spansk Halden","Alle"
+"HIÅ 225003 Ingeniør bygg","Alle"
+"HIÅ 225004 Ingeniør data","Alle"
+"HIÅ 225017 Ingeniør automatiseringsteknikk","Alle"
+"HIÅ 225045 Ingeniør produkt-  og systemdesign","Alle"
+"HIÅ 225050 Sykepleierutdanning",29.1
+"HIÅ 225160 Shipping og økonomi","Alle"
+"HIÅ 225162 Økonomi og ledelse",36.5
+"HIÅ 225184 Medisinsk og marint årsstudium","Alle"
+"HIÅ 225299 Bachelor i Marine- og biologiske fag","Alle"
+"HIÅ 225353 Maritim utdanning nautikk",43.2
+"HIÅ 225369 Økonomi og administrasjon",39.1
+"HIÅ 225410 Handels- og Serviceledelse",34.1
+"HIÅ 225432 Shipping og logistikk",35.8
+"HIÅ 225473 Eksportmarkedsføring",35.5
+"HIÅ 225699 Ingeniør skipsdesign","Alle"
+"HIÅ 225702 Bioingeniør","Alle"
+"HIÅ 225895 Innovasjonsledelse og entreprenørskap",37.4
+"HD 232050 Sykepleierutdanning",42.7
+"LDH 230050 Sykepleierutdanning",43
+"MHS 256196 Kristendomskunnskap/RLE","Alle"
+"MHS 256418 Interkult. kommunikasjon og globalt samarb.","Alle"
+"MHS 256480 Teologi","Alle"
+"MHS 256482 Religion og interkulturell kommunikasjon","Alle"
+"MHS 256680 Samfunnsfag","Alle"
+"MHS 256771 Teologi profesjonsstudium","Alle"
+"NHH 191345 Siviløkonomutdanningen",55.2
+"NTNU 194104 Afrikastudier årsstudium",33.8
+"NTNU 194109 Yrkesfaglærerutd. bygg- og anleggsteknikk","Alle"
+"NTNU 194123 Yrkesfaglærerutdanning helse- og sosialfag","Alle"
+"NTNU 194129 Yrkesfaglærerutdanning teknikk og industriell prod","Alle"
+"NTNU 194170 Engelsk årsstudium",42.9
+"NTNU 194171 Rådgiving og voksnes læring","Alle"
+"NTNU 194174 Fransk årsstudium","Alle"
+"NTNU 194179 Historie årsstudium",40
+"NTNU 194184 Biologi og kjemi årsstudium",51.1
+"NTNU 194188 Informatikk årsstudium","Alle"
+"NTNU 194200 Kunsthistorie","Alle"
+"NTNU 194205 Matematikk og statistikk årsstudium",47.6
+"NTNU 194210 Nordisk årsstudium","Alle"
+"NTNU 194220 Pedagogikk årsstudium",39.2
+"NTNU 194238 Statsvitenskap årsstudium",46.1
+"NTNU 194239 Samfunnsøkonomi årsstudium",45
+"NTNU 194240 Sosiologi årsstudium",44.1
+"NTNU 194242 Studier av kunnskap teknologi og samfunn (STS)",41.8
+"NTNU 194244 Tysk årsstudium","Alle"
+"NTNU 194272 Kunsthistorie årsstudium","Alle"
+"NTNU 194284 Geografi årsstudium",39.9
+"NTNU 194285 Samfunnskunnskap årsstudium",42.2
+"NTNU 194294 Latin","Alle"
+"NTNU 194324 Emnestudier samfunnsvitenskap",41.1
+"NTNU 194327 Biologi",49.4
+"NTNU 194366 Filosofi årsstudium",41.9
+"NTNU 194367 Sosialantropologi årsstudium",43
+"NTNU 194395 Informatikk",44.3
+"NTNU 194437 Musikkvitenskap","Alle"
+"NTNU 194438 Geografi",30
+"NTNU 194439 Drama og teater",41.2
+"NTNU 194440 Bevegelsesvitenskap",44.7
+"NTNU 194456 Allmenn litteraturvitenskap","Alle"
+"NTNU 194457 Lingvistikk","Alle"
+"NTNU 194459 Antikkens kultur","Alle"
+"NTNU 194476 Musikkteknologi",45.6
+"NTNU 194478 Arkeologi",39.1
+"NTNU 194479 Filosofi",34.8
+"NTNU 194481 Historie",33.5
+"NTNU 194486 Samfunns- og idrettsvitenskap",42.4
+"NTNU 194615 Allmenn litteraturvitenskap årsstudium","Alle"
+"NTNU 194626 Kristendomsk. med religions- og livssynsk.","Alle"
+"NTNU 194646 Film- og videoproduksjon",46.6
+"NTNU 194649 Kroppsøving og idrett årsstudium",51.8
+"NTNU 194684 Lektorutdanning i historie",49.5
+"NTNU 194685 Lektorutdanning språkfag/engelsk",44.3
+"NTNU 194686 Lektorutdanning språkfag/fransk","Alle"
+"NTNU 194687 Lektorutdanning språkfag/nordisk",45.8
+"NTNU 194689 Lektorutdanning språkfag/tysk","Alle"
+"NTNU 194715 Emnestudier humaniora årsstudium","Alle"
+"NTNU 194740 Medisin",58.4
+"NTNU 194752 Psykologi årsstudium",48
+"NTNU 194755 Materialteknologi",51.9
+"NTNU 194756 Arkitekt",52.7
+"NTNU 194757 Petroleumsfag",51.9
+"NTNU 194759 Bygg- og miljøteknikk",51.9
+"NTNU 194760 Datateknikk",50.9
+"NTNU 194761 Elektronikk",47.8
+"NTNU 194763 Fysikk og matematikk",56.5
+"NTNU 194764 Industriell kjemi og bioteknologi",52.6
+"NTNU 194765 Marin teknikk",53.1
+"NTNU 194766 Produktutvikling og produksjon",52.8
+"NTNU 194767 Industriell økonomi og teknologiledelse",58.9
+"NTNU 194768 Industriell design",54.4
+"NTNU 194769 Energi og miljø",54.6
+"NTNU 194770 Kommunikasjonsteknologi",49.6
+"NTNU 194786 Europastudier med fremmedspråk spansk","Alle"
+"NTNU 194793 Europastudier med fremmedspråk fransk","Alle"
+"NTNU 194795 Europastudier med fremmedspråk tysk","Alle"
+"NTNU 194798 Teknisk kybernetikk",51.5
+"NTNU 194818 Samfunnsøkonomi master",46.6
+"NTNU 194843 Lektorutdanning i realfag",48.6
+"NTNU 194847 Filmvitenskap","Alle"
+"NTNU 194851 Medievitenskap",38.5
+"NTNU 194852 Pedagogikk",35
+"NTNU 194855 Bioteknologi master",52.6
+"NTNU 194857 Fysikk",52.7
+"NTNU 194859 Geologi",47.2
+"NTNU 194860 Kjemi",49.2
+"NTNU 194862 Matematiske fag",49.8
+"NTNU 194868 Afrikastudier","Alle"
+"NTNU 194870 Europastudier med fremmedspråk engelsk",42.4
+"NTNU 194875 Politisk økonomi",44.4
+"NTNU 194876 Psykologi",46.7
+"NTNU 194879 Sosialantropologi",37.5
+"NTNU 194880 Sosiologi",39.3
+"NTNU 194881 Statsvitenskap",44.6
+"NTNU 194887 Engelsk",35.6
+"NTNU 194888 Fransk","Alle"
+"NTNU 194889 Nordisk","Alle"
+"NTNU 194890 Tysk","Alle"
+"NTNU 194898 Samfunnsøkonomi",43.9
+"NTNU 194901 Språklig kommunikasjon","Alle"
+"NTNU 194904 Kulturminneforvaltning","Alle"
+"NTNU 194905 Ingeniørvitenskap og IKT",52
+"NTNU 194910 Religionsvitenskap årsstudium","Alle"
+"NTNU 194912 Spansk årsstudium",36.9
+"NTNU 194929 Religionsvitenskap","Alle"
+"NTNU 194930 Fonetikk","Alle"
+"NTNU 194932 Klassisk språk og litteratur","Alle"
+"NTNU 194934 Lektorutdanning i geografi",46.3
+"NTNU 194937 Nanoteknologi",61.9
+"NTNU 194941 Psykologi profesjonsstudiet",55.2
+"NTNU 194945 Lektorutdanning i samfunnsfag",48.4
+"NTNU 194946 Tekniske geofag",51.5
+"NLA 254130 Førskolelærerutdanning","Alle"
+"NLA 254182 Menighetspedagogikk","Alle"
+"NLA 254196 KRLE årsstudium","Alle"
+"NLA 254220 Pedagogikk årsstudium",34.6
+"NLA 254418 Interkulturell forståelse vekt på Sør-Amerika",36.3
+"NLA 254480 Teologi","Alle"
+"NLA 254482 Kristendomskunnskap","Alle"
+"NLA 254485 Kristendom og idrett","Alle"
+"NLA 254547 Grunnskolelærerutdanning 1.-7. trinn","Alle"
+"NLA 254651 Grunnskolelærerutdanning 5.-10. trinn","Alle"
+"NLA 254717 Interkulturell forståelse vekt på Norge","Alle"
+"NLA 254791 Interkulturell forståelse vekt på Øst-Asia","Alle"
+"NLA 254852 Pedagogikk",43.3
+"NLA 254902 Interkulturell forståelse vekt på Øst-Afrika","Alle"
+"NLA 254929 Religion og kultur","Alle"
+"SA/SH 231064 Samisk språk og litteratur","Alle"
+"SA/SH 231065 Duodji (samisk håndverk)","Alle"
+"SA/SH 231066 Reindriftsstudier","Alle"
+"SA/SH 231135 Samisk førskolelærerutdanning","Alle"
+"SA/SH 231557 Samisk grunnskolelærer 1-7","Alle"
+"SA/SH 231651 Samisk grunnskolelærerutdanning 5.-10. trinn","Alle"
+"UIA 201003 Ingeniør byggdesign Grimstad","Alle"
+"UIA 201004 Ingeniør data Grimstad","Alle"
+"UIA 201006 Ingeniør fornybar energi Grimstad","Alle"
+"UIA 201007 Ingeniør flyteknikk Grimstad","Alle"
+"UIA 201012 Ingeniør maskin Grimstad","Alle"
+"UIA 201050 Sykepleierutdanning Kr.sand",40.1
+"UIA 201052 Sykepleierutdanning Grimstad",37.5
+"UIA 201060 Vernepleierutdanning Grimstad",37.1
+"UIA 201080 Sosionomutdanning",41.8
+"UIA 201083 Grunnskolelærerutdanning 5.-10. trinn master","Alle"
+"UIA 201084 Grunnskolelærerutdanning 1.-7. trinn master","Alle"
+"UIA 201130 Førskolelærerutd. Kr.sand.","Alle"
+"UIA 201132 Førskolelærerutd. Grimstad","Alle"
+"UIA 201149 Multimedieteknologi og -design Grimstad","Alle"
+"UIA 201157 Faglærerutdanning i drama","Alle"
+"UIA 201170 Engelsk årsstudium","Alle"
+"UIA 201172 Friluftsliv og naturguiding årsstudium","Alle"
+"UIA 201174 Fransk årsstudium","Alle"
+"UIA 201179 Historie årsstudium","Alle"
+"UIA 201184 Biologi årsstudium","Alle"
+"UIA 201189 IT og informasjonssystemer årsstudium","Alle"
+"UIA 201200 Kunstfag med fordypning i kunst og håndverk","Alle"
+"UIA 201203 Folkehelsearbeid",40.5
+"UIA 201205 Matematikk årsstudium","Alle"
+"UIA 201210 Nordisk språk og litteratur årsstudium","Alle"
+"UIA 201238 Statsvitenskap årsstudium",36.9
+"UIA 201242 Samfunnsfag årsstudium",35
+"UIA 201247 Utviklingsstudiet årsstudium",41.8
+"UIA 201260 IT og informasjonssystemer",33
+"UIA 201301 Matematisk finans","Alle"
+"UIA 201303 Oversetting og interkulturell kom. engelsk","Alle"
+"UIA 201317 Opplevelsesbasert reiseliv",36.6
+"UIA 201318 Revisjon",39.7
+"UIA 201327 Biologi","Alle"
+"UIA 201336 Skolebibliotekkunnskap deltid","Alle"
+"UIA 201345 Økonomi og administrasjon - siviløkonom",45.8
+"UIA 201366 Filosofi årsstudium","Alle"
+"UIA 201369 Økonomi og administrasjon Kr.sand",42.7
+"UIA 201404 Økonomi og administrasjon Grimstad",40.1
+"UIA 201437 Kunstfag med fordypning i musikk","Alle"
+"UIA 201440 Idrett",42.9
+"UIA 201456 Litteratur film og teater","Alle"
+"UIA 201474 Samfunnsendring og kommunikasjon","Alle"
+"UIA 201481 Historie","Alle"
+"UIA 201482 Religion etikk og kultur","Alle"
+"UIA 201484 Utviklingsstudier",39.3
+"UIA 201547 Grunnskolelærerutdanning 1.-7. trinn Kristiansand","Alle"
+"UIA 201548 Grunnskolelærerutdanning 1.-7. trinn Grimstad","Alle"
+"UIA 201618 Drama årsstudium","Alle"
+"UIA 201642 Kunst og håndverk årsstudium","Alle"
+"UIA 201646 Ernæring mat og kultur årsstudium",40.5
+"UIA 201649 Idrett årsstudium",43.5
+"UIA 201651 Grunnskolelærerutdanning 5.-10. trinn Kr. sand",38.7
+"UIA 201652 Religion og etikk årsstudium","Alle"
+"UIA 201661 Fysikk årsstudium","Alle"
+"UIA 201663 Mediefag årsstudium",36.9
+"UIA 201667 Musikk årsstudium",42.9
+"UIA 201676 Pedagogikk årsstudium",37.3
+"UIA 201690 Tysk årsstudium","Alle"
+"UIA 201702 Bioingeniør",41.5
+"UIA 201767 Industriell økonomi og tekn.ledelse Grimstad",48.1
+"UIA 201794 Kommunikasjon årsstudium","Alle"
+"UIA 201803 Ingeniør elektronikk Grimstad","Alle"
+"UIA 201807 Informasjons- og kom.teknologi Grimstad","Alle"
+"UIA 201828 Lektorutdanning i realfag","Alle"
+"UIA 201850 Kommunikasjon",40
+"UIA 201852 Pedagogikk",31.3
+"UIA 201862 Matematikk og fysikk","Alle"
+"UIA 201864 Ernæring mat og kultur",46.8
+"UIA 201881 Statsvitenskap",40
+"UIA 201887 Engelsk","Alle"
+"UIA 201889 Nordisk språk og litteratur","Alle"
+"UIA 201900 Arbeids- og velferdssosiologi","Alle"
+"UIA 201912 Spansk årsstudium","Alle"
+"UIA 201922 Litteratur film og teater årsstudium","Alle"
+"UMB 192199 Grunnstudium",53.3
+"UMB 192230 Eiendomsfag",44.8
+"UMB 192233 Frie realfag","Alle"
+"UMB 192299 Bioteknologi",47.7
+"UMB 192310 Landskapsingeniør",48
+"UMB 192321 Husdyrvitenskap","Alle"
+"UMB 192322 Skogfag","Alle"
+"UMB 192327 Biologi",44.1
+"UMB 192332 Kjemi","Alle"
+"UMB 192369 Økonomi og administrasjon",47.2
+"UMB 192377 Miljø og naturressurser","Alle"
+"UMB 192388 Økologi og naturforvaltning","Alle"
+"UMB 192406 Geomatikk: kart satellitter og 3D-modellering","Alle"
+"UMB 192468 Samfunnsøkonomi",46.2
+"UMB 192484 Internasjonale miljø- og utviklingsstudier",48.4
+"UMB 192544 Hestefag","Alle"
+"UMB 192732 Landskapsarkitektur",54.7
+"UMB 192759 Byggeteknikk og arkitektur",49.8
+"UMB 192766 Maskin- prosess- og produktutvikling",43.2
+"UMB 192767 Industriell økonomi",52.3
+"UMB 192783 Kjemi og bioteknologi","Alle"
+"UMB 192784 Miljøfysikk og fornybar energi",49.2
+"UMB 192809 Vann- og miljøteknikk","Alle"
+"UMB 192813 Geomatikk: kart satellitter og 3D-mod. master","Alle"
+"UMB 192835 Fornybar energi",51.5
+"UMB 192842 Plantevitenskap","Alle"
+"UMB 192843 Lektorutdanning i realfag","Alle"
+"UMB 192857 Energi- og miljøfysikk",42.9
+"UMB 192864 Matvitenskap","Alle"
+"UMB 192949 By- og regionplanlegging",47.7
+"UIO 185170 Engelsk årsstudium",58.7
+"UIO 185174 Fransk årsstudium",55.9
+"UIO 185179 Historie årsstudium",57.1
+"UIO 185211 Nordisk særlig norsk språk og litteratur års",57.8
+"UIO 185212 Norsk som andrespråk årsstudium",51.2
+"UIO 185221 Tegnspråk årsstudium","Alle"
+"UIO 185222 Tverrfaglige kjønnsstudier årsstudium",53.8
+"UIO 185233 Realfag årsstudium","Alle"
+"UIO 185272 Kunsthistorie årsstudium",56.7
+"UIO 185306 Matematikk informatikk og teknologi","Alle"
+"UIO 185308 Kultur og kommunikasjon",53
+"UIO 185327 Biologi",44.4
+"UIO 185437 Musikkvitenskap","Alle"
+"UIO 185438 Samfunnsgeografi",52.5
+"UIO 185439 Estetiske studier",50.6
+"UIO 185452 Offentlig administrasjon og ledelse",54.2
+"UIO 185455 Portugisisk",42.4
+"UIO 185459 Antikk kultur og klassiske språk",46.8
+"UIO 185461 Midtøstenstudier med tyrkisk","Alle"
+"UIO 185462 Kunsthistorie",49
+"UIO 185464 Informatikk: tekniske og naturvitenskaplige anv.","Alle"
+"UIO 185465 Helseledelse og helseøkonomi",53.5
+"UIO 185466 Tegnspråk og tolking","Alle"
+"UIO 185478 Arkeologi",48.5
+"UIO 185479 Filosofi og idéhistorie",48.4
+"UIO 185480 Teologi og kristendom","Alle"
+"UIO 185481 Historie",48.3
+"UIO 185482 Religion og samfunn",45
+"UIO 185483 Russisk",38
+"UIO 185565 Italiensk",41.3
+"UIO 185582 Japansk med Japan-studier",49.7
+"UIO 185592 Kinesisk med Kina-studier",52.4
+"UIO 185601 Arkivkunnskap årsstudium",53.9
+"UIO 185604 Medievitenskap årsstudium",56.3
+"UIO 185615 Allmenn litteraturvitenskap årsstudium",56.7
+"UIO 185626 Kristendom årsstudium",47.8
+"UIO 185690 Tysk årsstudium",51.8
+"UIO 185698 Samfunnsøkonomisk analyse 5-årig",55
+"UIO 185707 Farmasi",50.4
+"UIO 185708 Master i klinisk ernæring start høst","Alle"
+"UIO 185713 Master i klinisk ernæring start vår",63
+"UIO 185724 Rettsvitenskap (jus) start høst",58.1
+"UIO 185725 Rettsvitenskap (jus) start vår",55.7
+"UIO 185740 Medisin start høst",68
+"UIO 185742 Odontologi start høst",63.9
+"UIO 185745 Medisin start vår",66.1
+"UIO 185748 Odontologi start vår","Alle"
+"UIO 185752 Psykologi årsstudium",57
+"UIO 185771 Teologi profesjonsstudium","Alle"
+"UIO 185786 Nederlandsk","Alle"
+"UIO 185793 Fransk",40.4
+"UIO 185795 Tysk","Alle"
+"UIO 185817 Lektorprogrammet nordisk","Alle"
+"UIO 185829 Informatikk: programmering og nettverk","Alle"
+"UIO 185830 Informatikk: design bruk og interaksjon",46
+"UIO 185832 Informatikk: nanoelektronikk og robotikk",38.8
+"UIO 185837 Informatikk: språk og kommunikasjon",45.5
+"UIO 185841 Demokrati og rettigheter i informasjonssamfunnet",50
+"UIO 185843 Lektorprogrammet realfag","Alle"
+"UIO 185844 Lektorprogrammet kultur og samfunnsfag",49.3
+"UIO 185851 Medievitenskap",50.2
+"UIO 185852 Pedagogikk",46.5
+"UIO 185853 Spesialpedagogikk",46.4
+"UIO 185856 Elektronikk og datateknologi","Alle"
+"UIO 185857 Fysikk astronomi og meteorologi",40.9
+"UIO 185858 Geofag: geologi geofysikk og geografi",43.8
+"UIO 185860 Kjemi","Alle"
+"UIO 185862 Matematikk og økonomi",51.8
+"UIO 185863 Materialer energi og nanoteknologi","Alle"
+"UIO 185865 Molekylærbiologi og biologisk kjemi",41.7
+"UIO 185868 India områdestudier",48
+"UIO 185870 Europastudier (EU)",51.8
+"UIO 185872 Internasjonale studier",58.1
+"UIO 185873 Tverrfaglige kjønnsstudier",47.6
+"UIO 185874 Kriminologi",53.3
+"UIO 185876 Psykologi",55.9
+"UIO 185879 Sosialantropologi",50.2
+"UIO 185880 Sosiologi",50.4
+"UIO 185881 Statsvitenskap",54.2
+"UIO 185883 Utviklingsstudier",51.7
+"UIO 185889 Nordiske studier",46.9
+"UIO 185893 Lingvistikk",55.7
+"UIO 185898 Samfunnsøkonomi",55.5
+"UIO 185899 Tannpleie",54.2
+"UIO 185904 Kulturarv og bevaringskunnskap",49.8
+"UIO 185912 Spansk årsstudium",60.2
+"UIO 185918 Latin-Amerika-studier",45.5
+"UIO 185919 Nord-Amerika-studier",44.8
+"UIO 185920 Engelsk",51.6
+"UIO 185922 Allmenn litteraturvitenskap",50.9
+"UIO 185923 Midtøsten-studier med arabisk",52
+"UIO 185924 Spansk",52.8
+"UIO 185929 Religionshistorie og kulturhistorie",42
+"UIO 185935 Lektorprogrammet fremmedspråk","Alle"
+"UIO 185941 Psykologi profesjon start høst",64.9
+"UIO 185942 Psykologi profesjon start vår",63
+"UIS 217003 Bygg",40.7
+"UIS 217004 Data","Alle"
+"UIS 217005 Elektro","Alle"
+"UIS 217009 Kjemi og miljø","Alle"
+"UIS 217012 Maskin","Alle"
+"UIS 217015 Petroleumsteknologi",44
+"UIS 217046 Fjernsyns- og multimedieproduksjon",45.8
+"UIS 217050 Sykepleierutdanning",36.3
+"UIS 217070 Barnevern",37.1
+"UIS 217080 Sosialt arbeid",39.8
+"UIS 217130 Førskolelærerutdanning","Alle"
+"UIS 217170 Engelsk årsstudium",32.3
+"UIS 217179 Historie årsstudium","Alle"
+"UIS 217196 Religionsstudier","Alle"
+"UIS 217200 Kunst- og kulturstudier","Alle"
+"UIS 217205 Matematikk årsstudium","Alle"
+"UIS 217211 Nordisk årsstudium","Alle"
+"UIS 217240 Sosiologi årsstudium",35.9
+"UIS 217255 Hotelledelse","Alle"
+"UIS 217317 Reiselivsledelse","Alle"
+"UIS 217318 Regnskap og revisjon",39.2
+"UIS 217345 Økonomi og administrasjon - siviløkonom master",46.7
+"UIS 217369 Økonomi og administrasjon",43.9
+"UIS 217440 Kroppsøving/idrett",38.9
+"UIS 217454 Journalistikk",48.4
+"UIS 217481 Historie","Alle"
+"UIS 217505 Kunst og håndtverk",43
+"UIS 217547 Grunnskolelærerutdanning 1.-7. trinn","Alle"
+"UIS 217618 Drama","Alle"
+"UIS 217649 Kroppsøving/idrett årsstudium",42.2
+"UIS 217651 Grunnskolelærerutdanning 5.-10. trinn","Alle"
+"UIS 217755 Konstruksjoner og materialer",38.7
+"UIS 217800 Industriell økonomi",49.9
+"UIS 217801 Petroleumsteknologi master",46.8
+"UIS 217802 Offshoreteknologi",45.7
+"UIS 217803 Informasjonsteknologi",41.5
+"UIS 217844 Adjunkt- og lektorprogram i humanistiske fag","Alle"
+"UIS 217857 Matematikk og fysikk","Alle"
+"UIS 217860 Biologisk kjemi","Alle"
+"UIS 217880 Sosiologi",32.9
+"UIS 217881 Statsvitenskap",41.7
+"UIS 217887 Engelsk språk og litteratur","Alle"
+"UIS 217889 Nordisk språk og litteratur","Alle"
+"UIS 217938 Byutvikling og urban design","Alle"
+"UIS 217947 Petroleumsgeologi",41.4
+"UIT 186002 Ingeniør Sikkerhet og miljø","Alle"
+"UIT 186017 Ingeniør Automatiseringsteknikk","Alle"
+"UIT 186018 Ingeniør Prosess/gassteknologi","Alle"
+"UIT 186049 Ingeniør Nautikk","Alle"
+"UIT 186050 Sykepleierutdanning",43.8
+"UIT 186083 Lærerutdanning 5.-10. trinn integrert master","Alle"
+"UIT 186084 Lærerutdanning 1.-7. trinn integrert master","Alle"
+"UIT 186130 Førskolelærerutdanning","Alle"
+"UIT 186132 Førskolelærerutdanning samlingsbasert","Alle"
+"UIT 186137 Allmenn litteraturvitenskap oppstart vår","Alle"
+"UIT 186164 Bedriftsøkonomi",38.6
+"UIT 186170 Engelsk oppstart høst","Alle"
+"UIT 186174 Fransk oppstart vår","Alle"
+"UIT 186179 Historie oppstart høst","Alle"
+"UIT 186205 Matematikk","Alle"
+"UIT 186211 Nordisk oppstart høst","Alle"
+"UIT 186222 Kjønnsstudier","Alle"
+"UIT 186235 Nordsamisk som morsmål oppstart vår","Alle"
+"UIT 186299 Bioteknologi","Alle"
+"UIT 186306 Datasikkerhet","Alle"
+"UIT 186327 Biologi klima og miljø","Alle"
+"UIT 186331 Fiskeri- og havbruksvitenskap","Alle"
+"UIT 186369 Økonomi og administrasjon",38.6
+"UIT 186395 Informatikk","Alle"
+"UIT 186427 Biomedisin","Alle"
+"UIT 186474 Samfunnsplanlegging og kulturforståelse","Alle"
+"UIT 186475 Kunstvitenskap","Alle"
+"UIT 186478 Arkeologi","Alle"
+"UIT 186479 Filosofi","Alle"
+"UIT 186481 Historie","Alle"
+"UIT 186482 Religionsvitenskap","Alle"
+"UIT 186483 Russlandsstudier","Alle"
+"UIT 186609 Antikkens kultur oppstart høst","Alle"
+"UIT 186613 Historie oppstart vår","Alle"
+"UIT 186615 Allmenn litteraturvitenskap oppstart høst","Alle"
+"UIT 186616 Allmenn språkvitenskap oppstart høst","Alle"
+"UIT 186623 Engelsk oppstart vår","Alle"
+"UIT 186626 Religionsvitenskap oppstart vår","Alle"
+"UIT 186644 Luftfartsfag","Alle"
+"UIT 186677 Allmenn språkvitenskap oppstart vår","Alle"
+"UIT 186692 Drama og teater","Alle"
+"UIT 186700 Ergoterapeututdanning",41.4
+"UIT 186701 Radiografutdanning",40
+"UIT 186702 Bioingeniørutdanning","Alle"
+"UIT 186703 Fysioterapeututdanning",53.6
+"UIT 186707 Farmasi","Alle"
+"UIT 186709 Fiskehelse","Alle"
+"UIT 186712 Russisk oppstart vår","Alle"
+"UIT 186724 Rettsvitenskap",47.3
+"UIT 186739 Medisinske fag","Alle"
+"UIT 186740 Medisin",61.2
+"UIT 186742 Odontologi",58.8
+"UIT 186743 Tannpleierutdanning",49.9
+"UIT 186752 Psykologi årsstudium",42.6
+"UIT 186769 Energi og miljø i nord","Alle"
+"UIT 186770 Dataanalyse og sensorteknologi","Alle"
+"UIT 186785 Informatikk master","Alle"
+"UIT 186789 Antikkens kultur oppstart vår","Alle"
+"UIT 186813 Industriell matematikk","Alle"
+"UIT 186814 Romfysikk","Alle"
+"UIT 186843 Lektorutdanning i realfag","Alle"
+"UIT 186844 Lektorutdanning i språk og samfunnsfag","Alle"
+"UIT 186846 Dokumentasjonsvitenskap","Alle"
+"UIT 186852 Pedagogikk","Alle"
+"UIT 186857 Fysikk","Alle"
+"UIT 186859 Geologi","Alle"
+"UIT 186860 Kjemi","Alle"
+"UIT 186862 Matematikk og statistikk","Alle"
+"UIT 186867 Ledelse innovasjon og marked",38.7
+"UIT 186876 Psykologi",41.6
+"UIT 186877 Samfunnssikkerhet og miljø","Alle"
+"UIT 186878 Politikk økonomi og filosofi","Alle"
+"UIT 186879 Sosialantropologi","Alle"
+"UIT 186880 Sosiologi","Alle"
+"UIT 186881 Statsvitenskap","Alle"
+"UIT 186891 Språk og litteratur","Alle"
+"UIT 186892 Språk og økonomi","Alle"
+"UIT 186898 Samfunnsøkonomi","Alle"
+"UIT 186910 Religionsvitenskap oppstart høst","Alle"
+"UIT 186912 Spansk oppstart vår","Alle"
+"UIT 186950 Nordisk oppstart vår","Alle"

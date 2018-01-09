@@ -1,0 +1,25 @@
+.info-presentation ol li #code {
+    width: 100%;
+}
+
+.page-right-content .doc-info-presentation {
+    width: 90%;
+}
+
+.page-left-content .doc-info-presentation {
+    width: 90%;
+}
+
+@media screen and (max-width: 480px) {
+    .page-content > h1 {
+        font-size: 30px;
+    }
+
+    .demands {
+        font-size: 10px;
+    }
+
+    .info-presentation ol {
+        font-size: 14px;
+    }
+}

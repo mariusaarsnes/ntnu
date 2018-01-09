@@ -1,0 +1,45 @@
+a)  Nevn 3 eksempler på distribusjonsnett. Nevn 3 eksempler på kommunikasjonsnett.
+    -   Internet
+    -   4G/ LTE (Long term evolution)
+    -   GSM
+
+b)  Hva er forskjellen på analoge og digitale signaler?
+    -   Analoge signaler er signaler hvor en variabel egenskap,
+        (egenskap i endring) representerer informasjonen som blir overført.
+    -   Digitale signaler er signaler hvor den variable egenskapen representeres av en diskret funksjon,
+        som gir verdier fra en definert og begrenset verdimengde.
+
+c)  Hva er Nyquist samplingsteorem, hvorfor vil man benytte seg av det?
+    -   Nyquist samplingteorem sier at hvis den høyeste frekvensen i et analogt signal er gitt av fMAX,
+        må samling raten være minst 2*fMAX.
+
+d)  Hvordan oppstår feil i digitale signaler?
+    -   Feil i digitale signaler kan oppstå når de blir utsatt for "støy", fra et fysisk medium (f. eks. lynnedslag).
+
+e)  Hvem eier internett?
+    -   Det er ingen som faktisk eier internettet, og det er heller ingen enkelt person,
+        eller organisasjon som kontrollerer det.
+
+f)  Nevn noen utfordringer med trådløst nett.
+    -   Radiospektrumet er begrenset
+    -   Enheter i "frittfram"-spektrumet ødelegger for hverandre.
+        (2400-2480MHz som kan brukes av hvem som helst uten å spørre om lov)
+
+g)  Hva er en protokoll?
+    -   en protokoll er et slags sett med regler som bestemmer hvordan kommunikasjon
+        skal fungere og hvilke funksjoner som skal brukes; en protokoll definerer formatet og sekvensen på meldinger
+        som utveksles mellom to eller flere kommuniserende enheter, og aksjoner som må utføres.
+
+h)  Hva er de 4 kravene til nett?
+    -   Skalerbarhet: evnen til å håndtere større og større mengde trafikk
+    -   Tilgjengelighet: evnen til å tilby tjenester til enhver tid.
+    -   Pålitelighet: evnen til å levere, uavbrutt/kontinuerlig, tjeneste.
+    -   Ytelse: evnen til å levere de nødvendige ressursene til alle typer tjenester.
+
+i)  Hva er cookies?
+    -   Cookies er små teksfiler som legges igjen på harddisken, som inneholder små biter med informasjon
+        for å gjøre ting raskere, f.eks. hvis den inneholder brukernavn og passord til en nettside,
+        eller de kan samle inn informasjon om deg for å komme med, f.eks., spesialisert reklame.
+
+j)  Hvordan kan men sende hemmelige meldinger over nett?
+    -   ved hjelp av kryptering og dekryptering

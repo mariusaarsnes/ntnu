@@ -1,0 +1,24 @@
+.eddy-gallery {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 22px;
+}
+.eddy-image {
+	width: 60%;
+	margin: auto;
+	padding-top: 30px;
+}
+.eddy-image img {
+	width: 90%;
+	border-radius: 5px;
+	-webkit-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.54);
+	-moz-box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.54);
+	box-shadow: -1px 3px 25px -2px rgba(0,0,0,0.54);
+	transition: all .2s ease-in-out;
+}
+.eddy-image img:hover {
+	width: 100%;
+}

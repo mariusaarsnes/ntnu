@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prosjekt 1: Dogs &lt;3</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#pictures">PICTURES</a></li>
+                <li><a id="instagram" href="https://www.instagram.com/dudleysharpei/" target="_blank">DUDLEY'S INSTAGRAM</a></li>
+            </ul>
+        </nav>
+
+        <div id="top">
+            <img id="main_img" alt="Image of a brown dog on a train" src="images/main.jpg" >
+            <img id="speech_bubble" class="hover_elements" alt="speech bouble for the dog barking" src="images/speech-bubble.png">
+            <h1 id="dog_bark" class="hover_elements"><span>BARK!<br>&nbsp; &nbsp; &nbsp; &nbsp;BARK!</span></h1>
+        </div>
+        <div id="pictures">
+            <div class="bottom_container">
+                <img  alt="Picture of a cute puppy" src="images/slider/4.jpg">
+                <button class="show_hide_button" onclick="showHideText(0)">Tell me more!</button>
+                <ul class= "text">
+                    <li>This puppy is really cute!</li>
+                    <li>Just look at that nose</li>
+                    <li>and those eyes, damn!</li>
+                </ul>
+            </div>
+            <div class="bottom_container">
+            <img  alt="Picture of a brown dog" src="images/slider/5.jpg">
+                <button class="show_hide_button" onclick="showHideText(1)">Tell me more!</button>
+                <ul class= "text">
+                    <li>Staring in a random direction -</li>
+                    <li>Goddamn badass dog!</li>
+                </ul>
+            </div>
+            <div class="bottom_container">
+                <img alt="Picutre of three dogs" src="images/slider/6.jpg">
+                <button class="show_hide_button" onclick="showHideText(2)">Tell me more!</button>
+                <ul class= "text">
+                    <li>Three happy dogs</li>
+                    <li>Okey, only  one is smiling...</li>
+                    <li>But they are still really cute</li>
+                </ul>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

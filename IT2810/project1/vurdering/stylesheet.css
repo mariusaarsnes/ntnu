@@ -1,0 +1,175 @@
+.body{
+  margin: 0;
+  padding: 0;
+}
+
+
+/*HEADER*/
+.header{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: black;
+  width: 100%;
+  height: 50px;
+}
+
+.leftHeader{
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.rightHeader{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.logoHeaderImage{
+  background-color: black;
+  border: none;
+  margin-left: 20px;
+}
+.headerTextSelected{
+  color: #B3B2B2;
+  margin-left: 20px;
+}
+.headerText{
+  color: white;
+  margin-left: 20px;
+}
+.searchHeaderImage{
+  margin-right: 20px;
+}
+.storeHeaderImage{
+  margin-right: 20px;
+}
+
+
+/*CONTENT*/
+.content{
+  margin-top: 100px;
+}
+.contentHeader{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+}
+.contentMainHeader{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+.contentSubHeader{
+  text-align: center;
+  color: #5B5A5A;
+}
+.contentImage{
+  margin: auto;
+  width: 60%;
+  height: auto;
+}
+.contentImageBottom{
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+/*CONTENT_FEATURES*/
+.features{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+.feature{
+  width: 30%;
+  text-align: center;
+  margin: 20px;
+}
+.featureHeader{
+  text-align: center;
+}
+.contentText{
+  text-align: center;
+  color: #333
+}
+
+/*FOOTER*/
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 60px;
+}
+.footerContent{
+  margin-top: 30px;
+  width: 80%;
+}
+.footerText{
+  color: #B3B2B2;
+}
+
+
+
+.button {
+  /* text styles */
+  font-size: 11px;
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+
+  /* box styles */
+  display: inline-block;
+  height: 19px;
+  padding: 0 10px;
+  border: 1px solid;
+  border-color: #2d86b6 #24659e #255796;
+  border-radius: 21px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(1, 4, 8, 0.2);
+
+  /* gradients */
+  background-color: #52b6ec;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF52B6EC', endColorstr='#FF2E75CE');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #52b6ec), color-stop(100%, #2e75ce));
+  background-image: -webkit-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: -moz-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: -o-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+
+}
+.button:hover {
+  text-decoration: none;
+  border-color: #377cae #175a9c #0c4893;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(5, 64, 140, 0.2);
+
+  background-color: #4fa6e4;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4FA6E4', endColorstr='#FF1462C4');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4fa6e4), color-stop(100%, #1462c4));
+  background-image: -webkit-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: -moz-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: -o-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+}
+.button:active {
+  border-color: #094b84 #094b84 #0f4585;
+  box-shadow: 0 1px 1px rgba(241, 243, 247, 0.2), 0 0 20px rgba(0, 0, 0, 0.5) inset;
+
+  background-color: #1c7ec9;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1C7EC9', endColorstr='#FF2395D9');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c7ec9), color-stop(100%, #2395d9));
+  background-image: -webkit-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: -moz-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: -o-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+}

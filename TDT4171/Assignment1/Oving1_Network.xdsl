@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Choice">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Contains">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Opened">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<parents>Choice Contains</parents>
+			<probabilities>0 0.5 0.5 0 0 1 0 1 0 0 0 1 0.5 0 0.5 1 0 0 0 1 0 1 0 0 0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Choice">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Contains">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Opened">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<parents>Copy_of_Choice Copy_of_Contains</parents>
+			<probabilities>0 0.5 0.5 0 0 1 0 1 0 0 0 1 0.5 0 0.5 1 0 0 0 1 0 1 0 0 0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Copy_2_of_Choice">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Copy_2_of_Contains">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="Copy_2_of_Opened">
+			<state id="A" />
+			<state id="B" />
+			<state id="C" />
+			<parents>Copy_2_of_Choice Copy_2_of_Contains</parents>
+			<probabilities>0 0.5 0.5 0 0 1 0 1 0 0 0 1 0.5 0 0.5 1 0 0 0 1 0 1 0 0 0.5 0.5 0</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network1" faultnameformat="nodestate">
+			<node id="Choice">
+				<name>YourChoice</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>41 168 131 230</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Opened">
+				<name>OpenedByOfficial</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>92 295 197 364</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Contains">
+				<name>ContainsPrize</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>131 72 223 129</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_of_Choice">
+				<name>YourChoice</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 168 388 230</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_of_Opened">
+				<name>OpenedByOfficial</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>354 284 459 353</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_of_Contains">
+				<name>ContainsPrize</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>401 69 493 126</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_2_of_Choice">
+				<name>YourChoice</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>580 167 670 229</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_2_of_Opened">
+				<name>OpenedByOfficial</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>652 280 757 349</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_2_of_Contains">
+				<name>ContainsPrize</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>684 77 776 134</position>
+				<barchart width="128" height="72" />
+			</node>
+			<textbox>
+				<caption>Initial</caption>
+				<font color="000000" name="Arial" size="16" />
+				<position>98 381 147 405</position>
+			</textbox>
+			<textbox>
+				<caption>Door chosen</caption>
+				<font color="000000" name="Arial" size="16" />
+				<position>363 383 483 407</position>
+			</textbox>
+			<textbox>
+				<caption>Official opened door</caption>
+				<font color="000000" name="Arial" size="16" />
+				<position>641 382 829 406</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

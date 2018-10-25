@@ -61,7 +61,7 @@ def remove_punctuation_from_paragraph(paragraph):
     for word in paragraph:
         new_word = ""
         for c in word:
-            if c not in string.punctuation+"\n\r\n":
+            if c not in string.punctuation+"\n\r\t":
                 new_word += c
             
         if new_word == "":
@@ -133,7 +133,10 @@ def retrieve_models(bags,dictionary):
     lsi_matrix = MatrixSimilarity(lsi_corpus)
 
     # Task 3.5
-    lsi_model.show_topics(3)[1]
+    print("\n\n-------------- Task 3.5 --------------")
+    for i in range(3):
+        print(lsi_model.show_topics(3)[i])
+    print()
     return tfidf_model, tfidf_corpus, matrix_sim, lsi_model, lsi_corpus, lsi_matrix
 
 
@@ -151,12 +154,16 @@ def show_topics(topics, lsi_model):
         t = topic[1][0]
         print("\n[Topic " + t.__str__() + "]")
         print(lsi_model.show_topics()[t])
+    print()
 
 def show_docs(docs, paragraphs):
     for doc in docs:
         p = doc[0]
         print("\n[Paragraph " + p.__str__() + "]")
-        print(paragraphs[p])
+        first_five = paragraphs[p].split("\r\n")[:5]
+        for elem in first_five:
+            print(elem)
+    print()
 
 
 # Task 4
@@ -170,8 +177,11 @@ def query(dictionary, tfidf_model, tfidf_corpus, matrix_sim,lsi_model, lsi_matri
 
     # Task 4.2
     tfidf_index = tfidf_model[query]
-
+    print("\n\n-------------- Task 4.2 --------------")
+    print([dictionary[word_index]+": "+ str(val) for (word_index,val) in tfidf_index])
+    
     # Task 4.3
+    print("\n\n-------------- Task 4.3 --------------")
     docsim = enumerate(matrix_sim[tfidf_index])
     docs = sorted(docsim, key=lambda kv: -kv[1])[:3]
     show_docs(docs, paragraphs)
@@ -183,6 +193,8 @@ def query(dictionary, tfidf_model, tfidf_corpus, matrix_sim,lsi_model, lsi_matri
     docsim = enumerate(lsi_matrix[lsi_query])
     docs = sorted(docsim, key=lambda kv: -kv[1])[:3]
     show_docs(docs, paragraphs)
+
+    
 
 def main():
     #raw_documents, documents = generate_documents("pg3300.txt")

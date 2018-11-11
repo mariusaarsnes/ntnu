@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyIndexFiles",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "no.ntnu.idi.ir.MyIndexFiles",
+            "args": "",
+            "projectName": "ir4-sample"
+        }
+    ]
+}

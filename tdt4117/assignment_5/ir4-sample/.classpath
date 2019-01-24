@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/lucene-analyzers-common-4.10.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-4.10.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-demo-4.10.1.jar"/>
+	<classpathentry kind="lib" path="lucene-7.5.0/core/lucene-core-7.5.0.jar"/>
+	<classpathentry kind="lib" path="lucene-7.5.0/queryparser/lucene-queryparser-7.5.0.jar"/>
+	<classpathentry kind="lib" path="lucene-7.5.0/analysis/common/lucene-analyzers-common-7.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

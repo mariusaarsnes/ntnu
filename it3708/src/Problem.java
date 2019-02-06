@@ -8,7 +8,8 @@ public class Problem {
     int maxVehiclesPerDepot, numberOfDepots, numberOfCustomers;
     double solutionThreshold;
     int[] closestDepotToCustomers;
-    double[][] customerToCustomerDistances;
+    double[][] neighbourMatrix;
+    double maxDistance;
 
     public Problem(String fileName) {
         /**
@@ -19,27 +20,25 @@ public class Problem {
         try {
             BufferedReader br = new BufferedReader(new FileReader("data_files/" + fileName));
 
-
-            int[] metaData = parseStringToIntArray(br.readLine());
-            this.maxVehiclesPerDepot = metaData[0];
-            this.numberOfDepots = metaData[1];
-            this.numberOfCustomers = metaData[2];
-
-            this.depots = new Depot[this.numberOfDepots];
-            this.customers = new Customer[this.numberOfCustomers];
-
             String rawLine;
             int i = 0;
             while ((rawLine = br.readLine()) != null) {
                 int[] data = parseStringToIntArray(rawLine);
-                if (i <= this.numberOfDepots) {
-                    this.depots[i] = new Depot(data[0], data[1]);
-                } else if (i <= this.numberOfCustomers + this.numberOfDepots) {
-                    this.customers[i - this.numberOfDepots] = new Customer(data[0], data[1], data[2], data[3], data[4]);
+                if (i == 0) {
+                    this.maxVehiclesPerDepot = data[0];
+                    this.numberOfCustomers = data[1];
+                    this.numberOfDepots = data[2];
 
+
+                    this.depots = new Depot[this.numberOfDepots];
+                    this.customers = new Customer[this.numberOfCustomers];
+                } else if (i <= this.numberOfDepots) {
+                    this.depots[i - 1] = new Depot(data[0], data[1]);
+                } else if (i <= this.numberOfCustomers + this.numberOfDepots) {
+                    this.customers[i - this.numberOfDepots - 1] = new Customer(data[0]-1, data[1], data[2], data[3], data[4]);
                 } else {
-                    this.depots[i - (this.numberOfCustomers + this.numberOfDepots)].setDepotNr(data[0]);
-                    this.depots[i - (this.numberOfCustomers + this.numberOfDepots)].setPos(data[1], data[2]);
+                    this.depots[i - (this.numberOfCustomers + this.numberOfDepots) - 1].setNr(data[0]-1);
+                    this.depots[i - (this.numberOfCustomers + this.numberOfDepots) - 1].setPos(data[1], data[2]);
                 }
                 i++;
             }
@@ -49,43 +48,50 @@ public class Problem {
         }
         // Read solution threshold
         try {
-            BufferedReader br = new BufferedReader(new FileReader("solution_files/" + fileName));
+            BufferedReader br = new BufferedReader(new FileReader("solution_files/" + fileName + ".res"));
             String rawLine = br.readLine();
-            this.solutionThreshold = Integer.parseInt(rawLine.trim());
+            this.solutionThreshold = Double.parseDouble(rawLine.trim());
         } catch (Exception e) {
             e.printStackTrace();
         }
+        generateNeighbourMatrix();
         generateClosestDepotArray();
-        generateCustomerToCustomerDistances();
+
     }
 
-    private void generateCustomerToCustomerDistances() {
-        this.customerToCustomerDistances = new double[this.numberOfCustomers][this.numberOfCustomers];
+    private void generateNeighbourMatrix() {
+        this.maxDistance = Double.MIN_VALUE;
+        this.neighbourMatrix = new double[this.numberOfCustomers+this.numberOfDepots][this.numberOfCustomers+this.numberOfDepots];
+        for (int i = 0; i < this.numberOfCustomers + this.numberOfDepots; i++) {
+            Point startPoint;
+            if (i < this.numberOfCustomers)startPoint = this.customers[i];
+            else startPoint = this.depots[i-this.numberOfCustomers];
+            for(int j = 0; j < this.numberOfCustomers + this.numberOfDepots; j++) {
+                Point destPoint;
+                if (j < this.numberOfCustomers)destPoint = this.customers[j];
+                else destPoint = this.depots[j-this.numberOfCustomers];
 
-        for (int i = 0; i < this.numberOfCustomers; i++) {
-            for (int j = 0; j < this.numberOfCustomers; j++) {
-                int[] startPos = {this.customers[i].xPos, this.customers[i].yPos};
-                int[] endPos = {this.customers[j].xPos, this.customers[j].yPos};
-                this.customerToCustomerDistances[i][j] = Math.hypot(startPos[0] - endPos[0], startPos[1] + endPos[1]);
+                double distance = startPoint.getDistanceTo(destPoint);
+                this.neighbourMatrix[i][j] =  distance;
+                if(distance > this.maxDistance) {
+                    this.maxDistance = distance;
+                }
             }
         }
     }
+    private double getDistance(Point startPoint, Point destPoint) {
+        return this.neighbourMatrix[startPoint.getNr()][destPoint.getNr()];
+
+    }
 
     private void generateClosestDepotArray() {
-        /**
-         * Loops through the array of customers and finds the nearest depot.
-         * The results is an array which is stored in the class for later use
-         */
         this.closestDepotToCustomers = new int[this.customers.length];
         for (int c = 0; c < this.customers.length; c++) {
-            int[] customerPos = {this.customers[c].xPos, this.customers[c].yPos};
-            double currentShortestDistance = Double.MAX_VALUE;
-            for (int d = 0; d < this.depots.length; d++) {
-                int[] depotPos = {this.depots[d].xPos, this.depots[d].yPos};
-                double customerDepotDistance = Math.hypot(customerPos[0] - depotPos[0], customerPos[1] - depotPos[1]);
-                if (currentShortestDistance < customerDepotDistance) {
-                    this.closestDepotToCustomers[c] = d;
-                    currentShortestDistance = customerDepotDistance;
+            double currentMinDistance = Double.MAX_VALUE;
+            for (int d = this.numberOfCustomers; d < this.numberOfCustomers+ this.depots.length; d++) {
+                if (this.neighbourMatrix[c][d] < currentMinDistance){
+                    this.closestDepotToCustomers[c] = d-this.numberOfCustomers;
+                    currentMinDistance = this.neighbourMatrix[c][d];
                 }
             }
         }

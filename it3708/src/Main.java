@@ -80,7 +80,7 @@ public class Main extends Application {
             public void handle(ActionEvent e) {
                 //TODO: Run algorithm with given parameters
                 popSizeText.getText();
-                initGa(
+                runGA(
                         Integer.parseInt(popSizeText.getText()),
                         Integer.parseInt(genNumText.getText()),
                         Integer.parseInt(crossRateText.getText()),
@@ -104,9 +104,11 @@ public class Main extends Application {
         return hbox;
     }
 
-    private void initGa(int popSize, int genNum, int crossRate, int mutRate) {
+
+    private void runGA(int popSize, int genNum, int crossRate, int mutRate) {
         this.ga = new GeneticAlgorithm(this.problem, popSize, genNum, crossRate, mutRate);
-        ArrayList<Integer>[][] temp = this.ga.initRandomPop();
+        this.ga.run();
+        ArrayList<Integer>[][] temp = this.ga.generateNewIndividual();
         drawPaths(temp);
     }
 
@@ -114,18 +116,26 @@ public class Main extends Application {
         Color[] colors = new Color[]{Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE, Color.PINK, Color.INDIGO};
         GraphicsContext gc = this.canvas.getGraphicsContext2D();
 
-        for (int i = 0; i < paths.length; i++) { // loop through all the depots
-            gc.setStroke(colors[i]); // Set new color for each depot
-            for (int j = 0; j < paths[i].length; j++) { // loop through all vehicles
-                Color pointColor = colors[i]; // Reset point color for each vehicle
-                int[] startPos = new int[]{this.problem.depots[i].xPos, this.problem.depots[i].yPos}; // Reset starting position for each new vehicle
-                int c;
-                for (c = 0; c < paths[i][j].size(); c++) {
-                    int[] destPos = new int[]{this.problem.customers[paths[i][j].get(c)].xPos, this.problem.customers[paths[i][j].get(c)].yPos};
-                    gc.strokeLine(startPos[0], startPos[1], destPos[0], destPos[1]);
-                    if (c == paths[i][j].size() - 1) {
+        for (int depot = 0; depot < paths.length; depot++) {
+            gc.setStroke(colors[depot]);
+            for (int vehicle = 0; vehicle < paths[depot].length; vehicle++) {
+                Color pointColor = colors[depot];
+                int[] startPos = new int[]{this.problem.depots[depot].x, this.problem.depots[depot].y};
+
+                for (int c = 0; c < paths[depot][vehicle].size(); c++) {
+                    int[] destPos;
+                    if (c == paths[depot][vehicle].size() - 1) {
                         pointColor = Color.DARKTURQUOISE;
+                        destPos = new int[]{
+                                this.problem.depots[paths[depot][vehicle].get(c)].x,
+                                this.problem.depots[paths[depot][vehicle].get(c)].y};
+
+                    } else {
+                        destPos = new int[]{
+                                this.problem.customers[paths[depot][vehicle].get(c)].x,
+                                this.problem.customers[paths[depot][vehicle].get(c)].y};
                     }
+                    gc.strokeLine(startPos[0], startPos[1], destPos[0], destPos[1]);
                     drawPointOnCanvas(gc, pointColor, destPos[0], destPos[1]);
                     startPos = destPos;
                 }
@@ -160,12 +170,12 @@ public class Main extends Application {
         gc.fillRect(-this.canvas.getHeight(), -this.canvas.getWidth(), 2 * this.canvas.getHeight(), 2 * this.canvas.getWidth());
         for (Depot depot : this.problem.depots
         ) {
-            drawPointOnCanvas(gc, depot.color, depot.xPos, depot.yPos);
+            drawPointOnCanvas(gc, depot.color, depot.x, depot.y);
 
         }
         for (Customer customer : this.problem.customers
         ) {
-            drawPointOnCanvas(gc, customer.color, customer.xPos, customer.yPos);
+            drawPointOnCanvas(gc, customer.color, customer.x, customer.y);
         }
     }
 

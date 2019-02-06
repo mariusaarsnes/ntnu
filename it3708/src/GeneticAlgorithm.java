@@ -1,11 +1,15 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class GeneticAlgorithm {
 
     // Set Genetic algorithm parameters
 
     Problem problem;
-    ArrayList<Integer>[][][] initialPopulation;
+    ArrayList<Genotype> population;
+    double[] populationFitness;
+
+
     int populationSize, generationNumber, crossoverRate, mutationRate;
 
 
@@ -15,18 +19,41 @@ public class GeneticAlgorithm {
         this.generationNumber = generationNumber;
         this.crossoverRate = crossoverRate;
         this.mutationRate = mutationRate;
+        this.populationFitness = new double[this.populationSize];
 
+    }
+
+    public void run() {
+
+        // Initialise random population
+        initRandomPop();
+        for (int currentGeneration = 0; currentGeneration < this.generationNumber; currentGeneration++) {
+
+            evaluatePopulation();
+
+            // If optimization criteria are met end, else
+            if (thresholdIsMet()) {
+                break;
+            }
+
+            // Select parents for next generation
+
+
+            // Crossover of parents chromosomes
+
+            // Mutation of chromosome
+
+        }
     }
 
     // Generate initial random population
     public void initRandomPop() {
-        ArrayList<Integer>[][][] population = new ArrayList
-                [this.populationSize]
-                [this.problem.numberOfDepots]
-                [this.problem.numberOfCustomers];
-        for (int p = 0; p < this.populationSize; p++) {
-            population[p] = generateRandomIndividual();
+
+        ArrayList<Genotype> population = new ArrayList<Genotype>();
+        for (int p =0; p< this.populationSize; p++) {
+            population.add(new Genotype(this.problem));
         }
+        this.population = population;
     }
 
     /**
@@ -37,41 +64,36 @@ public class GeneticAlgorithm {
      *
      * @return
      */
-    private ArrayList<Integer>[][] generateRandomIndividual() {
+    public ArrayList<Integer>[][] generateNewIndividual() {
 
-        /*
-        CLUSTERING STAGE: First we group the customers
-        This is done by assigning each customer a depot based on which depot they are the closest to
-         */
         int[] grouping = new int[this.problem.numberOfCustomers];
         for (int i = 0; i < grouping.length; i++) {
             grouping[i] = this.problem.closestDepotToCustomers[i];
         }
 
-
-        /*
-
-        ROUTING STAGE: Now we create the routes the different vehicles should take
-        This is done by assigning each customer to a random vehicle for each depot.
-         */
-
         ArrayList<Integer>[][] routing = new ArrayList[this.problem.numberOfDepots][this.problem.maxVehiclesPerDepot];
 
 
-        //TODO: Add check for validity of routes. This way we can only focus on distance traveled for fitness
         for (int i = 0; i < grouping.length; i++) {
             int depot = grouping[i];
-            int vehicle = (int) (Math.random() * (this.problem.maxVehiclesPerDepot));
+
+            int vehicle = (int) (Math.random() * this.problem.maxVehiclesPerDepot);
+
             if (routing[depot][vehicle] == null) {
                 routing[depot][vehicle] = new ArrayList<Integer>();
             }
             routing[depot][vehicle].add(i);
+
         }
 
-        //TODO: Ask TA if it is necessary to have final depot in genotype or if this can be derived in the phenotype
+        //TODO: Ask TA if it is necessary to have final depot in genotype or if this can be derived in the phenotype.
+        // If not, then remove this part, else update distance and validity tests
+
         for (int i = 0; i < routing.length; i++) {
+            System.out.println("Depot: " + i);
             for (int j = 0; j < routing[i].length; j++) {
                 // In case the route for a given vehicle is empty we skip it, since it will never drive anywhere
+                System.out.println("Route: " + routing[i][j]);
                 if (routing[i][j].size() == 0) {
                     continue;
                 }
@@ -82,70 +104,147 @@ public class GeneticAlgorithm {
         return routing;
     }
 
-    private boolean isValidIndividual(ArrayList<Integer>[][] routing){
-        //TODO: Write loop for checking if individual is valid. use
-        for (ArrayList<Integer>[] depotRoutes: routing) {
-            for (ArrayList<Integer> route: depotRoutes){
-                route.forEach();
-            }
-        }
-    }
-
-
-    // Evaluate fitness of each chromosome in the population
-    public double evaluateFitness(ArrayList<Integer>[][] individual) {
-        /**
-         * helper function to evaluate fitness of individuals.
-         * The function adds up the total distance traveled for the individual
-         * and also adds up the difference in duration and capacity if the constraint is exceeded
-         *
-         */
-        double fitness = 0;
-
-        for (int i = 0; i < individual.length; i++) { // for each depot
-            double distanceSum = 0;
-            for (int j = 0; j < individual[i].length; j++) { // For each route
-                int durationSum = 0;
-                int capacitySum = 0;
-
-                for (int c = 0; c < individual[i][j].size() - 1; c++) { // We loop through the whole route except the final destination
-                    double segmentDistance;
-                    if (c < individual[i][j].size() - 2) {
-                        segmentDistance = Math.hypot(
-                                this.problem.customers[individual[i][j].get(c)].xPos - this.problem.customers[individual[i][j].get(c + 1)].xPos,
-                                this.problem.customers[individual[i][j].get(c)].yPos - this.problem.customers[individual[i][j].get(c + 1)].yPos
-                        );
-                    } else {
-                        segmentDistance = Math.hypot(
-                                this.problem.customers[individual[i][j].get(c)].xPos - this.problem.depots[individual[i][j].get(c + 1)].xPos,
-                                this.problem.customers[individual[i][j].get(c)].yPos - this.problem.depots[individual[i][j].get(c + 1)].yPos);
-                    }
-                    distanceSum += segmentDistance;
-                    durationSum += this.problem.customers[individual[i][j].get(c)].serviceDuration;
-                    capacitySum += this.problem.customers[individual[i][j].get(c)].demand;
-                }
-
-
-                fitness += distanceSum;
-                // If the duration or capacity threshold is breached, we subtract this from the fitness value
-                double durationDiff, capacityDiff;
-                if ((durationDiff = durationSum - this.problem.depots[i].maxDuration) > 0) {
-                    fitness += durationDiff;
-                }
-                if ((capacityDiff = capacitySum - this.problem.depots[i].maxLoad) > 0) {
-                    fitness += capacityDiff;
+    /**
+     * Check if an individual is valid
+     *
+     * @param routing 2d array containing all routes for an individual
+     * @return
+     */
+    private boolean isValidIndividual(ArrayList<Integer>[][] routing) {
+        for (int d = 0; d < routing.length; d++) {
+            for (int r = 0; r < routing[d].length; r++) {
+                if (!isValidRoute(d, routing[d][r])) {
+                    return false;
                 }
             }
         }
-
-        return fitness;
+        return true;
     }
 
-    // If optimization criteria are met end, else
+    private int getRouteDurationOfRoute(ArrayList<Integer> route) {
+        int duration = 0;
+        for (int customer : route
+        ) {
+            duration += this.problem.customers[customer].serviceDuration;
+        }
+        return duration;
+    }
 
-    // Select parents for next generation
+    private int getCapacityOfRoute(ArrayList<Integer> route) {
+        int capacity = 0;
+        for (int customer : route
+        ) {
+            capacity += this.problem.customers[customer].demand;
+        }
+        return capacity;
+    }
 
-    // Crossover of parents chromosomes
+    /**
+     * Check whether or not a route is valid based on problem constraints
+     *
+     * @param depot the position of the start depot
+     * @param route the route to be checked
+     * @return True if duration and capacity constraints are not exceeded
+     */
+    private boolean isValidRoute(int depot, ArrayList<Integer> route) {
+        int durationSum = 0;
+        int capacitySum = 0;
+        for (int c = 0; c < route.size(); c++) {
+            durationSum += this.problem.customers[route.get(c)].serviceDuration;
+            capacitySum += this.problem.customers[route.get(c)].demand;
+            if (
+                    durationSum > this.problem.depots[depot].maxDuration || capacitySum > this.problem.depots[depot].maxLoad) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-    // Mutation of chromosome
+    /**
+     * Get the position of a depot or customer
+     *
+     * @param type     "customer" or "depot" depending on what you want the position of
+     * @param arrayPos position of the element in either problem.depots or problem.customer array
+     * @return an array containing x and y position
+     */
+    private int[] getPosition(String type, int arrayPos) {
+        switch (type) {
+            case "depot":
+                return new int[]{this.problem.depots[arrayPos].x, this.problem.depots[arrayPos].y};
+            case "customer":
+                return new int[]{this.problem.customers[arrayPos].x, this.problem.customers[arrayPos].y};
+        }
+        return new int[]{};
+    }
+
+    /**
+     * Get Euclidean distance between two positions
+     *
+     * @param startPos
+     * @param endPos
+     * @return distance
+     */
+    private double getDistance(int[] startPos, int[] endPos) {
+        return Math.hypot(startPos[0] - endPos[0], startPos[1] + endPos[1]);
+    }
+
+    /**
+     * Calculate the total distance traveled for a route.
+     *
+     * @param depot starting depot of route
+     * @param route the customers on the route
+     * @return total distance traveled on the route
+     */
+    private double getDistanceOfRoute(int depot, ArrayList<Integer> route) {
+        double distance = getDistance(
+                getPosition("depot", depot),
+                getPosition("customer", route.get(0))
+        );
+        int c;
+        for (c = 1; c < route.size(); c++) {
+            distance += getDistance(
+                    getPosition("customer", route.get(c - 1)),
+                    getPosition("customer", route.get(c))
+            );
+        }
+        distance += getDistance(
+                getPosition("customer", route.get(c)),
+                getPosition("depot", this.problem.closestDepotToCustomers[route.get(c)])
+        );
+        return distance;
+    }
+
+
+    /**
+     * Return the fitness of an individual
+     *
+     * @param individual
+     * @return
+     */
+    public double getFitness(ArrayList<Integer>[][] individual) {
+        //TODO: Ask TA if this representation of fitness is ok
+        double totalDistanceOfIndividual = 0;
+        for (int d = 0; d < individual.length; d++) {
+            for (int r = 0; r < individual[d].length; r++) {
+                totalDistanceOfIndividual += getDistanceOfRoute(d, individual[d][r]);
+            }
+        }
+        return totalDistanceOfIndividual - this.problem.solutionThreshold;
+    }
+
+
+    private boolean thresholdIsMet() {
+        for (double individualFitness : this.populationFitness) {
+            if (individualFitness <= this.problem.solutionThreshold) return true;
+        }
+        return false;
+    }
+
+    public void evaluatePopulation() {
+        this.populationFitness = new double[this.populationSize];
+        for (int i = 0; i< this.populationSize; i++){
+            this.populationFitness[i] = this.population.get(i).getFitness();
+        }
+
+    }
 }

@@ -1,29 +1,25 @@
 import javafx.scene.paint.Color;
 
-public class Depot {
-    int depotNr;
+public class Depot extends Point {
+
+
     int maxDuration;
     int maxLoad;
-    int xPos;
-    int yPos;
-    Color color;
 
-    public Depot(int d, int q) {
-        if (d == 0){
-            d = Integer.MAX_VALUE;
+    public Depot(int maxDuration, int maxLoad) {
+        super(Color.DARKTURQUOISE);
+        this.maxDuration = maxDuration;
+        this.maxLoad = maxLoad;
+        if (this.maxDuration == 0){
+            this.maxDuration = Integer.MAX_VALUE;
         }
-        if (q == 0){
-            q = Integer.MAX_VALUE;
+        if (this.maxLoad == 0){
+            this.maxLoad = Integer.MAX_VALUE;
         }
-        this.maxDuration = d;
-        this.maxLoad = q;
-        this.color = Color.DARKTURQUOISE;
     }
-    public void setDepotNr(int nr) {
-        this.depotNr = nr;
-    }
+
     public void setPos(int x, int y) {
-        this.xPos = x;
-        this.yPos = y;
+        this.x = x;
+        this.y = y;
     }
 }

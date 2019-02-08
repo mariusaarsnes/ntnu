@@ -108,7 +108,7 @@ public class Main extends Application {
     private void runGA(int popSize, int genNum, int crossRate, int mutRate) {
         this.ga = new GeneticAlgorithm(this.problem, popSize, genNum, crossRate, mutRate);
         this.ga.run();
-        ArrayList<Integer>[][] temp = this.ga.generateNewIndividual();
+        ArrayList<Integer>[][] temp = this.ga.population.get(0).routes;
         drawPaths(temp);
     }
 

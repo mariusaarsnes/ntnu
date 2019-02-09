@@ -1,4 +1,9 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class GeneticAlgorithm {
 
@@ -30,17 +35,34 @@ public class GeneticAlgorithm {
 
         for (int currentGeneration = 0; currentGeneration < this.generationNumber; currentGeneration++) {
             // If optimization criteria are met end
+            System.out.println("Generation: " + currentGeneration + "\t best distance: " + getBestIndividual().distance);
             if (thresholdIsMet()) {
                 break;
             }
 
-            // Select parents for next generation
-            //TODO: Add elitism to parent selection
-            List<Genotype> parents = tournamentSelection(this.populationSize/2,3);
+            List<Genotype> parents = tournamentSelection(this.populationSize, this.populationSize / 20);
+            Collections.sort(parents);
+            parents = new ArrayList<>(parents.subList(0, parents.size() / 2));
+
+
+            ArrayList<Genotype> newGeneration = new ArrayList<Genotype>();
+            Collections.sort(this.population);
+            for (int i = 0; i < this.populationSize * 5 / 100; i++) {
+                newGeneration.add(this.population.remove(0));
+            }
 
             // Crossover of parents chromosomes
+            while (newGeneration.size() < this.populationSize) {
+                int p1 = (int) (Math.random() * parents.size()), p2 = (int) (Math.random() * parents.size());
+                Genotype parent1 = parents.get(p1), parent2 = parents.get(p2);
 
-            // Mutation of chromosome
+                newGeneration.addAll(crossover(parent1, parent2));
+            }
+
+            for (int i = 0; i < this.population.size(); i++) {
+                mutate(newGeneration.get(i));
+            }
+            this.population = newGeneration;
         }
     }
 
@@ -48,7 +70,7 @@ public class GeneticAlgorithm {
     public void initRandomPop() {
 
         List<Genotype> population = new ArrayList<Genotype>();
-        for (int p =0; p< this.populationSize; p++) {
+        for (int p = 0; p < this.populationSize; p++) {
             population.add(new Genotype(this.problem));
         }
         this.population = population;
@@ -64,7 +86,7 @@ public class GeneticAlgorithm {
 
     public void evaluatePopulation() {
         this.populationFitness = new double[this.populationSize];
-        for (int i = 0; i< this.populationSize; i++){
+        for (int i = 0; i < this.populationSize; i++) {
             this.population.get(i).updateFitnessVariables(this.problem);
             this.population.get(i).updateFitness(this.problem);
             this.populationFitness[i] = this.population.get(i).getFitness();
@@ -78,7 +100,7 @@ public class GeneticAlgorithm {
             Collections.shuffle(this.population);
             Genotype p1 = this.population.get(0);
 
-            for (int ts = 1; ts < tournamentSize+1; ts++) {
+            for (int ts = 1; ts < tournamentSize + 1; ts++) {
                 Genotype p2 = this.population.get(ts);
 
                 if (p2.getFitness() > p1.getFitness()) {
@@ -90,14 +112,74 @@ public class GeneticAlgorithm {
         return winners;
     }
 
-    private List<Genotype> crossover(Genotype parent1, Genotype parent2) {
-        return null;
+    private ArrayList<Genotype> crossover(Genotype parent1, Genotype parent2) {
+
+        ArrayList<Integer>[][] routes1 = new ArrayList[problem.numberOfDepots][problem.maxVehiclesPerDepot];
+        ArrayList<Integer>[][] routes2 = new ArrayList[problem.numberOfDepots][problem.maxVehiclesPerDepot];
+
+        for (int i = 0; i < routes1.length; i++) {
+            for (int j = 0; j < routes1[i].length; j++) {
+                routes1[i][j] = new ArrayList<>(parent1.routes[i][j]);
+                routes2[i][j] = new ArrayList<>(parent2.routes[i][j]);
+            }
+        }
+
+        Genotype offspring1 = new Genotype(problem, routes1);
+        Genotype offspring2 = new Genotype(problem, routes2);
+
+        int depot1 = (int) (Math.random() * this.problem.numberOfDepots);
+        int depot2 = (int) (Math.random() * this.problem.numberOfDepots);
+
+
+        ArrayList<Integer> route1 = selectRandomNonEmptyRoute(offspring1, depot1);
+        ArrayList<Integer> route2 = selectRandomNonEmptyRoute(offspring2, depot2);
+
+        if (route1 == null || route2 == null) {
+            return new ArrayList<Genotype>(Arrays.asList(offspring1, offspring2));
+        }
+
+        for (int customer : route1) {
+            offspring2.removeCustomerFromRoutes(customer);
+        }
+        for (int customer : route2) {
+            offspring1.removeCustomerFromRoutes(customer);
+        }
+
+        for (int customer : route1) {
+            offspring2.addNewCustomerToRoutes(this.problem, customer);
+        }
+        for (int customer : route2) {
+            offspring1.addNewCustomerToRoutes(this.problem, customer);
+        }
+
+        offspring1.updateFitnessVariables(this.problem);
+        offspring1.updateFitness(this.problem);
+
+        offspring2.updateFitnessVariables(this.problem);
+        offspring2.updateFitness(this.problem);
+
+        return new ArrayList<Genotype>(Arrays.asList(offspring1,offspring2));
     }
 
-    private Genotype mutate(Genotype individual) {
-        if (this.mutationRate > Math.random()*100){
+    private ArrayList<Integer> selectRandomNonEmptyRoute(Genotype genotype, int depot) {
+        List<Integer> possibleRoutes = IntStream.rangeClosed(0, this.problem.numberOfDepots-1).boxed().collect(Collectors.toList());
+        ArrayList<Integer> route = null;
+
+        while (route == null && possibleRoutes.size() > 0) {
+            int r = possibleRoutes.get((int) (Math.random() * possibleRoutes.size()));
+            possibleRoutes.removeIf(possibleRoute -> possibleRoute == r);
+            route = genotype.routes[depot][r];
+        }
+        return route;
+    }
+
+    private void mutate(Genotype individual) {
+        if (this.mutationRate > Math.random() * 100) {
             individual.mutate();
         }
-        return null;
+    }
+
+    public Genotype getBestIndividual() {
+        return Collections.min(this.population);
     }
 }

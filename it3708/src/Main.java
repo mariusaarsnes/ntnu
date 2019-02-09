@@ -80,6 +80,7 @@ public class Main extends Application {
             public void handle(ActionEvent e) {
                 //TODO: Run algorithm with given parameters
                 popSizeText.getText();
+                initCanvas();
                 runGA(
                         Integer.parseInt(popSizeText.getText()),
                         Integer.parseInt(genNumText.getText()),
@@ -108,8 +109,12 @@ public class Main extends Application {
     private void runGA(int popSize, int genNum, int crossRate, int mutRate) {
         this.ga = new GeneticAlgorithm(this.problem, popSize, genNum, crossRate, mutRate);
         this.ga.run();
-        ArrayList<Integer>[][] temp = this.ga.population.get(0).routes;
-        drawPaths(temp);
+        Genotype temp = this.ga.getBestIndividual();
+        System.out.println("Distance: " + temp.distance);
+        System.out.println("Capacity overload: " + temp.capacityOverload);
+        System.out.println("Duration overload: " + temp.durationOverload);
+        drawPaths(temp.routes);
+        System.out.println("DONE");
     }
 
     private void drawPaths(ArrayList<Integer>[][] paths) {
@@ -119,25 +124,26 @@ public class Main extends Application {
         for (int depot = 0; depot < paths.length; depot++) {
             gc.setStroke(colors[depot]);
             for (int vehicle = 0; vehicle < paths[depot].length; vehicle++) {
+
                 Color pointColor = colors[depot];
-                int[] startPos = new int[]{this.problem.depots[depot].x, this.problem.depots[depot].y};
+                int[] startPos = this.problem.depots[depot].getPosition();
 
-                for (int c = 0; c < paths[depot][vehicle].size(); c++) {
-                    int[] destPos;
-                    if (c == paths[depot][vehicle].size() - 1) {
-                        pointColor = Color.DARKTURQUOISE;
-                        destPos = new int[]{
-                                this.problem.depots[paths[depot][vehicle].get(c)].x,
-                                this.problem.depots[paths[depot][vehicle].get(c)].y};
+                int c;
+                for (c = 0; c < paths[depot][vehicle].size(); c++) {
 
-                    } else {
-                        destPos = new int[]{
-                                this.problem.customers[paths[depot][vehicle].get(c)].x,
-                                this.problem.customers[paths[depot][vehicle].get(c)].y};
-                    }
+
+                    int[] destPos = this.problem.customers[paths[depot][vehicle].get(c)].getPosition();
+
                     gc.strokeLine(startPos[0], startPos[1], destPos[0], destPos[1]);
                     drawPointOnCanvas(gc, pointColor, destPos[0], destPos[1]);
                     startPos = destPos;
+                }
+                if (c > 0) {
+                    int[] destPos = this.problem.depots[this.problem.closestDepotToCustomers[this.problem.customers[paths[depot][vehicle].get(c - 1)].getNr()]].getPosition();
+
+
+                    gc.strokeLine(startPos[0], startPos[1], destPos[0], destPos[1]);
+                    drawPointOnCanvas(gc, Color.DARKTURQUOISE, destPos[0], destPos[1]);
                 }
             }
         }

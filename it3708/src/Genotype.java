@@ -1,12 +1,20 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Genotype implements Comparable<Genotype> {
+public class Genotype implements Comparable<Genotype>, Cloneable {
 
     double fitness;
 
     int distance, durationOverload, capacityOverload, invalidFactor;
     ArrayList<Integer>[][] routes;
+
+    public Genotype(Problem problem, ArrayList<Integer>[][] routes) {
+        this.durationOverload = 0;
+        this.capacityOverload = 0;
+        this.invalidFactor = 0;
+
+        this.routes = routes;
+    }
 
     public Genotype(Problem problem) {
         this.durationOverload = 0;
@@ -14,8 +22,8 @@ public class Genotype implements Comparable<Genotype> {
         this.invalidFactor = 0;
         ArrayList<Integer>[][] routing = new ArrayList[problem.numberOfDepots][problem.maxVehiclesPerDepot];
 
-        for(int i = 0; i < routing.length; i++) {
-            for (int j = 0;j < routing[i].length; j++) {
+        for (int i = 0; i < routing.length; i++) {
+            for (int j = 0; j < routing[i].length; j++) {
                 routing[i][j] = new ArrayList<Integer>();
             }
         }
@@ -33,7 +41,68 @@ public class Genotype implements Comparable<Genotype> {
         this.updateFitness(problem);
     }
 
+    public void removeCustomerFromRoutes(int customer) {
+        for (ArrayList<Integer>[] depot : this.routes) {
+            for (ArrayList<Integer> route : depot) {
+                route.removeIf(customerInRoute -> customerInRoute == customer);
+            }
+        }
+    }
+
+    public void addNewCustomerToRoutes(Problem problem, int newCustomer) {
+        int[] location = new int[3];
+        double minDistance = Double.MAX_VALUE;
+        for (int d = 0; d < this.routes.length; d++) {
+            for (int r = 0; r < this.routes[d].length; r++) {
+                int prevNr = problem.depots[d].getNr();
+                for (int c = 0; c < this.routes[d][r].size()+1; c++) {
+                    int nextNr;
+                    if (c < routes[d][r].size()) nextNr = problem.customers[this.routes[d][r].get(c)].getNr();
+                    else nextNr = problem.closestDepotToCustomers[newCustomer];
+                    double distance = problem.neighbourMatrix[prevNr][newCustomer]
+                            + problem.neighbourMatrix[newCustomer][nextNr];
+                    prevNr = nextNr;
+
+                    if (minDistance > distance) {
+                        location = new int[]{d, r, c};
+                        minDistance = distance;
+                    }
+                }
+            }
+        }
+        routes[location[0]][location[1]].add(location[2], newCustomer);
+    }
+
+    private ArrayList<Integer> scheduleRoute(Problem problem, ArrayList<Integer> route, int depot) {
+        ArrayList<Integer> schedule = new ArrayList<>();
+
+        int closestCustomer = route.get(0);
+        double closestDistance = problem.neighbourMatrix[depot][closestCustomer];
+        for (Integer customer : route) {
+            if (problem.neighbourMatrix[depot][customer] < closestDistance) {
+                closestDistance = problem.neighbourMatrix[depot][customer];
+                closestCustomer = customer;
+            }
+        }
+        schedule.add(route.remove(route.indexOf(closestCustomer)));
+
+        while (route.size() > 0) {
+            closestCustomer = route.get(0);
+            closestDistance = problem.neighbourMatrix[schedule.size() - 1][closestCustomer];
+            for (Integer customer : route) {
+                if (problem.neighbourMatrix[schedule.size() - 1][customer] < closestDistance) {
+                    closestDistance = problem.neighbourMatrix[schedule.size() - 1][customer];
+                    closestCustomer = customer;
+                }
+            }
+            schedule.add(route.remove(route.indexOf(closestCustomer)));
+        }
+        return schedule;
+    }
+
+
     public void mutate() {
+
         int type = (int) Math.round(Math.random());
 
         switch (type) {
@@ -43,7 +112,6 @@ public class Genotype implements Comparable<Genotype> {
             case 1:
                 extraRouteMutate();
         }
-
     }
 
     private void intraRouteMutate() {
@@ -83,8 +151,13 @@ public class Genotype implements Comparable<Genotype> {
     }
 
     private void swapCustomersInRoute() {
-        int depot = (int) (Math.random() * this.routes.length);
-        int vehicle = (int) (Math.random() * this.routes[depot].length);
+        int len = 0, depot = 0, vehicle = 0;
+
+        while (len == 0) {
+            depot = (int) (Math.random() * this.routes.length);
+            vehicle = (int) (Math.random() * this.routes[depot].length);
+            len = this.routes[depot][vehicle].size();
+        }
 
         int customer1 = (int) (Math.random() * this.routes[depot][vehicle].size());
         int customer2 = (int) (Math.random() * this.routes[depot][vehicle].size());
@@ -95,23 +168,42 @@ public class Genotype implements Comparable<Genotype> {
     }
 
     private void moveCustomerToRandomRoute() {
-        int depot = (int) (Math.random() * this.routes.length);
+        int len = 0, depot = 0, vehicle1 = 0, vehicle2 = 0;
 
-        int vehicle1 = (int) (Math.random() * this.routes[depot].length);
-        int vehicle2 = (int) (Math.random() * this.routes[depot].length);
+        while (len == 0) {
+            depot = (int) (Math.random() * this.routes.length);
 
-        int customer = (int) (Math.random() * this.routes[depot][vehicle1].size());
+            vehicle1 = (int) (Math.random() * this.routes[depot].length);
+            vehicle2 = (int) (Math.random() * this.routes[depot].length);
 
-        this.routes[depot][vehicle2].add(customer, this.routes[depot][vehicle1].remove(customer));
+            len = this.routes[depot][vehicle1].size() + this.routes[depot][vehicle2].size();
+
+        }
+
+        if (this.routes[depot][vehicle1].size() > 0) {
+            int customer1 = (int) (Math.random() * this.routes[depot][vehicle1].size());
+            this.routes[depot][vehicle2].add(this.routes[depot][vehicle1].remove(customer1));
+
+        } else {
+            int customer2 = (int) (Math.random() * this.routes[depot][vehicle2].size());
+            this.routes[depot][vehicle1].add(this.routes[depot][vehicle2].remove(customer2));
+        }
+
 
     }
 
     private void swapCustomersBetweenRoutes() {
-        int depot1 = (int) (Math.random() * this.routes.length);
-        int depot2 = (int) (Math.random() * this.routes.length);
+        int len1 = 0, len2 = 0, depot1 = 0, depot2 = 0, vehicle1 = 0, vehicle2 = 0;
+        while (len1 == 0 || len2 == 0) {
+            depot1 = (int) (Math.random() * this.routes.length);
+            depot2 = (int) (Math.random() * this.routes.length);
 
-        int vehicle1 = (int) (Math.random() * this.routes[depot1].length);
-        int vehicle2 = (int) (Math.random() * this.routes[depot2].length);
+            vehicle1 = (int) (Math.random() * this.routes[depot1].length);
+            vehicle2 = (int) (Math.random() * this.routes[depot2].length);
+
+            len1 = this.routes[depot1][vehicle1].size();
+            len2 = this.routes[depot2][vehicle2].size();
+        }
 
         int customer1 = (int) (Math.random() * this.routes[depot1][vehicle1].size());
         int customer2 = (int) (Math.random() * this.routes[depot2][vehicle2].size());
@@ -122,8 +214,8 @@ public class Genotype implements Comparable<Genotype> {
 
     }
 
-    public boolean isValid(Problem problem) {
-        for (ArrayList<Integer>[] depot : this.routes) {
+    public boolean isValidRoutes(ArrayList<Integer>[][] routes, Problem problem) {
+        for (ArrayList<Integer>[] depot : routes) {
             for (ArrayList<Integer> route : depot) {
                 if (!isValidRoute(route, problem)) {
                     return false;
@@ -134,9 +226,9 @@ public class Genotype implements Comparable<Genotype> {
     }
 
     private boolean isValidRoute(ArrayList<Integer> route, Problem problem) {
-        int duration = getDurationOfRoute(route, problem);
+        //int duration = getDurationOfRoute(route, problem);
         int capacity = getDemandOfRoute(route, problem);
-        return duration > problem.depots[0].maxDuration || capacity > problem.depots[0].maxLoad;
+        return /*duration > problem.depots[0].maxDuration || */capacity > problem.depots[0].maxLoad;
     }
 
     private int getDemandOfRoute(ArrayList<Integer> route, Problem problem) {
@@ -156,13 +248,26 @@ public class Genotype implements Comparable<Genotype> {
         return duration;
     }
 
+    public double getDistanceOfRoutes(Problem problem) {
+        double distance = 0;
+        for (int d = 0; d < this.routes.length; d++) {
+            for (int r = 0; r < this.routes[d].length; r++) {
+                if (this.routes[d][r].size() > 0) {
+                    distance += getDistanceOfRoute(this.routes[d][r], d, problem);
+                }
+            }
+        }
+        return distance;
+    }
+
     private double getDistanceOfRoute(ArrayList<Integer> route, int depotNr, Problem problem) {
         int i = 0;
         double distance = problem.neighbourMatrix[depotNr][route.get(0)];
         for (i = 1; i < route.size(); i++) {
             distance += problem.neighbourMatrix[route.get(i - 1)][route.get(i)];
         }
-        distance += problem.neighbourMatrix[route.get(i - 1)][problem.depots[problem.closestDepotToCustomers[i - 1]].getNr()];
+
+        distance += problem.neighbourMatrix[route.get(route.size()-1)][problem.depots[problem.closestDepotToCustomers[route.get(route.size()-1)]].getNr()];
         return distance;
     }
 
@@ -207,6 +312,6 @@ public class Genotype implements Comparable<Genotype> {
 
     @Override
     public int compareTo(Genotype genotype) {
-        return (int) (genotype.fitness - this.fitness);
+        return (int) (this.fitness - genotype.fitness);
     }
 }

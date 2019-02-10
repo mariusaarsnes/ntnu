@@ -61,18 +61,21 @@ public class Main extends Application {
 
         // Population size
         Label popSizeLabel = generateHeaderLabel("Population size: ");
-        TextField popSizeText = generateTextField("30", 24);
+        TextField popSizeText = generateTextField("100", 24);
 
         // Generation number
         Label genNumLabel = generateHeaderLabel("Generation number: ");
-        TextField genNumText = generateTextField("20", 24);
+        TextField genNumText = generateTextField("1000", 24);
 
         // Crossover Rate
         Label crossRateLabel = generateHeaderLabel("Crossover rate: ");
         TextField crossRateText = generateTextField("20", 24);
 
         Label mutRateLabel = generateHeaderLabel("Mutation rate: ");
-        TextField mutRateText = generateTextField("10", 24);
+        TextField mutRateText = generateTextField("20", 24);
+
+        Label elitRateLabel = generateHeaderLabel("Elitism rate: ");
+        TextField elitRateText = generateTextField("10", 24);
 
         Button runButton = generateButton("Run!", 24);
         runButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -85,7 +88,8 @@ public class Main extends Application {
                         Integer.parseInt(popSizeText.getText()),
                         Integer.parseInt(genNumText.getText()),
                         Integer.parseInt(crossRateText.getText()),
-                        Integer.parseInt(mutRateText.getText())
+                        Integer.parseInt(mutRateText.getText()),
+                        Integer.parseInt(elitRateText.getText())
                 );
 
             }
@@ -101,24 +105,37 @@ public class Main extends Application {
                 crossRateText,
                 mutRateLabel,
                 mutRateText,
+                elitRateLabel,
+                elitRateText,
                 runButton);
         return hbox;
     }
 
 
-    private void runGA(int popSize, int genNum, int crossRate, int mutRate) {
-        this.ga = new GeneticAlgorithm(this.problem, popSize, genNum, crossRate, mutRate);
+    private void runGA(int popSize, int genNum, int crossRate, int mutRate, int elitRate) {
+        this.ga = new GeneticAlgorithm(this.problem, popSize, genNum, crossRate, mutRate, elitRate);
         this.ga.run();
-        Genotype temp = this.ga.getBestIndividual();
-        System.out.println("Distance: " + temp.distance);
-        System.out.println("Capacity overload: " + temp.capacityOverload);
-        System.out.println("Duration overload: " + temp.durationOverload);
-        drawPaths(temp.routes);
+        Genotype bestIndividual = this.ga.getBestIndividual();
+
+        System.out.println("\n" + bestIndividual.distance);
+        for (int d = 0; d < bestIndividual.routes.length; d++) {
+            for (int r = 0; r < bestIndividual.routes[d].length; r++) {
+                if (bestIndividual.routes[d][r].size() > 0) {
+                    System.out.println(d + "\t" + r + "\t" +
+                            (int) bestIndividual.getDistanceOfRoute(bestIndividual.routes[d][r], this.problem.depots[d].getNr(), this.problem) + "\t" +
+                            bestIndividual.getDemandOfRoute(bestIndividual.routes[d][r], problem) + "\t" +
+                            this.problem.closestDepotToCustomers[bestIndividual.routes[d][r].get(bestIndividual.routes[d][r].size() - 1)] + "\t" +
+                            bestIndividual.routes[d][r]);
+                }
+            }
+        }
+
         System.out.println("DONE");
+        drawPaths(bestIndividual.routes);
     }
 
     private void drawPaths(ArrayList<Integer>[][] paths) {
-        Color[] colors = new Color[]{Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE, Color.PINK, Color.INDIGO};
+        Color[] colors = new Color[]{Color.GREEN, Color.YELLOW, Color.RED, Color.BLUE, Color.ORANGE, Color.PINK, Color.INDIGO, Color.TEAL, Color.SANDYBROWN, Color.OLDLACE};
         GraphicsContext gc = this.canvas.getGraphicsContext2D();
 
         for (int depot = 0; depot < paths.length; depot++) {

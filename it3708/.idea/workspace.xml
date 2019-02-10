@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/it3708/GeneticAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/it3708/GeneticAlgorithm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/it3708/Genotype.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/it3708/Genotype.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/it3708/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/it3708/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/it3708/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/it3708/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneticAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Genotype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Genotype.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -20,18 +18,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="154" selection-start-line="154" selection-end-line="154" />
+            <state relative-caret-position="539">
+              <caret line="40" column="108" selection-start-line="40" selection-start-column="108" selection-end-line="40" selection-end-column="108" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1433#1443#0" expanded="true" />
-                <element signature="e#2367#2377#0" expanded="true" />
-                <element signature="e#3303#3313#0" expanded="true" />
-                <element signature="e#4111#4112#0" expanded="true" />
-                <element signature="e#4166#4167#0" expanded="true" />
+                <element signature="e#10390#10391#0" expanded="true" />
+                <element signature="e#10426#10427#0" expanded="true" />
+                <element signature="e#10809#10810#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,38 +36,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Genotype.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="268" lean-forward="true" selection-start-line="268" selection-end-line="268" />
+            <state relative-caret-position="-3719">
+              <caret line="263" column="30" selection-start-line="263" selection-start-column="30" selection-end-line="263" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#11181#11182#0" expanded="true" />
-                <element signature="e#11604#11605#0" expanded="true" />
+                <element signature="e#9425#9434#0" expanded="true" />
+                <element signature="e#10484#10493#0" expanded="true" />
+                <element signature="e#15543#15544#0" expanded="true" />
+                <element signature="e#15966#15967#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#139#140#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+            <state relative-caret-position="107">
+              <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,9 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generateCan</find>
-      <find>depot</find>
-      <find>Pos</find>
       <find>pos</find>
       <find>meta</find>
       <find>button</find>
@@ -104,7 +83,27 @@
       <find>getdistance</find>
       <find>getDistance</find>
       <find>removeCus</find>
+      <find>removeCustomer</find>
+      <find>inver</find>
+      <find>getDistanceOfRoute</find>
+      <find>get</find>
+      <find>generation</find>
+      <find>schedul</find>
+      <find>sched</find>
+      <find>selectRandom</find>
+      <find>scheduleRoutes</find>
+      <find>scheduleRoute</find>
+      <find>getDistanceofRoute</find>
       <find>addNew</find>
+      <find>selectRandomNon</find>
+      <find>evaluatePopulation</find>
+      <find>update</find>
+      <find>addNewCustomerToRoutes</find>
+      <find>upda</find>
+      <find>muta</find>
+      <find>mutate</find>
+      <find>isValidRoute</find>
+      <find>isValidRoute(r</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,14 +128,14 @@
         <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/Problem.java" />
         <option value="$PROJECT_DIR$/src/GenotypeComparator.java" />
-        <option value="$PROJECT_DIR$/src/GeneticAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/Genotype.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Genotype.java" />
+        <option value="$PROJECT_DIR$/src/GeneticAlgorithm.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1651" />
+    <option name="x" value="102" />
     <option name="y" value="35" />
     <option name="width" value="1549" />
     <option name="height" value="1765" />
@@ -149,6 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,28 +156,17 @@
               <item name="it3708" type="b2602c69:ProjectViewProjectNode" />
               <item name="it3708" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="it3708" type="b2602c69:ProjectViewProjectNode" />
-              <item name="it3708" type="462c0819:PsiDirectoryNode" />
-              <item name="solution_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="it3708" type="b2602c69:ProjectViewProjectNode" />
-              <item name="it3708" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549661187266" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549763927942" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -243,11 +232,13 @@
       <workItem from="1549562903001" duration="1912000" />
       <workItem from="1549624444269" duration="32230000" />
       <workItem from="1549661696499" duration="19524000" />
+      <workItem from="1549708745955" duration="6133000" />
+      <workItem from="1549717687881" duration="45960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169150000" />
+    <option name="totallyTimeSpent" value="221243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +258,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.14717609" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.15116279" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -276,8 +267,8 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.32955304" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32955304" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.35823882" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4916611" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.39026016" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.2508339" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32955304" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -303,19 +294,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>116</line>
+          <url>file://$PROJECT_DIR$/src/Genotype.java</url>
+          <line>122</line>
           <properties />
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/it3708.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Drawer.java" />
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jfxrt.jar!/javafx/fxml/FXMLLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -343,9 +330,6 @@
     <entry file="file://$PROJECT_DIR$/data_files/p03">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_files/p04">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_files/p05">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -368,14 +352,6 @@
     <entry file="file://$PROJECT_DIR$/data_files/p12">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_files/p02">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_files/p01">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-348" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -383,27 +359,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Depot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="309" selection-start-line="309" selection-end-line="309" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -431,19 +390,11 @@
     <entry file="file://$PROJECT_DIR$/data_files/p07">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_files/p08">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_files/p14">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data_files/p22">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_files/p23">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8178" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_files/p09">
       <provider selected="true" editor-type-id="text-editor">
@@ -478,49 +429,10 @@
         <state relative-caret-position="-174" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solution_files/p01.res">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/solution_files/p23.res">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/util/function/Predicate.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1433#1443#0" expanded="true" />
-            <element signature="e#2367#2377#0" expanded="true" />
-            <element signature="e#3303#3313#0" expanded="true" />
-            <element signature="e#4111#4112#0" expanded="true" />
-            <element signature="e#4166#4167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,24 +464,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genotype.java">
+    <entry file="file://$PROJECT_DIR$/solution_files/p08.res">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution_files/p05.res">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution_files/p04.res">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution_files/p01.res">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="268" lean-forward="true" selection-start-line="268" selection-end-line="268" />
+        <state relative-caret-position="261">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_files/p01">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Depot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_files/p23">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Problem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1073">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11181#11182#0" expanded="true" />
-            <element signature="e#11604#11605#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/solution_files/p23.res">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution_files/p12.res">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_files/p04">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_files/p02">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+        <state relative-caret-position="107">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_files/p08">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Genotype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3719">
+          <caret line="263" column="30" selection-start-line="263" selection-start-column="30" selection-end-line="263" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9425#9434#0" expanded="true" />
+            <element signature="e#10484#10493#0" expanded="true" />
+            <element signature="e#15543#15544#0" expanded="true" />
+            <element signature="e#15966#15967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="40" column="108" selection-start-line="40" selection-start-column="108" selection-end-line="40" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10390#10391#0" expanded="true" />
+            <element signature="e#10426#10427#0" expanded="true" />
+            <element signature="e#10809#10810#0" expanded="true" />
           </folding>
         </state>
       </provider>

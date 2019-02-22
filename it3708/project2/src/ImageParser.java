@@ -16,7 +16,9 @@ public class ImageParser {
         this.height = image.getHeight();
         this.width = image.getWidth();
         this.numPixels = this.height * this.width;
+        System.out.println("\tStarting to read in new image");
         this.pixels = parseImage(image);
+        System.out.println("\tFinished reading in new image");
     }
 
     private int[][] parseImage(BufferedImage image) {
@@ -70,7 +72,9 @@ public class ImageParser {
         return this.width;
     }
 
-    public int getNumPixels() { return this.numPixels; }
+    public int getNumPixels() {
+        return this.numPixels;
+    }
 
     public int[][] getPixels() {
         return pixels;

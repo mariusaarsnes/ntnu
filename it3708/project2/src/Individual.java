@@ -1,4 +1,6 @@
-import java.util.Comparator;
+import javafx.util.Pair;
+
+import java.util.*;
 
 public class Individual {
 
@@ -7,23 +9,57 @@ public class Individual {
     PixelMatrix pixelMatrix;
     Direction[] genotype;
     double score, edgeValue, overallDeviation, crowdingDistance;
+    Random random;
 
 
     public Individual(ImageParser image, PixelMatrix pixelMatrix) {
         this.imageParser = image;
         this.pixelMatrix = pixelMatrix;
+        this.random = new Random();
         this.genotype = createGenotype();
     }
 
 
     private Direction[] createGenotype() {
-        Direction[] genotype = new Direction[this.imageParser.getNumPixels()];
+        Direction[] genotype = new Direction[this.pixelMatrix.getSize()];
 
-        // SECTION
-        // step 1: Select random Pixel,
+        final ArrayList<Pixel> visitedPixels = new ArrayList<Pixel>();
+        final ArrayList<PixelEdge> mst = new ArrayList<PixelEdge>();
+        final Pixel root = this.pixelMatrix.getPixel(this.random.nextInt(this.pixelMatrix.getHeight()), this.random.nextInt(this.pixelMatrix.getWidth()));
+        final PriorityQueue<PixelEdge> pq = new PriorityQueue<>(new rgbDistanceComparator());
+        addPixelEdgesToPriorityQueue(pq, root.edges);
+        while (!pq.isEmpty()) {
+            final PixelEdge pixelEdge = pq.remove();
+            boolean addEdgeToMst = false;
+            if (!visitedPixels.contains(pixelEdge.U)) {
+                addEdgeToMst = true;
+                visitedPixels.add(pixelEdge.U);
+                addPixelEdgesToPriorityQueue(pq, pixelEdge.U.edges);
 
+            }
+            if (!visitedPixels.contains(pixelEdge.V)) {
+                addEdgeToMst = true;
+                visitedPixels.add(pixelEdge.V);
+                addPixelEdgesToPriorityQueue(pq, pixelEdge.V.edges);
+            }
+            if (addEdgeToMst) {
+                mst.add(pixelEdge);
+            }
+
+        }
+        for (PixelEdge pixelEdge : mst) {
+            genotype[pixelEdge.U.index] = pixelEdge.direction;
+        }
+        return genotype;
     }
 
+    private void addPixelEdgesToPriorityQueue(PriorityQueue<PixelEdge> pq, PixelEdge[] edges) {
+        for (PixelEdge edge : edges) {
+            if (edge != null) {
+                pq.add(edge);
+            }
+        }
+    }
 
 }
 

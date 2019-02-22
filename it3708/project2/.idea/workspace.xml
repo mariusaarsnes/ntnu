@@ -2,92 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/project1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ImageParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Individual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MOEA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pixel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PixelEdge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PixelMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../tdt4237/project1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Benchmarks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Description for files.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Depot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/GeneticAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Genotype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/GenotypeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/META-INF/it3708.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Meta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Problem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p01.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p02.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p03.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p04.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p05.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p06.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p07.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p08.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p09.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p10.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p11.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p12.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p13.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p14.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p15.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p16.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p17.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p18.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p19.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p20.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p21.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p22.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p23.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Depot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/GeneticAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Genotype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/GenotypeComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Meta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Problem.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CIELab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SLIC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SuperPixel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project2/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project2/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project2/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ImageParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ImageParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MOEA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MOEA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pixel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pixel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PixelEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PixelEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PixelMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PixelMatrix.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,47 +71,62 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Direction.java">
+        <entry file="file://$PROJECT_DIR$/src/Individual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="62">
+              <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#654#661#0" expanded="true" />
+                <element signature="e#679#690#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ImageParser.java">
+        <entry file="file://$PROJECT_DIR$/src/SuperPixel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1069">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="58">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Individual.java">
+        <entry file="file://$PROJECT_DIR$/src/SLIC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="725">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="e#111#112#0" expanded="true" />
+                <element signature="e#157#158#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Segment.java">
+        <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/com/sun/javafx/application/PlatformImpl.java">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MOEA.java">
+        <entry file="file://$PROJECT_DIR$/src/CIELab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+            <state relative-caret-position="667">
+              <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,24 +135,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pixel.java">
+        <entry file="file://$PROJECT_DIR$/src/MOEA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PixelEdge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="565">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding>
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -218,12 +149,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PixelMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
+            <state relative-caret-position="345">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
               <folding>
-                <element signature="e#2676#2677#0" expanded="true" />
-                <element signature="e#2710#2711#0" expanded="true" />
-                <element signature="e#2753#2754#0" expanded="true" />
-                <element signature="e#2793#2794#0" expanded="true" />
+                <element signature="e#5824#5825#0" expanded="true" />
+                <element signature="e#5886#5887#0" expanded="true" />
+                <element signature="e#5961#5962#0" expanded="true" />
+                <element signature="e#6031#6032#0" expanded="true" />
+                <element signature="e#6114#6115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pixel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PixelEdge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#671#672#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -276,19 +231,23 @@
         <option value="$PROJECT_DIR$/src/edgeValueComparator.java" />
         <option value="$PROJECT_DIR$/src/overallDeviationComparator.java" />
         <option value="$PROJECT_DIR$/src/Segment.java" />
-        <option value="$PROJECT_DIR$/src/ImageParser.java" />
         <option value="$PROJECT_DIR$/src/ImageSegmentation.java" />
-        <option value="$PROJECT_DIR$/src/Pixel.java" />
-        <option value="$PROJECT_DIR$/src/PixelEdge.java" />
-        <option value="$PROJECT_DIR$/src/PixelMatrix.java" />
         <option value="$PROJECT_DIR$/src/Direction.java" />
-        <option value="$PROJECT_DIR$/src/MOEA.java" />
+        <option value="$PROJECT_DIR$/src/ImageParser.java" />
+        <option value="$PROJECT_DIR$/src/PixelEdge.java" />
+        <option value="$PROJECT_DIR$/src/CIELab.java" />
+        <option value="$PROJECT_DIR$/src/Pixel.java" />
         <option value="$PROJECT_DIR$/src/Individual.java" />
+        <option value="$PROJECT_DIR$/src/PixelMatrix.java" />
+        <option value="$PROJECT_DIR$/src/SuperPixel.java" />
+        <option value="$PROJECT_DIR$/src/MOEA.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/SLIC.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="102" />
     <option name="y" value="35" />
     <option name="width" value="1549" />
@@ -303,7 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,12 +272,24 @@
             <path>
               <item name="project2" type="b2602c69:ProjectViewProjectNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="86016" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PixelEdge.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -333,7 +303,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550782615680" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550868438827" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -398,6 +368,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="project2" />
+      <option name="VM_PARAMETERS" value="--module-path /usr/lib/jvm/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -434,6 +412,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -451,16 +434,26 @@
       <workItem from="1550072813659" duration="1338000" />
       <workItem from="1550136888470" duration="627000" />
       <workItem from="1550749808494" duration="22194000" />
+      <workItem from="1550834476778" duration="30176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28176000" />
+    <option name="totallyTimeSpent" value="58352000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="35" width="1549" height="1765" extended-state="4" />
+    <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.24572212" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1627907" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32990032" />
       <window_info id="Designer" order="3" />
@@ -469,11 +462,11 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22081387" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3275517" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.45363575" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32955304" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Problems" order="9" />
@@ -483,7 +476,7 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32955304" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Terminal" order="16" />
+      <window_info anchor="bottom" id="Terminal" order="16" weight="0.32955304" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -510,36 +503,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/86016/s41.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/Test image.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/s24.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/s23.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/s17.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/GT_41.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/s4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/GT_24.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/GT_23.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/86016/GT_17.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/147091/GT_10.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -615,6 +578,28 @@
     <entry file="file://$PROJECT_DIR$/353013/GT_15_1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crowdingDistanceComparator.java" />
+    <entry file="file://$PROJECT_DIR$/src/edgeValueComparator.java" />
+    <entry file="file://$PROJECT_DIR$/src/overallDeviationComparator.java" />
+    <entry file="file://$PROJECT_DIR$/src/Genotype.java" />
+    <entry file="file://$PROJECT_DIR$/src/Population.java" />
+    <entry file="file://$PROJECT_DIR$/src/Segment.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -623,116 +608,125 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/ImageParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/GT_17.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/GT_41.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/Test image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/s23.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/s4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/86016/GT_4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperPixel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crowdingDistanceComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/CIELab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edgeValueComparator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/overallDeviationComparator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Genotype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="667">
+          <caret line="53" column="13" lean-forward="true" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pixel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="232">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#654#661#0" expanded="true" />
+            <element signature="e#679#690#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PixelEdge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="145">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PixelMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <folding>
-            <element signature="e#2676#2677#0" expanded="true" />
-            <element signature="e#2710#2711#0" expanded="true" />
-            <element signature="e#2753#2754#0" expanded="true" />
-            <element signature="e#2793#2794#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ImageParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1069">
-          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Segment.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MOEA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        <state relative-caret-position="565">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Individual.java">
+    <entry file="file://$PROJECT_DIR$/src/PixelMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="345">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#5824#5825#0" expanded="true" />
+            <element signature="e#5886#5887#0" expanded="true" />
+            <element signature="e#5961#5962#0" expanded="true" />
+            <element signature="e#6031#6032#0" expanded="true" />
+            <element signature="e#6114#6115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/com/sun/javafx/application/PlatformImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SLIC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#157#158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

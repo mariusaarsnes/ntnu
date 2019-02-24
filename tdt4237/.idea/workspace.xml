@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcbc56a7-8239-4325-9b97-ac262aed66a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/project1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../it3708/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/Benchmarks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/Description for files.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/it3708.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Depot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/GeneticAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Genotype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/GenotypeComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/META-INF/it3708.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Meta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Problem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p01.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p02.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p03.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p04.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p05.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p06.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p07.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p08.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p09.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p10.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p11.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p12.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p13.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p14.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p15.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p16.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p17.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p18.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p19.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p20.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p21.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p22.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p23.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Depot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/GeneticAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Genotype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/GenotypeComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Meta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/src/Problem.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="939">
+              <caret line="313" column="33" selection-start-line="313" selection-start-column="33" selection-end-line="313" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>messages</find>
+      <find>.raw</find>
+      <find>SELECT</find>
+      <find>file</find>
+      <find>upload</find>
+      <find>upload_file</find>
+      <find>cleaned_data</find>
+      <find>JSOND</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/project1/source/sec/</dir>
+      <dir>$PROJECT_DIR$/project1/source/</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/project1/source/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="102" />
+    <option name="y" value="39" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="sec" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="sec" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcbc56a7-8239-4325-9b97-ac262aed66a1" name="Default Changelist" comment="" />
+      <created>1550138431626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550138431626</updated>
+      <workItem from="1550138433341" duration="13198000" />
+      <workItem from="1550248315162" duration="387000" />
+      <workItem from="1550256882368" duration="17000" />
+      <workItem from="1550502946860" duration="692000" />
+      <workItem from="1550506987512" duration="653000" />
+      <workItem from="1550585715570" duration="393000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15340000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30664453" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32990032" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/migrations/0002_profile_session.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/migrations/0003_auto_20190209_0836.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="261">
+            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/migrations/0004_auto_20181203_2008.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/migrations/0003_auto_20181104_2047.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/migrations/0002_auto_20181030_2007.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="18" column="106" selection-start-line="18" selection-start-column="106" selection-end-line="18" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="117" column="28" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/groupXX.service">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/env/lib/python3.6/site-packages/autobahn/wamp/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/nginx-configuration-file">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="939">
+          <caret line="313" column="33" selection-start-line="313" selection-start-column="33" selection-end-line="313" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

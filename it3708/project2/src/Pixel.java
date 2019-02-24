@@ -6,7 +6,7 @@ public class Pixel {
     final PixelEdge[] edges;
     final Pixel[] neighbours;
     final CIELab ci = new CIELab();
-    final float[] cielab;
+    final float[] cielab = new float[]{0, 0, 0};
 
 
     public Pixel(int row, int column, int index, int argb) {
@@ -17,6 +17,6 @@ public class Pixel {
         this.color = new Color(argb);
         this.edges = new PixelEdge[8];
         this.neighbours = new Pixel[8];
-        cielab = ci.fromRGB(new float[]{color.getRed(), color.getGreen(), color.getBlue()});
+        //this.cielab = ci.fromRGB(new float[]{color.getRed(), color.getGreen(), color.getBlue()});
     }
 }

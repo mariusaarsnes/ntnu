@@ -1,0 +1,45 @@
+{% extends 'sec/base.html' %}
+
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}New Project{% endblock %}
+
+
+{% block content %}
+    <h2 class="mt-3">New Project</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div id="task_container">
+            <div class="task">
+                <h2>Task</h2>
+                <p>
+                    <label class="new-task-input">Title:
+                        <input type="text" name="task_title" maxlength="200" class="form-control" required/>
+                    </label>
+                </p>
+                <p>
+                    <label class="new-task-input">Budget:
+                        <input type="number" min="0" id="budget_input" name="task_budget" maxlength="200"
+                               class="form-control" required/>
+                    </label>
+                </p>
+                <p>
+                    <label class="new-task-input">Description:
+                        <textarea name="task_description" maxlength="500" class="form-control" required></textarea>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <button id="add_task" class="btn btn-outline-secondary" type="button">Add Task</button>
+                <button id="remove_task" class="btn btn-outline-danger" type="button">Remove Task</button>
+                <button type="submit" class="btn btn-primary float-right">Create Project</button>
+            </div>
+
+        </div>
+    </form>
+    <script src="{% static 'projects/js/new_project.js' %}"></script>
+{% endblock %}

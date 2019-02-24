@@ -1,0 +1,25 @@
+server {
+	listen 40XX;
+	index index.html;
+
+	location / {
+		proxy_redirect off;
+		proxy_set_header Host 127.0.0.1;
+		proxy_pass http://127.0.0.1:80XX;
+	}
+
+	location /static/ {
+		root /home/www-data/groupXX/;
+	}
+
+	location /media/ {
+		root /home/www-data/groupXX/;
+		
+		location ~ (\.py|\.sh) {
+			gzip off;
+			fastcgi_pass unix:/var/run/fcgiwrap.socket;
+			include /etc/nginx/fastcgi_params;
+			fastcgi_param SCRIPT_FILENAME /home/www-data/groupXX/$fastcgi_script_name;
+		}
+	}
+}

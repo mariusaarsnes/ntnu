@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d874d36-f3c6-4978-a318-c020c3ca3518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../it3708/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/Benchmarks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/Description for files.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/data_files/p23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/it3708.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Depot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/GeneticAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Genotype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/GenotypeComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/META-INF/it3708.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Meta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/out/production/it3708/Problem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p01.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p02.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p03.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p04.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p05.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p06.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p07.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p08.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p09.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p10.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p11.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p12.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p13.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p14.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p15.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p16.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p17.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p18.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p19.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p20.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p21.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p22.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/solution_files/p23.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Depot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/GeneticAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Genotype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/GenotypeComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Meta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../it3708/src/Problem.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/sec/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="102" />
+    <option name="y" value="35" />
+    <option name="width" value="1549" />
+    <option name="height" value="1765" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="sec" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d874d36-f3c6-4978-a318-c020c3ca3518" name="Default Changelist" comment="" />
+      <created>1549979168389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549979168389</updated>
+      <workItem from="1549979169714" duration="240000" />
+      <workItem from="1549979434889" duration="161000" />
+      <workItem from="1549992223735" duration="1059000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1460000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16212624" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="12" visible="true" weight="0.32955304" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/sec/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Python</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>project1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

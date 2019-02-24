@@ -22,7 +22,7 @@ public class MOEA {
 
         try {
             this.image = new ImageParser(fileName);
-            this.pixelMatrix = new PixelMatrix(this.image, true);
+            this.pixelMatrix = new PixelMatrix(this.image, false);
         } catch (IOException e) {
             e.printStackTrace();
         }

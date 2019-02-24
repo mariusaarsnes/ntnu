@@ -21,9 +21,11 @@ public class PixelMatrix {
         final Pixel[][] pixels = new Pixel[imageParser.getHeight()][imageParser.getWidth()];
 
         // Create Pixel matrix
-        for (int y = 0; y < imageParser.getHeight(); y++) {
-            for (int x = 0; x < imageParser.getWidth(); x++) {
-                pixels[y][x] = new Pixel(y, x, y * imageParser.getWidth() + x, imageParser.getPixels()[y][x]);
+        int height = imageParser.getHeight(), width = imageParser.getWidth();
+        int[][] imagePixels = imageParser.getPixels();
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                pixels[y][x] = new Pixel(y, x, y * width + x, imagePixels[y][x]);
             }
         }
 

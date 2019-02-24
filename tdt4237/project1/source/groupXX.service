@@ -1,0 +1,11 @@
+[Unit]
+Description=UWSGI daemon for group XX
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+ExecStart=/home/www-data/groupXX/venv/bin/uwsgi --chdir=/home/www-data/groupXX/sec -w sec.wsgi:application --processes=2 --uid=33 --gid=33 --harakiri=20 --home=/home/www-data/groupXX/venv --http :80XX --master
+
+[Install]
+WantedBy=multi-user.target

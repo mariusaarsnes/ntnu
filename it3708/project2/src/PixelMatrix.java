@@ -1,34 +1,32 @@
-import javafx.util.Pair;
+import org.jetbrains.annotations.NotNull;
 
 public class PixelMatrix {
 
     private final Pixel[][] pixels;
     private final int height, width;
-    private boolean cielab;
 
-    public PixelMatrix(ImageParser imageParser, boolean cielab) {
+    public PixelMatrix(@NotNull ImageParser imageParser) {
 
         this.height = imageParser.getHeight();
         this.width = imageParser.getWidth();
-        this.cielab = cielab;
-        System.out.println("\tStarting to build new image matrix");
+        System.out.println("\tStarting to build new imageParser matrix");
         pixels = createPixels(imageParser);
-        System.out.println("\tFinished building new image matrix");
+        System.out.println("\tFinished building new imageParser matrix");
 
     }
 
-    private Pixel[][] createPixels(ImageParser imageParser) {
+    private Pixel[][] createPixels(@NotNull ImageParser imageParser) {
         final Pixel[][] pixels = new Pixel[imageParser.getHeight()][imageParser.getWidth()];
 
         // Create Pixel matrix
         int height = imageParser.getHeight(), width = imageParser.getWidth();
-        int[][] imagePixels = imageParser.getPixels();
+        int[][] imagePixels = imageParser.getPixelArgb();
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 pixels[y][x] = new Pixel(y, x, y * width + x, imagePixels[y][x]);
             }
         }
-
+        /*
         // Find neighbours and distances
         for (int y = 0; y < imageParser.getHeight(); y++) {
             for (int x = 0; x < imageParser.getWidth(); x++) {
@@ -109,25 +107,17 @@ public class PixelMatrix {
                 }
             }
         }
+         */
         return pixels;
     }
 
 
     private double euclideanDistance(Pixel p1, Pixel p2) {
-        if (this.cielab) {
-            double euclidean = 0;
-            for (int i = 0; i < p1.cielab.length; i++) {
-                euclidean = Math.pow(p1.cielab[i] - p2.cielab[i], 2);
-            }
+        int differenceRed = p1.color.getRed() - p2.color.getRed();
+        int differenceGreen = p1.color.getGreen() - p2.color.getGreen();
+        int differenceBlue = p1.color.getBlue() - p2.color.getBlue();
 
-            return euclidean;
-        } else {
-            int differenceRed = p1.color.getRed() - p2.color.getRed();
-            int differenceGreen = p1.color.getGreen() - p2.color.getGreen();
-            int differenceBlue = p1.color.getBlue() - p2.color.getBlue();
-
-            return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2));
-        }
+        return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2));
     }
 
 

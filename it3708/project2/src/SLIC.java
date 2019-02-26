@@ -1,61 +1,49 @@
-import java.awt.*;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SLIC {
 
-    PixelMatrix pixelMatrix;
-    ArrayList<SuperPixel> clusters;
+    ImageParser imageParser;
+    int imageHeight, imageWidth, numPixels;
+    ArrayList<SuperPixel> superPixels;
     int[][] label;
 
-    public SLIC(PixelMatrix pixelMatrix) {
+    public SLIC(ImageParser imageParser) {
 
-        this.pixelMatrix = pixelMatrix;
-        this.clusters = new ArrayList<>();
+        this.imageParser = imageParser;
+        this.imageHeight = imageParser.getHeight();
+        this.imageWidth = imageParser.getWidth();
+        this.numPixels = imageParser.getNumPixels();
+        this.superPixels = new ArrayList<>();
     }
 
     public void run(int numClusters) {
-        /*
-        int h = this.pixelMatrix.getHeight(), w = this.pixelMatrix.getWidth();
-        int k1 = h / 10, k2 = w / 10;
-        int sh = h / k1, sw = w / k2;
-
-
-        // Step 1: Select Centroids
-        ArrayList<Pixel> centroids = new ArrayList<Pixel>();
-        for (int y = sh / 2; y < this.pixelMatrix.getHeight(); y += sh) {
-            for (int x = sw / 2; x < this.pixelMatrix.getWidth(); x += sw) {
-                centroids.add(this.pixelMatrix.getPixel(y, x));
-            }
-        }
-
-        */
         System.out.println("Run SLIC");
-        int n = this.pixelMatrix.getSize();
+        int n = this.numPixels;
         int m = 10;
-        int s = (int) Math.round(Math.sqrt((float) n / numClusters));
+        int s = (int) Math.round(Math.sqrt((double) n / numClusters));
         int i = 0;
-        System.out.println("\tGenerating clusters");
-        for (int y = s / 2; y < this.pixelMatrix.getHeight(); y += s) {
-            for (int x = s / 2; x < this.pixelMatrix.getWidth(); x += s) {
-                this.clusters.add(new SuperPixel(i, y, x));
+        System.out.println("\tGenerating superPixels");
+        for (int y = s / 2; y < this.imageHeight; y += s) {
+            for (int x = s / 2; x < this.imageWidth; x += s) {
+                this.superPixels.add(new SuperPixel(this.imageParser, i, y, x));
             }
         }
-        System.out.println("\tFinished generating clusters");
+        System.out.println("\tFinished generating superPixels");
 
         // Move centroids to lowest gradient
         System.out.println("\tStarting to move centroids to lowest gradient");
-        for (SuperPixel superPixel : this.clusters
-        ) {
-            superPixel.moveToLowestGradient(this.pixelMatrix);
-
+        for (SuperPixel superPixel : this.superPixels) {
+            superPixel.moveToLowestGradient();
         }
         System.out.println("\tFinished moving centroids to lowest gradient");
 
-        double error = 0;
+        double error;
         int loop = 0;
-        int[][] label = new int[this.pixelMatrix.getHeight()][this.pixelMatrix.getWidth()];
-        double[][] distance = new double[this.pixelMatrix.getHeight()][this.pixelMatrix.getWidth()];
+        int[][] label = new int[this.imageHeight][this.imageWidth];
+        double[][] distance = new double[this.imageHeight][this.imageWidth];
         for (int[] row : label) {
             Arrays.fill(row, -1);
         }
@@ -66,31 +54,16 @@ public class SLIC {
         do {
             loop++;
             System.out.println("\tLoop " + loop + " started!");
-            for (int k = 0; k < this.clusters.size(); k++) {
-                SuperPixel sp = this.clusters.get(k);
+            for (int k = 0; k < this.superPixels.size(); k++) {
+                SuperPixel sp = this.superPixels.get(k);
                 int yMin = Math.max(0, sp.y - 2 * s);
-                int yMax = Math.min(this.pixelMatrix.getHeight(), sp.y + 2 * s);
+                int yMax = Math.min(this.imageHeight, sp.y + 2 * s);
                 int xMin = Math.max(0, sp.x - 2 * s);
-                int xMax = Math.min(this.pixelMatrix.getWidth(), sp.x + 2 * s);
+                int xMax = Math.min(this.imageWidth, sp.x + 2 * s);
 
                 for (int y = yMin; y < yMax; y++) {
                     for (int x = xMin; x < xMax; x++) {
-                        //TODO: Figure out what is wrong with cielab values
-                        /*
-                        float[] lab = this.pixelMatrix.getPixel(y, x).cielab;
-                        double dc = Math.sqrt(
-                                (lab[0] - sp.centroid.cielab[0]) * (lab[0] - sp.centroid.cielab[0]) +
-                                        (lab[1] - sp.centroid.cielab[1]) * (lab[1] - sp.centroid.cielab[1]) +
-                                        (lab[2] - sp.centroid.cielab[2]) * (lab[2] - sp.centroid.cielab[2])
-                        );
-                        */
-                        Color color = this.pixelMatrix.getPixel(y, x).color;
-                        double dc = Math.sqrt(
-                                (color.getAlpha() - sp.centroid.color.getAlpha()) * (color.getAlpha() - sp.centroid.color.getAlpha()) +
-                                        (color.getBlue() - sp.centroid.color.getBlue()) * (color.getBlue() - sp.centroid.color.getBlue()) +
-                                        (color.getRed() - sp.centroid.color.getRed()) * (color.getRed() - sp.centroid.color.getRed()) +
-                                        (color.getGreen() - sp.centroid.color.getGreen()) * (color.getGreen() - sp.centroid.color.getGreen())
-                        );
+                        double dc = Math.sqrt(this.imageParser.getArgbDistance(y, x, sp.y, sp.x));
                         double ds = Math.sqrt((x - sp.x) * (x - sp.x) + (y - sp.y) * (y - sp.y));
                         double d = Math.sqrt(dc * dc + ((ds / s) * (ds / s)) * (m * m));
                         if (d < distance[y][x]) {
@@ -108,11 +81,10 @@ public class SLIC {
 
         this.label = label;
 
-        //TODO: implement connected components algorithm to avoid disconnected labels
-        System.out.println("Number of clusters before enforcing connectivity: " + this.clusters.size());
+        System.out.println("Number of superPixels before enforcing connectivity: " + this.superPixels.size());
         enforceConnectivity();
-        System.out.println("Number of clusters after  enforcing connectivity: " + this.clusters.size());
-        System.out.println("Total number of pixels in image: " + this.pixelMatrix.getSize());
+        System.out.println("Number of superPixels after  enforcing connectivity: " + this.superPixels.size());
+        System.out.println("Total number of pixels in imageParser: " + this.numPixels);
         updateClusterCenters(this.label);
         System.out.println("Finished with running SLIC");
 
@@ -120,14 +92,14 @@ public class SLIC {
 
     private double updateClusterCenters(int[][] label) {
         double error = 0;
-        int[][] newClusterCenter = new int[this.clusters.size()][2];
+        int[][] newClusterCenter = new int[this.superPixels.size()][2];
         for (int[] val : newClusterCenter) {
             val[0] = 0;
             val[1] = 0;
         }
-        int[] newClusterPixelCount = new int[this.clusters.size()];
-        for (int y = 0; y < this.pixelMatrix.getHeight(); y++) {
-            for (int x = 0; x < this.pixelMatrix.getWidth(); x++) {
+        int[] newClusterPixelCount = new int[this.superPixels.size()];
+        for (int y = 0; y < this.imageHeight; y++) {
+            for (int x = 0; x < this.imageWidth; x++) {
                 int labelVal = label[y][x];
                 if (labelVal != -1) {
                     newClusterCenter[labelVal][0] += y;
@@ -140,10 +112,10 @@ public class SLIC {
             int newY = Math.round(((float) newClusterCenter[i][0]) / newClusterPixelCount[i]);
             int newX = Math.round(((float) newClusterCenter[i][1]) / newClusterPixelCount[i]);
             error += Math.sqrt(
-                    (newX - this.clusters.get(i).x) * (newX - this.clusters.get(i).x) +
-                            (newY - this.clusters.get(i).y) * (newY - this.clusters.get(i).y));
-            this.clusters.get(i).y = newY;
-            this.clusters.get(i).x = newX;
+                    (newX - this.superPixels.get(i).x) * (newX - this.superPixels.get(i).x) +
+                            (newY - this.superPixels.get(i).y) * (newY - this.superPixels.get(i).y));
+            this.superPixels.get(i).y = newY;
+            this.superPixels.get(i).x = newX;
 
         }
         return error;
@@ -152,12 +124,12 @@ public class SLIC {
     }
 
     private void enforceConnectivity() {
-        boolean[][] connectedPixels = new boolean[this.pixelMatrix.getHeight()][this.pixelMatrix.getWidth()];
-        for (SuperPixel cluster : this.clusters) {
+        boolean[][] connectedPixels = new boolean[this.imageHeight][this.imageWidth];
+        for (SuperPixel cluster : this.superPixels) {
             getConnectedSection(connectedPixels, cluster.y, cluster.x);
         }
-        for (int y = 0; y < this.pixelMatrix.getHeight(); y++) {
-            for (int x = 0; x < this.pixelMatrix.getWidth(); x++) {
+        for (int y = 0; y < this.imageHeight; y++) {
+            for (int x = 0; x < this.imageWidth; x++) {
                 if (connectedPixels[y][x]) {
                     continue;
                 }
@@ -165,25 +137,26 @@ public class SLIC {
                 createNewLabeledSection(visited);
             }
         }
-
     }
 
 
-    private ArrayList<int[]> getConnectedSection(boolean[][] connectedPixels, int y, int x) {
+    private ArrayList<int[]> getConnectedSection(@NotNull boolean[][] connectedPixels, int y, int x) {
         ArrayList<int[]> visited = new ArrayList<>();
         ArrayList<int[]> queue = new ArrayList<>();
-        boolean[][] queued = new boolean[this.pixelMatrix.getHeight()][this.pixelMatrix.getWidth()];
+        boolean[][] queued = new boolean[this.imageHeight][this.imageWidth];
         int[] current = {y, x};
         while (true) {
             visited.add(current);
             connectedPixels[current[0]][current[1]] = true;
-            int yMax = Integer.min(this.pixelMatrix.getHeight(), current[0] + 2);
-            int yMin = Integer.max(0, current[0] - 1);
-            int xMax = Integer.min(this.pixelMatrix.getWidth(), current[1] + 2);
-            int xMin = Integer.max(0, current[1] - 1);
-            for (int yy = yMin; yy < yMax; yy++) {
-                for (int xx = xMin; xx < xMax; xx++) {
-                    if (this.label[yy][xx] != this.label[current[0]][current[1]] || queued[yy][xx] || connectedPixels[yy][xx]) {
+
+            int[] startStop = getStartAndStopYX(current[0], current[1]);
+            for (int yy = startStop[0]; yy < startStop[1]; yy++) {
+                for (int xx = startStop[2]; xx < startStop[3]; xx++) {
+                    if (this.label[yy][xx] != this.label[current[0]][current[1]]) {
+                        this.superPixels.get(this.label[current[0]][current[1]]).addNeighbour();
+                        continue;
+                    }
+                    if (queued[yy][xx] || connectedPixels[yy][xx]) {
                         continue;
                     }
                     queued[yy][xx] = true;
@@ -198,16 +171,54 @@ public class SLIC {
         return visited;
     }
 
-    private void createNewLabeledSection(ArrayList<int[]> visited) {
+    private void createNewLabeledSection(@NotNull ArrayList<int[]> visited) {
         int centerY = 0;
         int centerX = 0;
         for (int[] pos : visited) {
-            this.label[pos[0]][pos[1]] = this.clusters.size();
+            this.label[pos[0]][pos[1]] = this.superPixels.size();
             centerY += pos[0];
             centerX += pos[1];
         }
         centerY /= visited.size();
         centerX /= visited.size();
-        this.clusters.add(new SuperPixel(this.clusters.size(), centerY, centerX));
+        this.superPixels.add(new SuperPixel(this.imageParser, this.superPixels.size(), centerY, centerX));
+    }
+
+    public void updateNeighbouringSuperPixels(int y, int x) {
+        boolean[][] queued = new boolean[this.imageHeight][this.imageWidth];
+        ArrayList<int[]> queue = new ArrayList<>();
+        int[] current = {y, x};
+        while (true) {
+            queued[current[0]][current[1]] = true;
+            int[] startStop = getStartAndStopYX(current[0], current[1]);
+            for (int yy = startStop[0]; yy < startStop[1]; yy++) {
+                for (int xx = startStop[2]; xx < startStop[3]; xx++) {
+                    if (this.label[yy][xx] != this.label[current[0]][current[1]]) {
+                        this.superPixels.get(this.label[current[0]][current[1]]).addNeighbour();
+                        continue;
+                    }
+                    if (queued[yy][xx]) {
+                        continue;
+                    }
+                    queued[yy][xx] = true;
+                    queue.add(new int[]{yy, xx});
+
+                }
+            }
+            if (queue.size() == 0) {
+                break;
+            }
+            current = queue.remove(0);
+        }
+    }
+
+    private int[] getStartAndStopYX(int y, int x) {
+        return new int[]{
+                Integer.max(0, y - 1),
+                Integer.min(this.imageHeight - 1, y + 2),
+                Integer.max(0, x - 1),
+                Integer.min(this.imageWidth - 1, x + 2)
+
+        };
     }
 }

@@ -2,13 +2,9 @@ import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
-
-import javax.imageio.ImageIO;
-
-import java.awt.*;
-
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
 import java.io.File;
 import java.util.Random;
 
@@ -21,10 +17,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        MOEA moea = new MOEA("./147091/Test image.jpg", 100, 2, 0.5, 0.5, 0.1);
-        SLIC slic = new SLIC(moea.pixelMatrix);
-        slic.run(256);
-        drawImage(moea.pixelMatrix, slic);
+        MOEA moea = new MOEA("./Segmentering/kuseknuser.png", 100, 2, 0.5, 0.5, 0.1);
+        drawImage(moea.slic);
         //moea.run();
         System.out.println("Done");
         //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -34,24 +28,16 @@ public class Main extends Application {
     }
 
 
-    private void drawImage(PixelMatrix pixelMatrix, SLIC slic) {
+    private void drawImage(SLIC slic) {
         Random rand = new Random();
 
 
-        final WritableImage image = new WritableImage(pixelMatrix.getWidth(), pixelMatrix.getHeight());
+        final WritableImage image = new WritableImage(slic.imageWidth, slic.imageHeight);
         final PixelWriter pixelWriter = image.getPixelWriter();
-        /*
-        Color[] colors = new Color[slic.clusters.size()];
-        for (int i = 0; i < colors.length; i++) {
-            int r = rand.nextInt(256);
-            int g = rand.nextInt(256);
-            int b = rand.nextInt(256);
-            colors[i] = new Color(r, g, b);
-        }
-        */
-        for (int y = 0; y < pixelMatrix.getHeight(); y++) {
-            for (int x = 0; x < pixelMatrix.getWidth(); x++) {
-                pixelWriter.setArgb(x, y, pixelMatrix.getPixel(slic.clusters.get(slic.label[y][x]).y, slic.clusters.get(slic.label[y][x]).x).argb);
+
+        for (int y = 0; y < slic.imageHeight; y++) {
+            for (int x = 0; x < slic.imageWidth; x++) {
+                pixelWriter.setArgb(x, y, slic.superPixels.get(slic.label[y][x]).getArgb());
             }
         }
 

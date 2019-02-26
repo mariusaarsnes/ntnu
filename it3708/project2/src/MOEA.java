@@ -4,8 +4,8 @@ import java.util.concurrent.Executors;
 
 public class MOEA {
 
-    ImageParser image;
-    PixelMatrix pixelMatrix;
+    ImageParser imageParser;
+    SLIC slic;
     int generations, populationSize;
     double mutationRate, crossoverRate, elitismRate;
 
@@ -21,11 +21,13 @@ public class MOEA {
         this.population = new Individual[populationSize];
 
         try {
-            this.image = new ImageParser(fileName);
-            this.pixelMatrix = new PixelMatrix(this.image, false);
+            this.imageParser = new ImageParser(fileName);
+            //this.pixelMatrix = new PixelMatrix(this.imageParser);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        this.slic = new SLIC(this.imageParser);
+        this.slic.run(10000);
     }
 
     public void run() {
@@ -37,13 +39,13 @@ public class MOEA {
 
     private Individual[] createInitialPopulation() {
         System.out.println("\tStarting to create initial population");
-        Individual[] population = new Individual[this.image.getNumPixels()];
+        Individual[] population = new Individual[this.imageParser.getNumPixels()];
         // Setup for parallel creation of individuals
         final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         for (int i = 0; i < this.populationSize; i++) {
             final int index = i;
             executorService.execute(() -> {
-                population[index] = new Individual(this.image, this.pixelMatrix);
+                //population[index] = new Individual(this.imageParser);
             });
         }
         executorService.shutdown();

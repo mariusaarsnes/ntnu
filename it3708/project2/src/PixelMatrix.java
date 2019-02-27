@@ -1,7 +1,5 @@
-import org.jetbrains.annotations.NotNull;
-
 public class PixelMatrix {
-
+/*
     private final Pixel[][] pixels;
     private final int height, width;
 
@@ -107,7 +105,6 @@ public class PixelMatrix {
                 }
             }
         }
-         */
         return pixels;
     }
 
@@ -140,4 +137,5 @@ public class PixelMatrix {
     public Pixel getPixel(int y, int x) {
         return this.pixels[y][x];
     }
+    */
 }

@@ -1,17 +1,21 @@
 import java.awt.*;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 class SuperPixel {
 
     ImageParser imageParser;
     int id, x, y;
-    HashMap<SuperPixel, Double> neighbours;
+    int alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
+    ArrayList<Integer> neighbours;
 
     SuperPixel(ImageParser imageParser, int id, int y, int x) {
         this.imageParser = imageParser;
         this.id = id;
         this.y = y;
         this.x = x;
+        this.pixelCount = 1;
+        this.neighbours = new ArrayList<>();
+        resetColor();
     }
 
     void moveToLowestGradient() {
@@ -32,6 +36,7 @@ class SuperPixel {
         }
         this.y = bestY;
         this.x = bestX;
+        resetColor();
     }
 
     private int getGradient(int y, int x) {
@@ -39,15 +44,43 @@ class SuperPixel {
                 (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y + 1, x, y - 1, x)));
     }
 
-    Color getColor() {
+    public void addNeighbour(int neighbour) {
+        if (this.neighbours.contains(neighbour)) {
+            return;
+        }
+        this.neighbours.add(neighbour);
+
+    }
+
+    private void resetColor() {
+        this.alphaTotal = 0;
+        this.redTotal = 0;
+        this.greenTotal = 0;
+        this.blueTotal = 0;
+
+    }
+
+    public void updateColor(int y, int x) {
+        Color color = this.imageParser.getPixelColor(y, x);
+        this.alphaTotal += color.getAlpha();
+        this.redTotal += color.getRed();
+        this.greenTotal += color.getGreen();
+        this.blueTotal += color.getBlue();
+    }
+
+    public Color getRootColor() {
         return this.imageParser.getPixelColor(this.y, this.x);
     }
 
-    int getArgb() {
-        return this.imageParser.getPixelArgb(this.y, this.x);
+
+    public Color getColor() {
+        return new Color(this.redTotal / this.pixelCount, this.greenTotal / this.pixelCount, this.blueTotal / this.pixelCount, this.alphaTotal / this.pixelCount);
     }
 
-    public void addNeighbour() {
+    public void resetCenter(int y, int x) {
+        this.y = y;
+        this.x = x;
+        this.pixelCount = 0;
 
     }
 }

@@ -73,7 +73,6 @@ public class SLIC {
                     }
                 }
             }
-
             error = updateClusterCenters(label);
             System.out.println("\tLoop " + loop + " done! Residual error: " + error);
 
@@ -85,7 +84,15 @@ public class SLIC {
         enforceConnectivity();
         System.out.println("Number of superPixels after  enforcing connectivity: " + this.superPixels.size());
         System.out.println("Total number of pixels in imageParser: " + this.numPixels);
+        System.out.println("Starting to update cluster centers");
         updateClusterCenters(this.label);
+        System.out.println("Completed updating cluster centers");
+        System.out.println("Starting to update neighbouring superpixels");
+        updateNeighbouringSuperPixels();
+        System.out.println("Completed updating neighbouring superpixels");
+        System.out.println("Starting to update superpixel colour");
+        updateSuperPixelsColor();
+        System.out.println("Completed updating superpixel colour");
         System.out.println("Finished with running SLIC");
 
     }
@@ -114,8 +121,7 @@ public class SLIC {
             error += Math.sqrt(
                     (newX - this.superPixels.get(i).x) * (newX - this.superPixels.get(i).x) +
                             (newY - this.superPixels.get(i).y) * (newY - this.superPixels.get(i).y));
-            this.superPixels.get(i).y = newY;
-            this.superPixels.get(i).x = newX;
+            this.superPixels.get(i).resetCenter(newY, newX);
 
         }
         return error;
@@ -126,7 +132,9 @@ public class SLIC {
     private void enforceConnectivity() {
         boolean[][] connectedPixels = new boolean[this.imageHeight][this.imageWidth];
         for (SuperPixel cluster : this.superPixels) {
-            getConnectedSection(connectedPixels, cluster.y, cluster.x);
+            ArrayList<int[]> visited = getConnectedSection(connectedPixels, cluster.y, cluster.x);
+            cluster.pixelCount = visited.size();
+
         }
         for (int y = 0; y < this.imageHeight; y++) {
             for (int x = 0; x < this.imageWidth; x++) {
@@ -134,11 +142,11 @@ public class SLIC {
                     continue;
                 }
                 ArrayList<int[]> visited = getConnectedSection(connectedPixels, y, x);
-                createNewLabeledSection(visited);
+                SuperPixel newSp = createNewSuperPixel(visited);
+                this.superPixels.add(newSp);
             }
         }
     }
-
 
     private ArrayList<int[]> getConnectedSection(@NotNull boolean[][] connectedPixels, int y, int x) {
         ArrayList<int[]> visited = new ArrayList<>();
@@ -153,7 +161,6 @@ public class SLIC {
             for (int yy = startStop[0]; yy < startStop[1]; yy++) {
                 for (int xx = startStop[2]; xx < startStop[3]; xx++) {
                     if (this.label[yy][xx] != this.label[current[0]][current[1]]) {
-                        this.superPixels.get(this.label[current[0]][current[1]]).addNeighbour();
                         continue;
                     }
                     if (queued[yy][xx] || connectedPixels[yy][xx]) {
@@ -171,7 +178,7 @@ public class SLIC {
         return visited;
     }
 
-    private void createNewLabeledSection(@NotNull ArrayList<int[]> visited) {
+    private SuperPixel createNewSuperPixel(@NotNull ArrayList<int[]> visited) {
         int centerY = 0;
         int centerX = 0;
         for (int[] pos : visited) {
@@ -181,43 +188,74 @@ public class SLIC {
         }
         centerY /= visited.size();
         centerX /= visited.size();
-        this.superPixels.add(new SuperPixel(this.imageParser, this.superPixels.size(), centerY, centerX));
+        return new SuperPixel(this.imageParser, this.superPixels.size(), centerY, centerX);
     }
 
-    public void updateNeighbouringSuperPixels(int y, int x) {
-        boolean[][] queued = new boolean[this.imageHeight][this.imageWidth];
-        ArrayList<int[]> queue = new ArrayList<>();
-        int[] current = {y, x};
-        while (true) {
-            queued[current[0]][current[1]] = true;
-            int[] startStop = getStartAndStopYX(current[0], current[1]);
-            for (int yy = startStop[0]; yy < startStop[1]; yy++) {
-                for (int xx = startStop[2]; xx < startStop[3]; xx++) {
-                    if (this.label[yy][xx] != this.label[current[0]][current[1]]) {
-                        this.superPixels.get(this.label[current[0]][current[1]]).addNeighbour();
-                        continue;
+    private void updateNeighbouringSuperPixels() {
+        for (SuperPixel sp : superPixels) {
+            boolean[][] visited = new boolean[this.imageHeight][this.imageWidth];
+            ArrayList<int[]> queue = new ArrayList<>();
+            int[] current = {sp.y, sp.x};
+            while (true) {
+                visited[current[0]][current[1]] = true;
+                int[] startStop = getStartAndStopYX(current[0], current[1]);
+                for (int yy = startStop[0]; yy < startStop[1]; yy++) {
+                    for (int xx = startStop[2]; xx < startStop[3]; xx++) {
+                        if (this.label[yy][xx] != sp.id) {
+                            sp.addNeighbour(this.label[yy][xx]);
+                            continue;
+                        }
+                        if (visited[yy][xx]) {
+                            continue;
+                        }
+                        visited[yy][xx] = true;
+                        queue.add(new int[]{yy, xx});
                     }
-                    if (queued[yy][xx]) {
-                        continue;
-                    }
-                    queued[yy][xx] = true;
-                    queue.add(new int[]{yy, xx});
-
                 }
+                if (queue.size() == 0) {
+                    break;
+                }
+                current = queue.remove(0);
             }
-            if (queue.size() == 0) {
-                break;
+        }
+    }
+
+    private void updateSuperPixelsColor() {
+        for (SuperPixel sp : this.superPixels) {
+            boolean[][] visited = new boolean[this.imageHeight][this.imageWidth];
+            ArrayList<int[]> queue = new ArrayList<>();
+            int[] current = {sp.y, sp.x};
+            while (true) {
+                visited[current[0]][current[1]] = true;
+                sp.pixelCount++;
+                sp.updateColor(current[0], current[1]);
+                int[] startStop = getStartAndStopYX(current[0], current[1]);
+                for (int yy = startStop[0]; yy < startStop[1]; yy++) {
+                    for (int xx = startStop[2]; xx < startStop[3]; xx++) {
+                        if (this.label[yy][xx] != sp.id) {
+                            continue;
+                        }
+                        if (visited[yy][xx]) {
+                            continue;
+                        }
+                        visited[yy][xx] = true;
+                        queue.add(new int[]{yy, xx});
+                    }
+                }
+                if (queue.size() == 0) {
+                    break;
+                }
+                current = queue.remove(0);
             }
-            current = queue.remove(0);
         }
     }
 
     private int[] getStartAndStopYX(int y, int x) {
         return new int[]{
                 Integer.max(0, y - 1),
-                Integer.min(this.imageHeight - 1, y + 2),
+                Integer.min(this.imageHeight, y + 2),
                 Integer.max(0, x - 1),
-                Integer.min(this.imageWidth - 1, x + 2)
+                Integer.min(this.imageWidth, x + 2)
 
         };
     }

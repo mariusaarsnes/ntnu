@@ -45,7 +45,7 @@ public class MOEA {
         for (int i = 0; i < this.populationSize; i++) {
             final int index = i;
             executorService.execute(() -> {
-                //population[index] = new Individual(this.imageParser);
+                population[index] = new Individual(this.imageParser,slic);
             });
         }
         executorService.shutdown();

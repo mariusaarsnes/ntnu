@@ -37,7 +37,7 @@ public class Main extends Application {
 
         for (int y = 0; y < slic.imageHeight; y++) {
             for (int x = 0; x < slic.imageWidth; x++) {
-                pixelWriter.setArgb(x, y, slic.superPixels.get(slic.label[y][x]).getArgb());
+                pixelWriter.setArgb(x, y, slic.superPixels.get(slic.label[y][x]).getColor().getRGB());
             }
         }
 

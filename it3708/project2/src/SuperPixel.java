@@ -7,6 +7,18 @@ class SuperPixel {
     int id, x, y;
     int alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
     ArrayList<Integer> neighbours;
+    ArrayList<SuperPixelEdge> edges;
+
+    SuperPixel(ImageParser imageParser, int id, int y, int x, int pixelCount) {
+        this.imageParser = imageParser;
+        this.id = id;
+        this.y = y;
+        this.x = x;
+        this.pixelCount = pixelCount;
+        this.neighbours = new ArrayList<>();
+        this.edges = new ArrayList<>();
+        resetColor();
+    }
 
     SuperPixel(ImageParser imageParser, int id, int y, int x) {
         this.imageParser = imageParser;
@@ -15,6 +27,7 @@ class SuperPixel {
         this.x = x;
         this.pixelCount = 1;
         this.neighbours = new ArrayList<>();
+        this.edges = new ArrayList<>();
         resetColor();
     }
 
@@ -44,12 +57,17 @@ class SuperPixel {
                 (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y + 1, x, y - 1, x)));
     }
 
-    public void addNeighbour(int neighbour) {
+    public boolean addNeighbour(int neighbour) {
         if (this.neighbours.contains(neighbour)) {
-            return;
+            return false;
         }
         this.neighbours.add(neighbour);
+        return true;
 
+    }
+
+    public void addEdge(SuperPixel V, double distance) {
+        this.edges.add(new SuperPixelEdge(this, V, distance));
     }
 
     private void resetColor() {
@@ -68,19 +86,19 @@ class SuperPixel {
         this.blueTotal += color.getBlue();
     }
 
-    public Color getRootColor() {
-        return this.imageParser.getPixelColor(this.y, this.x);
-    }
-
 
     public Color getColor() {
-        return new Color(this.redTotal / this.pixelCount, this.greenTotal / this.pixelCount, this.blueTotal / this.pixelCount, this.alphaTotal / this.pixelCount);
+        try {
+            return new Color(this.redTotal / this.pixelCount, this.greenTotal / this.pixelCount, this.blueTotal / this.pixelCount, this.alphaTotal / this.pixelCount);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void resetCenter(int y, int x) {
         this.y = y;
         this.x = x;
-        this.pixelCount = 0;
 
     }
 }

@@ -30,8 +30,7 @@ public class ImageParser {
         int height = image.getHeight();
         int width = image.getWidth();
         boolean hasAlphaChannel = image.getAlphaRaster() != null;
-
-        int[][] result = new int[height][width];
+        
         if (hasAlphaChannel) {
             final int pixelLength = 4;
             for (int pixel = 0, row = 0, col = 0; pixel < pixels.length; pixel += pixelLength) {

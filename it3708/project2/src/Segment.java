@@ -14,16 +14,16 @@ public class Segment {
         this.redTotal = root.redTotal;
         this.greenTotal = root.greenTotal;
         this.blueTotal = root.blueTotal;
-        this.pixelCount = 1;
+        this.pixelCount = root.pixelCount;
     }
 
     public void add(SuperPixel pixel) {
         this.pixels.add(pixel);
-        this.alphaTotal = pixel.alphaTotal;
-        this.redTotal = pixel.redTotal;
-        this.greenTotal = pixel.greenTotal;
-        this.blueTotal = pixel.blueTotal;
-        pixelCount++;
+        this.alphaTotal += pixel.alphaTotal;
+        this.redTotal += pixel.redTotal;
+        this.greenTotal += pixel.greenTotal;
+        this.blueTotal += pixel.blueTotal;
+        pixelCount += pixel.pixelCount;
     }
 
     int getArgb() {

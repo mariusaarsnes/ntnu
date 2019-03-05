@@ -18,8 +18,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         MOEA moea = new MOEA("./Segmentering/kuseknuser.png", 100, 2, 0.5, 0.5, 0.1);
+        moea.run();
         drawImage(moea.slic);
-        //moea.run();
         System.out.println("Done");
         //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         //primaryStage.setTitle("Hello World");

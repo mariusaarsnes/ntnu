@@ -1,7 +1,5 @@
 import org.jetbrains.annotations.NotNull;
 
-import javax.swing.text.Segment;
-
 public class SegmentSuperPixelEdge implements Comparable<SegmentSuperPixelEdge> {
 
     private final Segment segment;
@@ -10,6 +8,14 @@ public class SegmentSuperPixelEdge implements Comparable<SegmentSuperPixelEdge> 
     public SegmentSuperPixelEdge(Segment segment, SuperPixelEdge superPixelEdge) {
         this.segment = segment;
         this.superPixelEdge = superPixelEdge;
+    }
+
+    public Segment getSegment() {
+        return this.segment;
+    }
+
+    public SuperPixelEdge getSuperPixelEdge() {
+        return this.superPixelEdge;
     }
 
     @Override

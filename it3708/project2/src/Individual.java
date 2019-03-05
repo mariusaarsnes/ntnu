@@ -1,8 +1,4 @@
-import javax.swing.text.Segment;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.PriorityQueue;
-import java.util.Random;
+import java.util.*;
 
 public class Individual {
 
@@ -10,43 +6,74 @@ public class Individual {
     ImageParser imageParser;
     SLIC slic;
     int[] genotype;
+    int minimumSegmentCount, maximumSegmentCount;
     double score, edgeValue, overallDeviation, crowdingDistance;
+    HashMap<SuperPixel,Segment> visitedPixels;
+    Segment[] segments;
     Random random;
 
 
-    public Individual(ImageParser image, SLIC slic) {
+    public Individual(ImageParser image, SLIC slic, int minimumSegmentCount, int maximumSegmentCount ) {
         this.imageParser = image;
         this.slic = slic;
         this.random = new Random();
+        this.minimumSegmentCount = minimumSegmentCount;
+        this.maximumSegmentCount = maximumSegmentCount;
+
         this.genotype = createGenotype();
     }
 
     private int[] createGenotype() {
         final int[] genotype = new int[this.slic.superPixels.size()];
-
+        //TODO: Fix byll
         final HashMap<SuperPixel, Segment> visitedPixels = new HashMap<>();
-        final int segmentCount = 2;//this.minimumSegmentCount + this.random.nextInt(this.maximumSegmentCount - this.minimumSegmentCount + 1);
+        final int segmentCount = this.minimumSegmentCount + this.random.nextInt(this.maximumSegmentCount - this.minimumSegmentCount + 1);
         final Segment[] segments = new Segment[segmentCount];
 
         final PriorityQueue<SegmentSuperPixelEdge> pq = new PriorityQueue<>();
 
         for (int i = 0; i < segmentCount; i++) {
-            int pos;
             SuperPixel rootPixel;
             do {
-                pos = random.nextInt(this.slic.superPixels.size());
+                int pos = random.nextInt(this.slic.superPixels.size());
                 rootPixel = this.slic.superPixels.get(pos);
             }
             while (visitedPixels.containsKey(rootPixel));
-            /*
+
             segments[i] = new Segment(rootPixel);
             visitedPixels.put(rootPixel, segments[i]);
-            for (SuperPixelEdge pixelEdge : rootPixel.edges) {
-                pq.add(new SegmentSuperPixelEdge(segments[i], pixelEdge));
+            for (SuperPixelEdge superPixelEdge : rootPixel.edges) {
+                pq.add(new SegmentSuperPixelEdge(segments[i], superPixelEdge));
             }
-            */
         }
-        return new int[]{9, 2};
+        while (!pq.isEmpty()) {
+            final SegmentSuperPixelEdge segmentSuperPixelEdge = pq.remove();
+            final Segment segment = segmentSuperPixelEdge.getSegment();
+            final SuperPixelEdge currentSuperPixelEdge = segmentSuperPixelEdge.getSuperPixelEdge();
+
+            if (!visitedPixels.containsKey(currentSuperPixelEdge.V)){
+                segment.add(currentSuperPixelEdge.V);
+                visitedPixels.put(currentSuperPixelEdge.V,segment);
+                for (SuperPixelEdge superPixelEdge:currentSuperPixelEdge.V.edges) {
+                    pq.add(new SegmentSuperPixelEdge(segment,superPixelEdge));
+                }
+            } else if (!visitedPixels.containsKey(currentSuperPixelEdge.U)) {
+                segment.add(currentSuperPixelEdge.U);
+                visitedPixels.put(currentSuperPixelEdge.U,segment);
+                for (SuperPixelEdge superPixelEdge :
+                        currentSuperPixelEdge.U.edges) {
+                    pq.add(new SegmentSuperPixelEdge(segment, superPixelEdge));
+                }
+            }
+        }
+        int count = 0;
+        for (Segment segment :
+                segments) {
+            count += segment.pixels.size();
+        }
+        this.segments = segments;
+        this.visitedPixels = visitedPixels;
+        return genotype;
     }
 }
 

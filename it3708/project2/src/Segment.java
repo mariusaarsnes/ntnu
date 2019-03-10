@@ -5,11 +5,22 @@ public class Segment {
 
     final HashSet<SuperPixel> pixels = new HashSet<>();
     public double overallDeviation;
+    public double connectivityMeasure;
 
-    private int alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
+    int id, alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
 
-    public Segment(SuperPixel root) {
-        pixels.add(root);
+    public Segment(int id) {
+        this.id = id;
+        this.alphaTotal = 0;
+        this.redTotal = 0;
+        this.greenTotal = 0;
+        this.blueTotal = 0;
+        this.pixelCount = 0;
+    }
+
+    public Segment(SuperPixel root, int id) {
+        this.id = id;
+        this.pixels.add(root);
         this.alphaTotal = root.alphaTotal;
         this.redTotal = root.redTotal;
         this.greenTotal = root.greenTotal;
@@ -23,7 +34,7 @@ public class Segment {
         this.redTotal += pixel.redTotal;
         this.greenTotal += pixel.greenTotal;
         this.blueTotal += pixel.blueTotal;
-        pixelCount += pixel.pixelCount;
+        this.pixelCount += pixel.pixelCount;
     }
 
     int getArgb() {

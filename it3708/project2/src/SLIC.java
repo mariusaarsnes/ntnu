@@ -229,7 +229,7 @@ public class SLIC {
                                 continue;
                             }
                             if (label[yy][xx] != id) {
-                                if (superPixels.get(id).addNeighbour(label[yy][xx])) {
+                                if (sp.addNeighbour(label[yy][xx])) {
                                     double distance = getArgbDistance(sp, superPixels.get(label[yy][xx]));
                                     sp.addEdge(superPixels.get(label[yy][xx]), distance);
                                 }
@@ -286,37 +286,9 @@ public class SLIC {
                 }
             }
         }
-        /*
-        for (SuperPixel sp : this.superPixels) {
-            boolean[][] visited = new boolean[this.imageHeight][this.imageWidth];
-            ArrayList<int[]> queue = new ArrayList<>();
-            int[] current = {sp.y, sp.x};
-            while (true) {
-                visited[current[0]][current[1]] = true;
-                sp.pixelCount++;
-                sp.updateColor(current[0], current[1]);
-                int[] startStop = getStartAndStopYX(current[0], current[1]);
-                for (int yy = startStop[0]; yy < startStop[1]; yy++) {
-                    for (int xx = startStop[2]; xx < startStop[3]; xx++) {
-                        if (visited[yy][xx]) {
-                            continue;
-                        }
-                        if (this.label[yy][xx] != sp.id) {
-                            continue;
-                        }
-                        queue.add(new int[]{yy, xx});
-                    }
-                }
-                if (queue.size() == 0) {
-                    break;
-                }
-                current = queue.remove(queue.size() - 1);
-            }
-        }
-        */
     }
 
-    private int[] getStartAndStopYX(int y, int x) {
+    public int[] getStartAndStopYX(int y, int x) {
         return new int[]{
                 Integer.max(0, y - 1),
                 Integer.min(this.imageHeight, y + 2),
@@ -335,5 +307,17 @@ public class SLIC {
         int differenceBlue = c1.getBlue() - c2.getBlue();
 
         return Math.sqrt(differenceAlpha * differenceAlpha + differenceRed * differenceRed + differenceGreen * differenceGreen + differenceBlue * differenceBlue);
+    }
+
+    public boolean neighboursInSameSuperPixel(int y, int x) {
+        int[] startStop = getStartAndStopYX(y, x);
+        for (int yy = startStop[0]; yy < startStop[1]; yy++) {
+            for (int xx = startStop[2]; xx < startStop[3]; xx++) {
+                if (this.label[yy][xx] != this.label[y][x]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

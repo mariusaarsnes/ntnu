@@ -13,7 +13,7 @@ public class SuperPixelEdge implements Comparable<SuperPixelEdge> {
 
     @Override
     public int compareTo(SuperPixelEdge o) {
-        return Double.compare(o.distance, this.distance);
+        return Double.compare(this.distance, o.distance);
     }
 }
 

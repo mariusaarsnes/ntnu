@@ -17,9 +17,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        MOEA moea = new MOEA("./Segmentering/kuseknuser.png", 100, 2, 0.5, 0.5, 0.1);
+        MOEA moea = new MOEA("./160068/Test image.jpg",
+                10, 10,
+                0.5, 0.5, 0.1,
+                1, 1,
+                10, 15,
+                20, false);
         moea.run();
-        drawImage(moea.slic);
+        drawImage(moea.slic, moea);
         System.out.println("Done");
         //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         //primaryStage.setTitle("Hello World");
@@ -28,7 +33,7 @@ public class Main extends Application {
     }
 
 
-    private void drawImage(SLIC slic) {
+    private void drawImage(SLIC slic, MOEA moea) {
         Random rand = new Random();
 
 
@@ -48,5 +53,23 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        final WritableImage image2 = new WritableImage(slic.imageWidth, slic.imageHeight);
+        final PixelWriter pixelWriter2 = image2.getPixelWriter();
+
+        for (int y = 0; y < slic.imageHeight; y++) {
+            for (int x = 0; x < slic.imageWidth; x++) {
+                pixelWriter2.setArgb(x, y, moea.population[0].visitedPixels.get(slic.superPixels.get(slic.label[y][x])).getArgb());
+            }
+        }
+        File testFile2 = new File("test2.png");
+
+        try {
+            ImageIO.write(SwingFXUtils.fromFXImage(image2, null), "png", testFile2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

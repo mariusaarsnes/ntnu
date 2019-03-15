@@ -3,6 +3,7 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class SLIC {
@@ -319,5 +320,9 @@ public class SLIC {
             }
         }
         return true;
+    }
+
+    public SuperPixel closestNeighbour(SuperPixel sp) {
+        return Collections.min(sp.edges).V;
     }
 }

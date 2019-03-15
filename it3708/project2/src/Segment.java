@@ -37,6 +37,15 @@ public class Segment {
         this.pixelCount += pixel.pixelCount;
     }
 
+    public void remove(SuperPixel pixel) {
+        this.pixels.remove(pixel);
+        this.alphaTotal -= pixel.alphaTotal;
+        this.redTotal -= pixel.redTotal;
+        this.greenTotal -= pixel.greenTotal;
+        this.blueTotal -= pixel.blueTotal;
+        this.pixelCount -= pixel.pixelCount;
+    }
+
     int getArgb() {
         return new Color(
                 this.redTotal / this.pixelCount,
@@ -46,6 +55,9 @@ public class Segment {
     }
 
     Color getColor() {
+        if (this.pixelCount == 0) {
+            System.out.println("something is wrong");
+        }
         return new Color(
                 this.redTotal / this.pixelCount,
                 this.greenTotal / this.pixelCount,

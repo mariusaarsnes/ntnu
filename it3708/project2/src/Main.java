@@ -17,12 +17,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        MOEA moea = new MOEA("./160068/Test image.jpg",
-                10, 10,
+        MOEA moea = new MOEA("./147091/Test image.jpg",
+                1000, 50,
                 0.5, 0.5, 0.1,
-                1, 1,
-                10, 15,
-                20, false);
+                1, 20,
+                2, 40,
+                10, false);
         moea.run();
         drawImage(moea.slic, moea);
         System.out.println("Done");
@@ -60,7 +60,11 @@ public class Main extends Application {
 
         for (int y = 0; y < slic.imageHeight; y++) {
             for (int x = 0; x < slic.imageWidth; x++) {
-                pixelWriter2.setArgb(x, y, moea.population[0].visitedPixels.get(slic.superPixels.get(slic.label[y][x])).getArgb());
+                try {
+                    pixelWriter2.setArgb(x, y, moea.population[moea.population.length - 1].visitedPixels.get(slic.superPixels.get(slic.label[y][x])).getArgb());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         File testFile2 = new File("test2.png");

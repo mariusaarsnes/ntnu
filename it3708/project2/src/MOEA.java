@@ -67,6 +67,13 @@ public class MOEA {
         System.out.println("RUN MOEA:");
         Individual[] population = createInitialPopulation();
 
+        /*
+        for (Individual individual :
+                population) {
+            writeImage(individual);
+        }
+        */
+
         // If we have selected to run the weighted sum we use the normal GA approach
         if (this.weightedSum) {
             System.out.println("\tRunning with Weighted Sum comparison");
@@ -122,16 +129,16 @@ public class MOEA {
         final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         for (int i = 0; i < this.populationSize; i++) {
             final int index = i;
-            //executorService.execute(() -> {
-            population[index] = new Individual(slic,
-                    this.overallDeviationWeight, this.connectivityMeasureWeight,
-                    this.minimumSegmentCount, this.maximumSegmentCount);
-            population[index].overallDeviationAndConnectivityMeasure();
-            //});
+            executorService.execute(() -> {
+                population[index] = new Individual(slic,
+                        this.overallDeviationWeight, this.connectivityMeasureWeight,
+                        this.minimumSegmentCount, this.maximumSegmentCount);
+                population[index].overallDeviationAndConnectivityMeasure();
+            });
         }
-        //executorService.shutdown();
+        executorService.shutdown();
         //noinspection StatementWithEmptyBody
-        //while (!executorService.isTerminated()) ;
+        while (!executorService.isTerminated()) ;
 
         System.out.println("\tFinished creating initial population");
         return population;
@@ -146,29 +153,29 @@ public class MOEA {
         for (int i = 0; i < offspringCount; i++) {
             final int index = i;
 
-            //executorService.execute(() -> {
-            Individual child = null;
-            while (child == null) {
-                final int splitPoint = random.nextInt(slic.superPixels.size());
-                // Select two parents
-                Individual p1 = tournamentSelection(individuals, numberOfTournaments);
-                Individual p2 = tournamentSelection(individuals, numberOfTournaments);
-                child = new Individual(p1, p2, splitPoint, slic);
-                if (child.segments.length < minimumSegmentCount || child.segments.length > maximumSegmentCount) {
-                    child = null;
+            executorService.execute(() -> {
+                Individual child = null;
+                while (child == null) {
+                    final int splitPoint = random.nextInt(slic.superPixels.size());
+                    // Select two parents
+                    Individual p1 = tournamentSelection(individuals, numberOfTournaments);
+                    Individual p2 = tournamentSelection(individuals, numberOfTournaments);
+                    child = new Individual(p1, p2, splitPoint, slic);
+                    if (child.segments.length < minimumSegmentCount || child.segments.length > maximumSegmentCount) {
+                        child = null;
+                    }
                 }
-            }
 
-            if (random.nextDouble() < this.mutationRate) {
-                //mutate(child, minimumSegmentCount, maximumSegmentCount);
-            }
-            offspring[index] = child;
-            //});
+                if (random.nextDouble() < this.mutationRate) {
+                    //mutate(child, minimumSegmentCount, maximumSegmentCount);
+                }
+                offspring[index] = child;
+            });
         }
-        //executorService.shutdown();
+        executorService.shutdown();
 
         //noinspection StatementWithEmptyBody
-        //while (!executorService.isTerminated()) ;
+        while (!executorService.isTerminated()) ;
 
         return offspring;
     }
@@ -187,6 +194,21 @@ public class MOEA {
 
     private void mutate(@NotNull Individual individual, int minimumSegmentCount, int maximumSegmentCount) {
         //TODO: implement mutation using visitedPixels and segments
+        int spId = this.random.nextInt(individual.visitedPixels.size());
+        SuperPixel sp = this.slic.superPixels.get(spId);
+        Segment currentSegment = individual.visitedPixels.get(sp);
+        int eNum = this.random.nextInt(sp.edges.size());
+
+        SuperPixel randomNeighbour = sp.edges.get(eNum).V;
+        Segment neighbourSegment = individual.visitedPixels.get(randomNeighbour);
+
+        individual.visitedPixels.replace(sp, neighbourSegment);
+        if (currentSegment != neighbourSegment && currentSegment.pixels.size() > 1) {
+            neighbourSegment.add(sp);
+            currentSegment.remove(sp);
+        }
+
+
     }
 
     private void evaluate(@NotNull Individual[] individuals) {
@@ -194,14 +216,14 @@ public class MOEA {
 
         for (int i = 0; i < individuals.length; i++) {
             final int index = i;
-            //executorService.execute(() -> {
-            individuals[index].overallDeviationAndConnectivityMeasure();
-            //});
+            executorService.execute(() -> {
+                individuals[index].overallDeviationAndConnectivityMeasure();
+            });
         }
-        //executorService.shutdown();
+        executorService.shutdown();
 
         //noinspection StatementWithEmptyBody
-        //while (!executorService.isTerminated()) ;
+        while (!executorService.isTerminated()) ;
     }
 
     // This method ranks the individuals based on the weighted sum
@@ -255,12 +277,9 @@ public class MOEA {
         System.arraycopy(population, 0, tempPop, 0, population.length);
         System.arraycopy(offspring, 0, tempPop, population.length, offspring.length);
 
-        System.out.println("Population length: " + population.length);
-        System.out.println("Offspring length: " + offspring.length);
-        System.out.println("TempPop length: " + tempPop.length);
 
         HashMap<Integer, ArrayList<Individual>> dominationMap = new HashMap<>();
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 
         for (Individual individual : tempPop) {
             //Create domination rank for every solution
@@ -302,8 +321,6 @@ public class MOEA {
                 break;
             }
         }
-        // TODO: Fix null pointer exception due to lack of resultIndividuals being returned. Some places in the array are null
-        //  Look at the crowdingDistanceSort method and the logic above. see if there is anything wrong which produces empty individuals
         return resultIndividuals;
     }
 
@@ -322,7 +339,6 @@ public class MOEA {
         for (Individual individual : dominationEdge) {
             individual.crowdingDistance = 0;
         }
-        //TODO check logic here, are things sorted as they should be?
         deviationSort.get(0).crowdingDistance = Double.MAX_VALUE;
         deviationSort.get(deviationSort.size() - 1).crowdingDistance = Double.MAX_VALUE;
         pq.add(deviationSort.get(0));
@@ -341,9 +357,10 @@ public class MOEA {
                             deviationSort.get(i + 1).overallDeviation /
                             (deviationMax - deviationMin))
                     + Math.abs(
-                    deviationSort.get(i - 1).connectivityMeasure /
-                            deviationSort.get(i + 1).connectivityMeasure /
+                    (deviationSort.get(i - 1).connectivityMeasure) /
+                            (deviationSort.get(i + 1).connectivityMeasure) /
                             (connectivityMax - connectivityMin));
+            pq.add(deviationSort.get(i));
         }
 
         for (int i = 0; i < resIndividuals.length; i++) {
@@ -358,12 +375,8 @@ public class MOEA {
             if (individual == someIndividual) {
                 continue;
             }
-            try {
-                if (individual.isDominatedBy(someIndividual)) {
-                    dr++;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
+            if (individual.isDominatedBy(someIndividual)) {
+                dr++;
             }
         }
         return dr;

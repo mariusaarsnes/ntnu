@@ -4,9 +4,9 @@ import java.util.HashSet;
 public class Segment {
 
     final HashSet<SuperPixel> pixels = new HashSet<>();
+    private final CIELab ci = new CIELab();
     public double overallDeviation;
     public double connectivityMeasure;
-
     int id, alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
 
     public Segment(int id) {
@@ -25,7 +25,7 @@ public class Segment {
         this.redTotal = root.redTotal;
         this.greenTotal = root.greenTotal;
         this.blueTotal = root.blueTotal;
-        this.pixelCount = root.pixelCount;
+        this.pixelCount = root.getPixelCount();
     }
 
     public void add(SuperPixel pixel) {
@@ -34,7 +34,7 @@ public class Segment {
         this.redTotal += pixel.redTotal;
         this.greenTotal += pixel.greenTotal;
         this.blueTotal += pixel.blueTotal;
-        this.pixelCount += pixel.pixelCount;
+        this.pixelCount += pixel.getPixelCount();
     }
 
     public void remove(SuperPixel pixel) {
@@ -43,7 +43,7 @@ public class Segment {
         this.redTotal -= pixel.redTotal;
         this.greenTotal -= pixel.greenTotal;
         this.blueTotal -= pixel.blueTotal;
-        this.pixelCount -= pixel.pixelCount;
+        this.pixelCount -= pixel.getPixelCount();
     }
 
     int getArgb() {
@@ -63,5 +63,13 @@ public class Segment {
                 this.greenTotal / this.pixelCount,
                 this.blueTotal / this.pixelCount,
                 this.alphaTotal / this.pixelCount);
+    }
+
+    float[] getCielab() {
+        return ci.fromRGB(new float[]{
+                (float) this.redTotal / this.pixelCount,
+                (float) this.greenTotal / this.pixelCount,
+                (float) this.blueTotal / this.pixelCount,
+                (float) this.alphaTotal / this.pixelCount});
     }
 }

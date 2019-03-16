@@ -17,12 +17,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        MOEA moea = new MOEA("./147091/Test image.jpg",
-                1000, 50,
+        MOEA moea = new MOEA("./216066/Test image.jpg",
+                100, 50,
                 0.5, 0.5, 0.1,
-                1, 20,
-                2, 40,
-                10, false);
+                1, 1,
+                5, 50, 2, false, false);
         moea.run();
         drawImage(moea.slic, moea);
         System.out.println("Done");
@@ -34,18 +33,23 @@ public class Main extends Application {
 
 
     private void drawImage(SLIC slic, MOEA moea) {
-        Random rand = new Random();
-
 
         final WritableImage image = new WritableImage(slic.imageWidth, slic.imageHeight);
         final PixelWriter pixelWriter = image.getPixelWriter();
 
+        for (SuperPixel sp : slic.superPixels) {
+            for (Pixel pixel : sp.pixels) {
+                pixelWriter.setArgb(pixel.x, pixel.y, sp.getColor().getRGB());
+            }
+
+        }
+        /*
         for (int y = 0; y < slic.imageHeight; y++) {
             for (int x = 0; x < slic.imageWidth; x++) {
                 pixelWriter.setArgb(x, y, slic.superPixels.get(slic.label[y][x]).getColor().getRGB());
             }
         }
-
+        */
         File testFile = new File("test.png");
 
         try {

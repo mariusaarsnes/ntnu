@@ -7,14 +7,14 @@ public class Individual {
 
     SLIC slic;
     Integer[] genotype;
-    int dominationRank, overallDeviationWeight, connectivityMeasureWeight, minimumSegmentCount, maximumSegmentCount;
-    double score, overallDeviation, connectivityMeasure, crowdingDistance;
+    int dominationRank, minimumSegmentCount, maximumSegmentCount;
+    double overallDeviationWeight, connectivityMeasureWeight, score, overallDeviation, connectivityMeasure, crowdingDistance;
     HashMap<SuperPixel, Segment> visitedPixels;
     Segment[] segments;
     Random random;
 
 
-    public Individual(SLIC slic, int overallDeviationWeight, int connectivityMeasureWeight, int minimumSegmentCount, int maximumSegmentCount) {
+    public Individual(SLIC slic, double overallDeviationWeight, double connectivityMeasureWeight, int minimumSegmentCount, int maximumSegmentCount) {
         this.slic = slic;
         this.random = new Random();
         this.overallDeviationWeight = overallDeviationWeight;
@@ -33,28 +33,17 @@ public class Individual {
         this.overallDeviationWeight = p1.overallDeviationWeight;
         this.connectivityMeasureWeight = p1.connectivityMeasureWeight;
 
-        HashMap<SuperPixel, Segment> visitedPixels = new HashMap<>();
-        ArrayList<Segment> segments = new ArrayList<>();
 
         Integer[] genotype = new Integer[p1.genotype.length];
         System.arraycopy(p1.genotype, 0, genotype, 0, splitPoint);
         System.arraycopy(p2.genotype, splitPoint, genotype, splitPoint, genotype.length - splitPoint);
 
-        /**
-         *
+        this.genotype = genotype;
 
-         for (int pos = 0; pos < genotype.length; pos++) {
-         ArrayList<Integer> idArray = new ArrayList<>();
-         int pos2 = pos;
-         while (genotype[pos2] != null) {
-         if (idArray.contains(pos2)) {
-         System.out.println("LOOP WHEN INITIALIZING!!!!");
-         }
-         idArray.add(pos2);
-         pos2 = genotype[pos2];
-         }
-         }
-         */
+        /*
+
+        HashMap<SuperPixel, Segment> visitedPixels = new HashMap<>();
+        ArrayList<Segment> segments = new ArrayList<>();
 
         boolean[] added = new boolean[genotype.length];
         for (int pos = 0; pos < genotype.length; pos++) {
@@ -69,6 +58,9 @@ public class Individual {
                     continue;
                 }
                 if (idArray.contains(genotype[current])) {
+                    if (visitedPixels.containsKey(current)) {
+                        break;
+                    }
                     genotype[current] = null;
                     break;
                 }
@@ -101,7 +93,7 @@ public class Individual {
         this.genotype = genotype;
         this.visitedPixels = visitedPixels;
         this.segments = segments.toArray(new Segment[segments.size()]);
-
+        */
         /**
          * V2: Very slow and creates little variation
 
@@ -216,24 +208,56 @@ public class Individual {
 
     }
 
-    private SuperPixel tryGetNearestConnectedNeighbour(SuperPixel sp, boolean[] addedSuperPixels) {
-        SuperPixel closestNeighbour = Collections.min(sp.edges).V;
-        if (!addedSuperPixels[closestNeighbour.id]) {
-            double minDistance = Double.MAX_VALUE;
-            for (SuperPixelEdge edge :
-                    sp.edges) {
-                if (edge.distance < minDistance && addedSuperPixels[edge.V.id]) {
-                    closestNeighbour = edge.V;
-                    minDistance = edge.distance;
+    public void setVisitedAndSegments() {
+        HashMap<SuperPixel, Segment> visitedPixels = new HashMap<>();
+        ArrayList<Segment> segments = new ArrayList<>();
+
+        boolean[] added = new boolean[genotype.length];
+        for (int pos = 0; pos < genotype.length; pos++) {
+            if (added[pos]) {
+                continue;
+            }
+            int current = pos;
+            ArrayList<Integer> idArray = new ArrayList<>();
+            while (genotype[current] != null) {
+                if (added[current]) {
+                    break;
                 }
+                if (idArray.contains(genotype[current])) {
+                    genotype[current] = null;
+                    break;
+                }
+                idArray.add(current);
+                current = genotype[current];
+            }
+
+            SuperPixel root = slic.superPixels.get(current);
+
+            if (visitedPixels.containsKey(root)) {
+                Segment segment = visitedPixels.get(root);
+                for (int id : idArray) {
+                    SuperPixel sp = slic.superPixels.get(id);
+                    segment.add(sp);
+                    visitedPixels.put(sp, segment);
+                    added[id] = true;
+                }
+            } else {
+                Segment segment = new Segment(segments.size());
+                idArray.add(current);
+                for (int id : idArray) {
+                    SuperPixel sp = slic.superPixels.get(id);
+                    segment.add(sp);
+                    visitedPixels.put(sp, segment);
+                    added[id] = true;
+                }
+                segments.add(segment);
             }
         }
-        return closestNeighbour;
+        this.visitedPixels = visitedPixels;
+        this.segments = segments.toArray(new Segment[segments.size()]);
     }
 
-
     private void generateSegments() {
-        //TODO: check if kruskal gives good solution to begin with
 
         final Integer[] genotype = new Integer[this.slic.superPixels.size()];
         final HashMap<SuperPixel, Segment> visitedPixels = new HashMap<>();
@@ -312,6 +336,16 @@ public class Individual {
 
 
     private double euclideanDistance(SuperPixel sp, Segment segment) {
+        if (this.slic.cielab) {
+            float[] cielab1 = sp.getCielab();
+            float[] cielab2 = segment.getCielab();
+            double distance = 0;
+            for (int i = 0; i < cielab1.length; i++) {
+                distance += Math.pow(cielab1[i] - cielab2[i], 2);
+            }
+            return distance;
+        }
+
         Color spColor = sp.getColor();
         Color sColor = segment.getColor();
         int differenceAlpha = spColor.getAlpha() - sColor.getAlpha();
@@ -327,8 +361,8 @@ public class Individual {
         double cm = 0;
 
         for (int j = 0; j < sp.edges.size(); j++) {
-            if (segment.pixels.contains(sp.edges.get(j).V)) {
-                cm += 1 / (j + 1);
+            if (!segment.pixels.contains(sp.edges.get(j).V)) {
+                cm += 1.0 / (sp.edges.size());
             }
         }
         return cm;
@@ -337,18 +371,18 @@ public class Individual {
     /**
      * Update the overalldeviation, connectivitymeasure and the score of an individual.
      * The score is the weighted overall deviation - the weighted connectivity measure.
-     * The higher the score, the better
+     * The lower the score, the better
      *
      * @param overallDeviation
      * @param connectivityMeasure
      * @param overallDeviationWeight
      * @param connectivityMeasureWeight
      */
-    void scoreIndividual(double overallDeviation, double connectivityMeasure, int overallDeviationWeight, int connectivityMeasureWeight) {
+    void scoreIndividual(double overallDeviation, double connectivityMeasure, double overallDeviationWeight, double connectivityMeasureWeight) {
         this.overallDeviation = overallDeviation;
         this.connectivityMeasure = connectivityMeasure;
 
-        this.score = overallDeviation * overallDeviationWeight - connectivityMeasure * connectivityMeasureWeight;
+        this.score = overallDeviation * overallDeviationWeight + connectivityMeasure * connectivityMeasureWeight;
     }
 
 

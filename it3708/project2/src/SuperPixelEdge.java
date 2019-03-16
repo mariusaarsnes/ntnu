@@ -17,7 +17,7 @@ public class SuperPixelEdge implements Comparable<SuperPixelEdge> {
     }
 }
 
-class rgbDistanceComparator implements Comparator<SuperPixelEdge> {
+class SuperPixelEdgeComparator implements Comparator<SuperPixelEdge> {
 
     @Override
     public int compare(SuperPixelEdge o1, SuperPixelEdge o2) {

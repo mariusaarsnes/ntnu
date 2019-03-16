@@ -23,16 +23,15 @@ public class MOEA {
     Random random;
     Individual[] population;
     private int generations, populationSize,
-            overallDeviationWeight, connectivityMeasureWeight,
             minimumSegmentCount, maximumSegmentCount, numberOfTournaments, imagesWritten = 0;
-    private double mutationRate, crossoverRate, elitismRate;
-    private boolean weightedSum;
+    private double overallDeviationWeight, connectivityMeasureWeight, mutationRate, crossoverRate, elitismRate;
+    private boolean weightedSum, cielab;
 
 
     public MOEA(String fileName, int generations, int populationSize,
                 double mutationRate, double crossoverRate, double elitismRate,
-                int overallDeviationWeight, int connectivityMeasureWeight,
-                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, boolean weightedSum) {
+                double overallDeviationWeight, double connectivityMeasureWeight,
+                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, boolean weightedSum, boolean cielab) {
 
         System.out.println("INIT MOEA:");
         this.generations = generations;
@@ -46,6 +45,7 @@ public class MOEA {
         this.maximumSegmentCount = maximumSegmentCount;
         this.numberOfTournaments = numberOfTournaments;
         this.weightedSum = weightedSum;
+        this.cielab = cielab;
         this.population = new Individual[populationSize];
         this.random = new Random();
 
@@ -58,8 +58,8 @@ public class MOEA {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.slic = new SLIC(this.imageParser);
-        this.slic.run(10000);
+        this.slic = new SLIC(this.imageParser, cielab, 50);
+        this.slic.run(13000);
     }
 
     public void run() {
@@ -78,6 +78,7 @@ public class MOEA {
         if (this.weightedSum) {
             System.out.println("\tRunning with Weighted Sum comparison");
             for (int i = 0; i < this.generations; i++) {
+                System.out.println("Iteration: " + i);
                 //Run crossover to create new offsprings
                 final Individual[] offspring = crossover(
                         population, population.length, this.minimumSegmentCount,
@@ -159,16 +160,24 @@ public class MOEA {
                     final int splitPoint = random.nextInt(slic.superPixels.size());
                     // Select two parents
                     Individual p1 = tournamentSelection(individuals, numberOfTournaments);
-                    Individual p2 = tournamentSelection(individuals, numberOfTournaments);
+                    Individual p2 = p1;
+                    while (p2 == p1) {
+                        p2 = tournamentSelection(individuals, numberOfTournaments);
+                    }
+
                     child = new Individual(p1, p2, splitPoint, slic);
+                    if (random.nextDouble() < this.mutationRate) {
+                        mutate(child);
+                    }
+                    child.setVisitedAndSegments();
                     if (child.segments.length < minimumSegmentCount || child.segments.length > maximumSegmentCount) {
                         child = null;
                     }
                 }
 
-                if (random.nextDouble() < this.mutationRate) {
-                    //mutate(child, minimumSegmentCount, maximumSegmentCount);
-                }
+                //if (random.nextDouble() < this.mutationRate) {
+                //mutate(child);
+                //}
                 offspring[index] = child;
             });
         }
@@ -185,29 +194,22 @@ public class MOEA {
         for (int i = 0; i < numberOfTournaments; i++) {
             int contender = random.nextInt(individuals.length);
 
-            if (contender < bestIndex) {
+            if (individuals[contender].score < individuals[bestIndex].score) {
                 bestIndex = contender;
             }
         }
         return individuals[bestIndex];
     }
 
-    private void mutate(@NotNull Individual individual, int minimumSegmentCount, int maximumSegmentCount) {
-        //TODO: implement mutation using visitedPixels and segments
-        int spId = this.random.nextInt(individual.visitedPixels.size());
-        SuperPixel sp = this.slic.superPixels.get(spId);
-        Segment currentSegment = individual.visitedPixels.get(sp);
-        int eNum = this.random.nextInt(sp.edges.size());
+    private void mutate(@NotNull Individual individual) {
+        for (int i = 0; i < 3; i++) {
 
-        SuperPixel randomNeighbour = sp.edges.get(eNum).V;
-        Segment neighbourSegment = individual.visitedPixels.get(randomNeighbour);
 
-        individual.visitedPixels.replace(sp, neighbourSegment);
-        if (currentSegment != neighbourSegment && currentSegment.pixels.size() > 1) {
-            neighbourSegment.add(sp);
-            currentSegment.remove(sp);
+            int randomPos = individual.random.nextInt(individual.genotype.length);
+            ArrayList<SuperPixel> neighbours = this.slic.superPixels.get(randomPos).neighbours;
+            int randomPointer = neighbours.get(this.random.nextInt(neighbours.size())).id;
+            individual.genotype[randomPos] = randomPointer;
         }
-
 
     }
 
@@ -412,6 +414,9 @@ public class MOEA {
     }
 
     private boolean segmentContainsAllNeighbours(Individual individual, int y, int x) {
+        //TODO: Cleanup
+
+
         if (slic.neighboursInSameSuperPixel(y, x)) {
             return true;
         }
@@ -430,6 +435,7 @@ public class MOEA {
                 return false;
             }
         }
+
         return true;
     }
 }

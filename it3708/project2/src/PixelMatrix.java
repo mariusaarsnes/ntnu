@@ -1,12 +1,16 @@
+import org.jetbrains.annotations.NotNull;
+
 public class PixelMatrix {
-/*
+
     private final Pixel[][] pixels;
     private final int height, width;
+    private boolean cielab;
 
-    public PixelMatrix(@NotNull ImageParser imageParser) {
+    public PixelMatrix(@NotNull ImageParser imageParser, boolean cielab) {
 
         this.height = imageParser.getHeight();
         this.width = imageParser.getWidth();
+        this.cielab = cielab;
         System.out.println("\tStarting to build new imageParser matrix");
         pixels = createPixels(imageParser);
         System.out.println("\tFinished building new imageParser matrix");
@@ -18,13 +22,13 @@ public class PixelMatrix {
 
         // Create Pixel matrix
         int height = imageParser.getHeight(), width = imageParser.getWidth();
-        int[][] imagePixels = imageParser.getPixelArgb();
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                pixels[y][x] = new Pixel(y, x, y * width + x, imagePixels[y][x]);
+                pixels[y][x] = new Pixel(y, x,
+                        imageParser.getPixelArgb(y, x), imageParser.getPixelColor(y, x), imageParser.getPixelCielab(y, x));
             }
         }
-        /*
+
         // Find neighbours and distances
         for (int y = 0; y < imageParser.getHeight(); y++) {
             for (int x = 0; x < imageParser.getWidth(); x++) {
@@ -38,8 +42,7 @@ public class PixelMatrix {
                         currentPixel.edges[6] = new PixelEdge(
                                 currentPixel,
                                 currentPixel.neighbours[6],
-                                euclideanDistance(currentPixel, currentPixel.neighbours[6]),
-                                Direction.NW);
+                                euclideanDistance(currentPixel, currentPixel.neighbours[6]));
                     }
                     // Has neighbour NORTH EAST
                     if (x < imageParser.getWidth() - 1) {
@@ -47,15 +50,13 @@ public class PixelMatrix {
                         currentPixel.edges[4] = new PixelEdge(
                                 currentPixel,
                                 currentPixel.neighbours[4],
-                                euclideanDistance(currentPixel, currentPixel.neighbours[4]),
-                                Direction.NE);
+                                euclideanDistance(currentPixel, currentPixel.neighbours[4]));
                     }
                     currentPixel.neighbours[2] = pixels[y - 1][x];
                     currentPixel.edges[2] = new PixelEdge(
                             currentPixel,
                             currentPixel.neighbours[2],
-                            euclideanDistance(currentPixel, currentPixel.neighbours[2]),
-                            Direction.N);
+                            euclideanDistance(currentPixel, currentPixel.neighbours[2]));
                 }
 
                 // Has neighbour WEST
@@ -66,15 +67,13 @@ public class PixelMatrix {
                         currentPixel.edges[7] = new PixelEdge(
                                 currentPixel,
                                 currentPixel.neighbours[7],
-                                euclideanDistance(currentPixel, currentPixel.neighbours[7]),
-                                Direction.SW);
+                                euclideanDistance(currentPixel, currentPixel.neighbours[7]));
                     }
                     currentPixel.neighbours[1] = pixels[y][x - 1];
                     currentPixel.edges[1] = new PixelEdge(
                             currentPixel,
                             currentPixel.neighbours[1],
-                            euclideanDistance(currentPixel, currentPixel.neighbours[1]),
-                            Direction.W);
+                            euclideanDistance(currentPixel, currentPixel.neighbours[1]));
                 }
                 // Has neighbour SOUTH
                 if (y < imageParser.getHeight() - 1) {
@@ -84,15 +83,13 @@ public class PixelMatrix {
                         currentPixel.edges[5] = new PixelEdge(
                                 currentPixel,
                                 currentPixel.neighbours[5],
-                                euclideanDistance(currentPixel, currentPixel.neighbours[5]),
-                                Direction.SE);
+                                euclideanDistance(currentPixel, currentPixel.neighbours[5]));
                     }
                     currentPixel.neighbours[3] = pixels[y + 1][x];
                     currentPixel.edges[3] = new PixelEdge(
                             currentPixel,
                             currentPixel.neighbours[3],
-                            euclideanDistance(currentPixel, currentPixel.neighbours[3]),
-                            Direction.S);
+                            euclideanDistance(currentPixel, currentPixel.neighbours[3]));
                 }
                 // Has neighbour EAST
                 if (x < imageParser.getWidth() - 1) {
@@ -100,8 +97,7 @@ public class PixelMatrix {
                     currentPixel.edges[0] = new PixelEdge(
                             currentPixel,
                             currentPixel.neighbours[0],
-                            euclideanDistance(currentPixel, currentPixel.neighbours[0]),
-                            Direction.E);
+                            euclideanDistance(currentPixel, currentPixel.neighbours[0]));
                 }
             }
         }
@@ -110,11 +106,25 @@ public class PixelMatrix {
 
 
     private double euclideanDistance(Pixel p1, Pixel p2) {
-        int differenceRed = p1.color.getRed() - p2.color.getRed();
-        int differenceGreen = p1.color.getGreen() - p2.color.getGreen();
-        int differenceBlue = p1.color.getBlue() - p2.color.getBlue();
+        if (this.cielab) {
+            float[] cielab1 = p1.cielab;
+            float[] cielab2 = p2.cielab;
 
-        return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2));
+            double distance = 0.0;
+            for (int i = 0; i < cielab1.length; i++) {
+                distance += Math.pow(cielab1[i] - cielab2[i], 2);
+            }
+
+            return Math.sqrt(distance);
+        } else {
+
+            int differenceRed = p1.color.getRed() - p2.color.getRed();
+            int differenceGreen = p1.color.getGreen() - p2.color.getGreen();
+            int differenceBlue = p1.color.getBlue() - p2.color.getBlue();
+
+            return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2));
+        }
+
     }
 
 
@@ -137,5 +147,5 @@ public class PixelMatrix {
     public Pixel getPixel(int y, int x) {
         return this.pixels[y][x];
     }
-    */
+
 }

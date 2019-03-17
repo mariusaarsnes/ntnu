@@ -8,7 +8,8 @@ public class Segment {
     public double overallDeviation;
     public double connectivityMeasure;
     public double edgeValue;
-    public int id, alphaTotal, redTotal, greenTotal, blueTotal, pixelCount;
+    public int id, alphaTotal, redTotal, greenTotal, blueTotal;
+    Color color;
 
     public Segment(int id) {
         this.id = id;
@@ -16,7 +17,6 @@ public class Segment {
         this.redTotal = 0;
         this.greenTotal = 0;
         this.blueTotal = 0;
-        this.pixelCount = 0;
 
         this.overallDeviation = 0;
         this.connectivityMeasure = 0;
@@ -31,7 +31,7 @@ public class Segment {
         this.redTotal = root.color.getRed();
         this.greenTotal = root.color.getGreen();
         this.blueTotal = root.color.getBlue();
-        this.pixelCount = root.getPixelCount();
+        this.updateColor();
 
         this.overallDeviation = 0;
         this.connectivityMeasure = 0;
@@ -44,7 +44,8 @@ public class Segment {
         this.redTotal += pixel.color.getRed();
         this.greenTotal += pixel.color.getGreen();
         this.blueTotal += pixel.color.getBlue();
-        this.pixelCount += pixel.getPixelCount();
+        this.updateColor();
+
     }
 
     public void remove(SuperPixel pixel) {
@@ -53,28 +54,30 @@ public class Segment {
         this.redTotal -= pixel.color.getRed();
         this.greenTotal -= pixel.color.getGreen();
         this.blueTotal -= pixel.color.getBlue();
-        this.pixelCount -= pixel.getPixelCount();
+        this.updateColor();
     }
 
-    int getArgb() {
-        Color color = getColor();
-        return color.getRGB();
-    }
-
-    Color getColor() {
-        return new Color(
+    private void updateColor() {
+        this.color = new Color(
                 this.redTotal / this.pixels.size(),
                 this.greenTotal / this.pixels.size(),
                 this.blueTotal / this.pixels.size(),
                 this.alphaTotal / this.pixels.size());
     }
 
+    int getArgb() {
+        return this.color.getRGB();
+    }
+
+    Color getColor() {
+        return this.color;
+    }
+
     float[] getCielab() {
-        Color color = getColor();
         return ci.fromRGB(new float[]{
-                color.getRed(),
-                color.getGreen(),
-                color.getBlue(),
-                color.getAlpha()});
+                this.color.getRed(),
+                this.color.getGreen(),
+                this.color.getBlue(),
+                this.color.getAlpha()});
     }
 }

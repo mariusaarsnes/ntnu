@@ -6,6 +6,9 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main extends Application {
 
@@ -15,19 +18,32 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-        MOEA moea = new MOEA("./176035/Test image.jpg",
-                100, 50,
-                0.5, 0.5, 0.1,
-                1, 1, 1,
-                8, 30, 2, 35, 1000, false, true);
+        deleteExistingSegmentations();
+        MOEA moea = new MOEA("./353013/Test image.jpg",
+                100, 100,
+                0.3, 0.5, 0.1,
+                0.6, 0.3, 0.0,
+                1, 50, 5, 200, 0.01, true, true);
         moea.run();
         drawImage(moea.slic, moea);
         System.out.println("Done");
+        Plotter p = new Plotter();
 
+        p.plotFront(moea.getParetoFront());
         primaryStage.close();
     }
 
+    private void deleteExistingSegmentations() {
+        try {
+            Files.walk(Paths.get("Segmentation Evaluation/Student_Segmentation_Files"))
+                    .filter(Files::isRegularFile)
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     private void drawImage(SLIC slic, MOEA moea) {
 
@@ -75,6 +91,5 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

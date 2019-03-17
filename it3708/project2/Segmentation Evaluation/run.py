@@ -3,7 +3,7 @@ from fileReader import readImage
 from fileReader import readTextFile
 
 optimalFolder = "Optimal_Segmentation_Files" # you may have to specify the complete path
-studentFolder = "Student_Segmentation_Files" # you may have to specify the complete path
+studentFolder = "Student_Segmentation_Files/BlackAndWhite" # you may have to specify the complete path
 colorValueSlackRange = 40
 blackValueThreshold = 100 # colors below 100 is black
 pixelRangeCheck = 4

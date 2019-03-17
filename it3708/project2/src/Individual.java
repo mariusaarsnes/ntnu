@@ -52,6 +52,25 @@ public class Individual {
                 }
             }
         }
+        boolean[] added = new boolean[genotype.length];
+        for (int pos = 0; pos < genotype.length; pos++) {
+            if (added[pos]) {
+                continue;
+            }
+            int current = pos;
+            ArrayList<Integer> idArray = new ArrayList<>();
+            while (genotype[current] != null) {
+                if (added[current]) {
+                    break;
+                }
+                if (idArray.contains(current)) {
+                    genotype[current] = null;
+                    break;
+                }
+                idArray.add(current);
+                current = genotype[current];
+            }
+        }
         this.genotype = genotype;
     }
 
@@ -70,10 +89,12 @@ public class Individual {
                 if (added[current]) {
                     break;
                 }
+
                 if (idArray.contains(genotype[current])) {
                     genotype[current] = null;
                     break;
                 }
+
                 idArray.add(current);
                 current = genotype[current];
             }
@@ -159,12 +180,12 @@ public class Individual {
 
         double overallDeviation = 0.0;
         double connectivityMeasure = 0.0;
-        //double edgeValue = 0.0;
+        double edgeValue = 0.0;
 
         for (Segment segment : this.segments) {
             segment.overallDeviation = 0.0;
             segment.connectivityMeasure = 0.0;
-            //segment.edgeValue = 0.0;
+            segment.edgeValue = 0.0;
 
             for (SuperPixel sp : segment.pixels) {
                 //First calculate overall deviation (Summed argb distance from current superpixel to centroid of segment)
@@ -179,8 +200,8 @@ public class Individual {
 
                 for (SuperPixelEdge superPixelEdge : sp.edges) {
                     if (!segment.pixels.contains(superPixelEdge.V)) {
-                        //edgeValue += superPixelEdge.distance;
-                        //segment.edgeValue += superPixelEdge.distance;
+                        edgeValue += superPixelEdge.distance;
+                        segment.edgeValue += superPixelEdge.distance;
                     }
                 }
             }
@@ -213,7 +234,6 @@ public class Individual {
 
     private double connectivityMeasure(SuperPixel sp, Segment segment) {
         double cm = 0;
-        int counter = 0;
         for (SuperPixel neighbour : sp.neighbours) {
             if (!segment.pixels.contains(neighbour)) {
                 cm += 1.0 / sp.neighbours.size();
@@ -232,18 +252,18 @@ public class Individual {
                          double overallDeviationWeight, double connectivityMeasureWeight, double edgeValueWeight) {
         this.overallDeviation = overallDeviation;
         this.connectivityMeasure = connectivityMeasure;
-        //this.edgeValue = edgeValue;
+        this.edgeValue = edgeValue;
 
         this.score = (overallDeviation * overallDeviationWeight) +
-                (connectivityMeasure * connectivityMeasureWeight) /*-
-                (edgeValue * edgeValueWeight)*/;
+                (connectivityMeasure * connectivityMeasureWeight) -
+                (edgeValue * edgeValueWeight);
     }
 
 
     public boolean isDominatedBy(@NotNull Individual i) {
-        return (this.overallDeviation > i.overallDeviation && this.connectivityMeasure >= i.connectivityMeasure /*&& this.edgeValue <= i.edgeValue*/) ||
-                (this.overallDeviation >= i.overallDeviation && this.connectivityMeasure > i.connectivityMeasure /*&& this.edgeValue <= i.edgeValue*/) ||
-                (this.overallDeviation >= i.overallDeviation && this.connectivityMeasure >= i.connectivityMeasure /*&& this.edgeValue < i.edgeValue*/);
+        return (this.overallDeviation > i.overallDeviation && this.connectivityMeasure >= i.connectivityMeasure && this.edgeValue <= i.edgeValue) ||
+                (this.overallDeviation >= i.overallDeviation && this.connectivityMeasure > i.connectivityMeasure && this.edgeValue <= i.edgeValue) ||
+                (this.overallDeviation >= i.overallDeviation && this.connectivityMeasure >= i.connectivityMeasure && this.edgeValue < i.edgeValue);
     }
 }
 
@@ -285,6 +305,6 @@ class EdgeValueComparator implements Comparator<Individual> {
 
     @Override
     public int compare(Individual o1, Individual o2) {
-        return Double.compare(o2.edgeValue, o1.edgeValue);
+        return Double.compare(o1.edgeValue, o2.edgeValue);
     }
 }

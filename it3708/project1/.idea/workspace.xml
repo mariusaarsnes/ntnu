@@ -2,84 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f83d582e-374e-4777-b6ce-c7592f0f862c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/project1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../tdt4237/project1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Benchmarks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Description for files.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_files/p23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Depot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/GeneticAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Genotype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/GenotypeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/META-INF/it3708.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Meta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/it3708/Problem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p01.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p02.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p03.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p04.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p05.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p06.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p07.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p08.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p09.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p10.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p11.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p12.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p13.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p14.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p15.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p16.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p17.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p18.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p19.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p20.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p21.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p22.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solution_files/p23.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Depot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/GeneticAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Genotype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/GenotypeComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Meta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_39.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/Segmentation Evaluation/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/Segmentation Evaluation/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/ConnectivityMeasureComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/ConnectivityMeasureComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/CrowdingDistanceComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/CrowdingDistanceComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/EdgeValueComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/EdgeValueComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/MOEA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/MOEA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/OverallDeviationComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/OverallDeviationComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/SLIC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/SLIC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/out/production/project2/WeightedSumComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/out/production/project2/WeightedSumComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/src/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/src/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/src/MOEA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/src/MOEA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/src/SLIC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/src/SLIC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/test.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/test2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/test2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tdt4237/project2" beforeDir="false" afterPath="$PROJECT_DIR$/../../tdt4237/project2" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,22 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2987">
-              <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+            <state relative-caret-position="-1160">
+              <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4213#4757#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="2320">
               <caret line="134" column="45" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,11 +72,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Main.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="102" />
+    <option name="x" value="1651" />
     <option name="y" value="35" />
     <option name="width" value="1549" />
-    <option name="height" value="1761" />
+    <option name="height" value="1765" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -135,7 +91,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,13 +108,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549999526959" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552838704692" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -191,17 +147,18 @@
       <workItem from="1549999374818" duration="161000" />
       <workItem from="1550256902161" duration="3095000" />
       <workItem from="1550502931058" duration="11000" />
+      <workItem from="1552834628305" duration="2104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3267000" />
+    <option name="totallyTimeSpent" value="5371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="35" width="1549" height="1761" extended-state="4" />
+    <frame x="1651" y="35" width="1549" height="1765" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.29637235" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3689254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -233,7 +190,7 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29637235" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3689254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -275,22 +232,23 @@
     <entry file="file://$PROJECT_DIR$/src/GenotypeComparator.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2987">
-          <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+        <state relative-caret-position="2320">
+          <caret line="134" column="45" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneticAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="134" column="45" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="45" />
+        <state relative-caret-position="-1160">
+          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4213#4757#1" />
           </folding>
         </state>
       </provider>

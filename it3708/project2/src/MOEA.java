@@ -18,21 +18,21 @@ public class MOEA {
     private final Comparator<Individual> crowdingDistanceComparator;
     private final Comparator<Individual> overallDeviationComparator;
     private final Comparator<Individual> connectivityMeasureComparator;
-    //private final Comparator<Individual> edgeValueComparator;
+    private final Comparator<Individual> edgeValueComparator;
     ImageParser imageParser;
     SLIC slic;
     Random random;
     Individual[] population;
     private int generations, populationSize,
-            minimumSegmentCount, maximumSegmentCount, numberOfTournaments, imagesWritten = 0, k;
-    private double overallDeviationWeight, connectivityMeasureWeight, edgeValueWeight, mutationRate, crossoverRate, elitismRate;
+            minimumSegmentCount, maximumSegmentCount, numberOfTournaments, imagesWritten = 0;
+    private double overallDeviationWeight, connectivityMeasureWeight, edgeValueWeight, mutationRate, crossoverRate, elitismRate, m;
     private boolean weightedSum, cielab;
 
 
     public MOEA(String fileName, int generations, int populationSize,
                 double mutationRate, double crossoverRate, double elitismRate,
                 double overallDeviationWeight, double connectivityMeasureWeight, double edgeValueWeight,
-                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, int numSlicClusters, int k,
+                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, int numSlicClusters, double m,
                 boolean weightedSum, boolean cielab) {
 
         System.out.println("INIT MOEA:");
@@ -49,7 +49,7 @@ public class MOEA {
         this.numberOfTournaments = numberOfTournaments;
         this.weightedSum = weightedSum;
         this.cielab = cielab;
-        this.k = k;
+        this.m = m;
         this.population = new Individual[populationSize];
         this.random = new Random();
 
@@ -57,14 +57,14 @@ public class MOEA {
         this.crowdingDistanceComparator = new CrowdingDistanceComparator();
         this.overallDeviationComparator = new OverallDeviationComparator();
         this.connectivityMeasureComparator = new ConnectivityMeasureComparator();
-        //this.edgeValueComparator = new EdgeValueComparator();
+        this.edgeValueComparator = new EdgeValueComparator();
         try {
             this.imageParser = new ImageParser(fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
         this.slic = new SLIC(this.imageParser, cielab);
-        this.slic.run(numSlicClusters);
+        this.slic.run(numSlicClusters, m);
     }
 
     public void run() {
@@ -72,13 +72,34 @@ public class MOEA {
         System.out.println("RUN MOEA:");
         //Instant initStart = Instant.now();
         Individual[] population = createInitialPopulation();
+
         //Instant initEnd = Instant.now();
         //System.out.println("Time to create initial population: " + Duration.between(initStart, initEnd));
+        /*
+        for (int i = 0; i < 10 && i < population.length; i++) {
+            writeImage(population[i]);
+            if (!weightedSum) {
+                System.out.println("Domination rank: " + population[i].dominationRank);
+            }
+            System.out.println("Segments: " + population[i].segments.length);
+            System.out.println("Deviation score: " + population[i].overallDeviation);
+            System.out.println("Connectivity score: " + population[i].connectivityMeasure);
+            System.out.println("EdgeValue score: " + population[i].edgeValue);
+            System.out.println("Weighted sum: " + population[i].score);
+        }
+        */
         /*
         for (Individual individual :
                 population) {
             writeImage(individual);
         }
+        */
+        /*
+        rankPopulation(population);
+        for (Individual individual : getParetoFront(population, 1)) {
+            writeImage(individual);
+        }
+        this.population = population;
         */
         // If we have selected to run the weighted sum we use the normal GA approach
         if (this.weightedSum) {
@@ -137,17 +158,17 @@ public class MOEA {
         }
 
         System.out.println("Finished evolving solutions. Saving best images to folder");
-
-        for (int i = 0; i < 10 && i < population.length; i++) {
-            writeImage(population[i]);
+        ArrayList<Individual> paretoFront = getParetoFront(population, 1);
+        for (Individual individual : paretoFront) {
+            writeImage(individual);
             if (!weightedSum) {
-                System.out.println("Domination rank: " + population[i].dominationRank);
+                System.out.println("Domination rank: " + individual.dominationRank);
             }
-            System.out.println("Segments: " + population[i].segments.length);
-            System.out.println("Deviation score: " + population[i].overallDeviation);
-            System.out.println("Connectivity score: " + population[i].connectivityMeasure);
-            System.out.println("EdgeValue score: " + population[i].edgeValue);
-            System.out.println("Weighted sum: " + population[i].score);
+            System.out.println("Segments: " + individual.segments.length);
+            System.out.println("Deviation score: " + individual.overallDeviation);
+            System.out.println("Connectivity score: " + individual.connectivityMeasure);
+            System.out.println("EdgeValue score: " + individual.edgeValue);
+            System.out.println("Weighted sum: " + individual.score);
         }
 
         this.population = population;
@@ -234,6 +255,8 @@ public class MOEA {
                 best = contender;
             } else if (contender.dominationRank < best.dominationRank) {
                 best = contender;
+            } else if (contender.score < best.score) {
+                best = contender;
             }
         }
         return best;
@@ -247,16 +270,17 @@ public class MOEA {
         if (prob > 0.6) {
             individual.genotype[randomPos] = null;
         } else if (prob > 0.3) {
-            int randomPointer = this.random.nextInt(this.slic.superPixels.get(randomPos).neighbours.size());
-            SuperPixel randomNeighbour = this.slic.superPixels.get(randomPos).neighbours.get(randomPointer);
-            individual.genotype[randomPos] = randomNeighbour.id;
-
+            SuperPixel sp = this.slic.superPixels.get(randomPos);
+            int roof = sp.neighbours.size();
+            int randomNeighbourId = sp.neighbours.get(this.random.nextInt(roof)).id;
+            if (individual.genotype[randomNeighbourId] == null || individual.genotype[randomNeighbourId] != randomPos) {
+                individual.genotype[randomPos] = randomNeighbourId;
+            }
         } else {
             SuperPixelEdge spEdge = this.slic.superPixels.get(0).edges.get(0);
             for (SuperPixel sp : this.slic.superPixels) {
                 for (SuperPixelEdge newSpEdge : sp.edges) {
                     try {
-
                         if (spEdge.distance < newSpEdge.distance &&
                                 individual.genotype[newSpEdge.U.id] != null &&
                                 individual.genotype[newSpEdge.V.id] != null &&
@@ -396,12 +420,12 @@ public class MOEA {
 
         ArrayList<Individual> deviationSort = new ArrayList<>(dominationEdge);
         ArrayList<Individual> connectivitySort = new ArrayList<>(dominationEdge);
-        //ArrayList<Individual> edgeValueSort = new ArrayList<>(dominationEdge);
+        ArrayList<Individual> edgeValueSort = new ArrayList<>(dominationEdge);
 
 
         deviationSort.sort(overallDeviationComparator);
         connectivitySort.sort(connectivityMeasureComparator);
-        //edgeValueSort.sort(edgeValueComparator);
+        edgeValueSort.sort(edgeValueComparator);
         PriorityQueue<Individual> pq = new PriorityQueue<>(crowdingDistanceComparator);
 
         // First we reset the crowding distance for each individual
@@ -420,22 +444,22 @@ public class MOEA {
         double connectivityMax = connectivitySort.get(connectivitySort.size() - 1).connectivityMeasure;
         double connectivityMin = connectivitySort.get(0).connectivityMeasure;
 
-        //double edgeValueMax = -edgeValueSort.get(edgeValueSort.size() - 1).edgeValue;
-        //double edgeValueMin = -edgeValueSort.get(0).edgeValue;
+        double edgeValueMax = edgeValueSort.get(edgeValueSort.size() - 1).edgeValue;
+        double edgeValueMin = edgeValueSort.get(0).edgeValue;
 
         for (int i = 1; i < deviationSort.size() - 1; i++) {
             deviationSort.get(i).crowdingDistance = Math.abs(
-                    deviationSort.get(i - 1).overallDeviation /
-                            deviationSort.get(i + 1).overallDeviation /
+                    (deviationSort.get(i - 1).overallDeviation -
+                            deviationSort.get(i + 1).overallDeviation) /
                             (deviationMax - deviationMin))
                     + Math.abs(
-                    deviationSort.get(i - 1).connectivityMeasure /
-                            deviationSort.get(i + 1).connectivityMeasure /
-                            (connectivityMax - connectivityMin)) /*
+                    (deviationSort.get(i - 1).connectivityMeasure -
+                            deviationSort.get(i + 1).connectivityMeasure) /
+                            (connectivityMax - connectivityMin))
                     + Math.abs(
-                    -deviationSort.get(i - 1).edgeValue /
-                            (-deviationSort.get(i + 1).edgeValue) /
-                            (edgeValueMax - edgeValueMin))*/;
+                    (deviationSort.get(i - 1).edgeValue -
+                            deviationSort.get(i + 1).edgeValue) /
+                            (edgeValueMax - edgeValueMin));
             pq.add(deviationSort.get(i));
         }
 
@@ -443,6 +467,20 @@ public class MOEA {
             resIndividuals[i] = pq.poll();
         }
         return resIndividuals;
+    }
+
+    private void rankPopulation(Individual[] individuals) {
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        for (int i = 0; i < individuals.length; i++) {
+            final int index = i;
+            executorService.execute(() -> {
+                individuals[index].dominationRank = dominationRank(individuals, individuals[index]);
+            });
+        }
+        executorService.shutdown();
+
+        //noinspection StatementWithEmptyBody
+        while (!executorService.isTerminated()) ;
     }
 
     private int dominationRank(@NotNull Individual[] population, Individual individual) {
@@ -519,5 +557,25 @@ public class MOEA {
         }
 
         return true;
+    }
+
+    private ArrayList<Individual> getParetoFront(Individual[] individuals, int rank) {
+        ArrayList<Individual> front = new ArrayList<>();
+        for (Individual individual : individuals) {
+            if (individual.dominationRank <= rank) {
+                front.add(individual);
+            }
+        }
+        return front;
+    }
+
+    public ArrayList<Individual> getParetoFront() {
+        ArrayList<Individual> front = new ArrayList<>();
+        for (Individual individual : this.population) {
+            if (individual.dominationRank == 1) {
+                front.add(individual);
+            }
+        }
+        return front;
     }
 }

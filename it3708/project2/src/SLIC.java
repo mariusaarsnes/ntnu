@@ -20,16 +20,10 @@ public class SLIC {
         this.cielab = cielab;
     }
 
-    public void run(int numClusters) {
+    public void run(int numClusters, double m) {
         System.out.println("Run SLIC");
         int n = this.numPixels;
-        double m;
-        if (this.cielab) {
-            m = 0.0005;
-        } else {
-            m = 1;
 
-        }
         int s = (int) Math.round(Math.sqrt((double) n / numClusters));
         int i = 0;
         ArrayList<SuperPixel> superPixels = new ArrayList<>();

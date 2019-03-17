@@ -25,7 +25,7 @@ public class PixelMatrix {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 pixels[y][x] = new Pixel(y, x,
-                        imageParser.getPixelArgb(y, x), imageParser.getPixelColor(y, x), imageParser.getPixelCielab(y, x));
+                        imageParser.getPixelArgb(y, x), imageParser.getPixelColor(y, x));
             }
         }
 
@@ -115,14 +115,15 @@ public class PixelMatrix {
                 distance += Math.pow(cielab1[i] - cielab2[i], 2);
             }
 
-            return Math.sqrt(distance);
+            return distance;
         } else {
 
             int differenceRed = p1.color.getRed() - p2.color.getRed();
             int differenceGreen = p1.color.getGreen() - p2.color.getGreen();
             int differenceBlue = p1.color.getBlue() - p2.color.getBlue();
+            int differenceAlpha = p1.color.getAlpha() - p2.color.getAlpha();
 
-            return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2));
+            return Math.sqrt(Math.pow(differenceRed, 2) + Math.pow(differenceGreen, 2) + Math.pow(differenceBlue, 2) + Math.pow(differenceAlpha, 2));
         }
 
     }

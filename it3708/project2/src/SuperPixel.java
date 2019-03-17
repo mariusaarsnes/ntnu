@@ -6,8 +6,10 @@ class SuperPixel {
     ImageParser imageParser;
     CIELab ci = new CIELab();
     int id, x, y;
-    int alphaTotal, redTotal, greenTotal, blueTotal;
-    boolean cielab;
+    boolean usecielab;
+    float[] cielab;
+    Color color;
+
     ArrayList<Pixel> pixels;
     ArrayList<SuperPixel> neighbours;
     ArrayList<SuperPixelEdge> edges;
@@ -22,12 +24,12 @@ class SuperPixel {
         this.edges = new ArrayList<>();
     }
 
-    SuperPixel(ImageParser imageParser, int id, int y, int x, boolean cielab) {
+    SuperPixel(ImageParser imageParser, int id, int y, int x, boolean usecielab) {
         this.imageParser = imageParser;
         this.id = id;
         this.y = y;
         this.x = x;
-        this.cielab = cielab;
+        this.usecielab = usecielab;
         this.pixels = new ArrayList<>();
         this.neighbours = new ArrayList<>();
         this.edges = new ArrayList<>();
@@ -55,14 +57,18 @@ class SuperPixel {
     }
 
     private int getGradient(int y, int x) {
-        return (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y, x + 1, y, x - 1))) +
-                (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y + 1, x, y - 1, x)));
+        if (this.usecielab) {
+            return (int) Math.round(Math.sqrt(this.imageParser.getCIElabDistance(y, x + 1, y, x - 1))) +
+                    (int) Math.round(Math.sqrt(this.imageParser.getCIElabDistance(y + 1, x, y - 1, x)));
+        } else {
+
+            return (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y, x + 1, y, x - 1))) +
+                    (int) Math.round(Math.sqrt(this.imageParser.getArgbDistance(y + 1, x, y - 1, x)));
+        }
+
     }
 
     public void addPixel(Pixel pixel) {
-        if (this.pixels.contains(pixel)) {
-            return;
-        }
         this.pixels.add(pixel);
     }
 
@@ -78,13 +84,8 @@ class SuperPixel {
         return this.pixels.remove(i);
     }
 
-    public Pixel removePixel(Pixel pixel) {
-        for (int i = 0; i < this.pixels.size(); i++) {
-            if (this.pixels.get(i) == pixel) {
-                return this.pixels.remove(i);
-            }
-        }
-        throw new IllegalArgumentException("Pixel [" + pixel.y + ", " + pixel.x + "] does not exist in superpixel " + this.id);
+    public void removePixel(Pixel pixel) {
+        this.pixels.remove(pixel);
     }
 
     public void addNeighbour(SuperPixel neighbour) {
@@ -117,34 +118,31 @@ class SuperPixel {
     }
 
     public void updateColor() {
-        this.redTotal = 0;
-        this.greenTotal = 0;
-        this.blueTotal = 0;
-        this.alphaTotal = 0;
+        int redTotal = 0, greenTotal = 0, blueTotal = 0, alphaTotal = 0;
+
         for (Pixel pixel : this.pixels) {
-            this.redTotal += pixel.color.getRed();
-            this.greenTotal += pixel.color.getGreen();
-            this.blueTotal += pixel.color.getBlue();
-            this.alphaTotal += pixel.color.getAlpha();
+            alphaTotal += pixel.color.getAlpha();
+            redTotal += pixel.color.getRed();
+            greenTotal += pixel.color.getGreen();
+            blueTotal += pixel.color.getBlue();
         }
+        this.color = new Color(
+                redTotal / this.pixels.size(), greenTotal / this.pixels.size(),
+                blueTotal / this.pixels.size(), alphaTotal / this.pixels.size());
+
+        this.cielab = ci.fromRGB(new float[]{
+                this.color.getRed(), this.color.getGreen(),
+                this.color.getBlue(), this.color.getAlpha()});
+
     }
 
     public Color getColor() {
-
-        return new Color(
-                this.redTotal / this.pixels.size(),
-                this.greenTotal / this.pixels.size(),
-                this.blueTotal / this.pixels.size(),
-                this.alphaTotal / this.pixels.size());
+        return this.color;
 
     }
 
     public float[] getCielab() {
-        return ci.fromRGB(new float[]{
-                (float) this.redTotal / this.pixels.size(),
-                (float) this.greenTotal / this.pixels.size(),
-                (float) this.blueTotal / this.pixels.size(),
-                (float) this.alphaTotal / this.pixels.size()});
+        return this.cielab;
     }
 
     public void resetCenter(int y, int x) {
@@ -154,8 +152,8 @@ class SuperPixel {
     }
 
     public double getDistanceTo(SuperPixel sp) {
-        if (this.cielab) {
-            float[] cielab1 = this.getCielab();
+        if (this.usecielab) {
+            float[] cielab1 = this.cielab;
             float[] cielab2 = sp.getCielab();
 
             double dist = 0;
@@ -164,13 +162,16 @@ class SuperPixel {
             }
             return Math.sqrt(dist);
         } else {
-            Color c1 = this.getColor(), c2 = sp.getColor();
+            Color c1 = this.color, c2 = sp.getColor();
             int differenceAlpha = c1.getAlpha() - c2.getAlpha();
             int differenceRed = c1.getRed() - c2.getRed();
             int differenceGreen = c1.getGreen() - c2.getGreen();
             int differenceBlue = c1.getBlue() - c2.getBlue();
 
-            return Math.sqrt(differenceAlpha * differenceAlpha + differenceRed * differenceRed + differenceGreen * differenceGreen + differenceBlue * differenceBlue);
+            return Math.sqrt(Math.pow(differenceAlpha,2) +
+                    Math.pow(differenceRed,2) +
+                    Math.pow(differenceGreen,2)+
+                    Math.pow(differenceBlue,2));
         }
     }
 }

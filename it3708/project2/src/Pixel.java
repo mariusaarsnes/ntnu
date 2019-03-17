@@ -8,22 +8,15 @@ public class Pixel {
     final CIELab ci = new CIELab();
     final float[] cielab;
 
-    Pixel(int y, int x, int argb, Color color, float[] cielab) {
+    Pixel(int y, int x, int argb, Color color) {
         this.y = y;
         this.x = x;
         this.argb = argb;
         this.color = color;
-        this.cielab = cielab;
+        this.cielab = ci.fromRGB(new float[]{color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()});
         this.edges = new PixelEdge[8];
         this.neighbours = new Pixel[8];
     }
 
-    int getEdgeIndex(PixelEdge pixelEdge) {
-        for (int i = 0; i < 8; i++) {
-            if (edges[i] == pixelEdge) {
-                return i;
-            }
-        }
-        return -1;
-    }
+
 }

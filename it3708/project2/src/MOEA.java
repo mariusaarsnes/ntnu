@@ -18,20 +18,22 @@ public class MOEA {
     private final Comparator<Individual> crowdingDistanceComparator;
     private final Comparator<Individual> overallDeviationComparator;
     private final Comparator<Individual> connectivityMeasureComparator;
+    //private final Comparator<Individual> edgeValueComparator;
     ImageParser imageParser;
     SLIC slic;
     Random random;
     Individual[] population;
     private int generations, populationSize,
-            minimumSegmentCount, maximumSegmentCount, numberOfTournaments, imagesWritten = 0;
-    private double overallDeviationWeight, connectivityMeasureWeight, mutationRate, crossoverRate, elitismRate;
+            minimumSegmentCount, maximumSegmentCount, numberOfTournaments, imagesWritten = 0, k;
+    private double overallDeviationWeight, connectivityMeasureWeight, edgeValueWeight, mutationRate, crossoverRate, elitismRate;
     private boolean weightedSum, cielab;
 
 
     public MOEA(String fileName, int generations, int populationSize,
                 double mutationRate, double crossoverRate, double elitismRate,
-                double overallDeviationWeight, double connectivityMeasureWeight,
-                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, boolean weightedSum, boolean cielab) {
+                double overallDeviationWeight, double connectivityMeasureWeight, double edgeValueWeight,
+                int minimumSegmentCount, int maximumSegmentCount, int numberOfTournaments, int numSlicClusters, int k,
+                boolean weightedSum, boolean cielab) {
 
         System.out.println("INIT MOEA:");
         this.generations = generations;
@@ -41,11 +43,13 @@ public class MOEA {
         this.elitismRate = elitismRate;
         this.overallDeviationWeight = overallDeviationWeight;
         this.connectivityMeasureWeight = connectivityMeasureWeight;
+        this.edgeValueWeight = edgeValueWeight;
         this.minimumSegmentCount = minimumSegmentCount;
         this.maximumSegmentCount = maximumSegmentCount;
         this.numberOfTournaments = numberOfTournaments;
         this.weightedSum = weightedSum;
         this.cielab = cielab;
+        this.k = k;
         this.population = new Individual[populationSize];
         this.random = new Random();
 
@@ -53,27 +57,29 @@ public class MOEA {
         this.crowdingDistanceComparator = new CrowdingDistanceComparator();
         this.overallDeviationComparator = new OverallDeviationComparator();
         this.connectivityMeasureComparator = new ConnectivityMeasureComparator();
+        //this.edgeValueComparator = new EdgeValueComparator();
         try {
             this.imageParser = new ImageParser(fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        this.slic = new SLIC(this.imageParser, cielab, 50);
-        this.slic.run(13000);
+        this.slic = new SLIC(this.imageParser, cielab);
+        this.slic.run(numSlicClusters);
     }
 
     public void run() {
         // Create initial population
         System.out.println("RUN MOEA:");
+        //Instant initStart = Instant.now();
         Individual[] population = createInitialPopulation();
-
+        //Instant initEnd = Instant.now();
+        //System.out.println("Time to create initial population: " + Duration.between(initStart, initEnd));
         /*
         for (Individual individual :
                 population) {
             writeImage(individual);
         }
         */
-
         // If we have selected to run the weighted sum we use the normal GA approach
         if (this.weightedSum) {
             System.out.println("\tRunning with Weighted Sum comparison");
@@ -95,21 +101,44 @@ public class MOEA {
             for (int i = 0; i < this.generations; i++) {
                 System.out.println("Iteration: " + i);
                 // Run crossover to create new offsprings
+                //Instant crossoverStart = Instant.now();
                 final Individual[] offspring = crossover(
                         population, population.length, this.minimumSegmentCount,
                         this.maximumSegmentCount, this.numberOfTournaments);
-
+                //Instant crossoverEnd = Instant.now();
+                //System.out.println("Time to do crossover: " + Duration.between(crossoverStart, crossoverEnd));
                 // Evaluate Solutions
+                //Instant evaluateStart = Instant.now();
                 evaluate(offspring);
-
+                //Instant evaluateEnd = Instant.now();
+                //System.out.println("Time to evaluate: " + Duration.between(evaluateStart, evaluateEnd));
+                /*
                 // Select for next generation
+                for (Individual individual :
+                        population) {
+                    writeImage(individual, i, "pop_before");
+                }
+                for (Individual o : offspring) {
+                    writeImage(o, i, "offspring");
+                }
+                */
+                //Instant nsgaStart = Instant.now();
                 population = nonDominatingSorting(population, offspring, this.populationSize);
+                //Instant nsgaEnd = Instant.now();
+                //System.out.println("Time to run nsga: " + Duration.between(nsgaStart, nsgaEnd));
+                /*
+                for (Individual individual :
+                        population) {
+                    writeImage(individual, i, "pop_after");
+                }
+                */
+
             }
         }
 
         System.out.println("Finished evolving solutions. Saving best images to folder");
 
-        for (int i = 0; i < 5 && i < population.length; i++) {
+        for (int i = 0; i < 10 && i < population.length; i++) {
             writeImage(population[i]);
             if (!weightedSum) {
                 System.out.println("Domination rank: " + population[i].dominationRank);
@@ -117,8 +146,10 @@ public class MOEA {
             System.out.println("Segments: " + population[i].segments.length);
             System.out.println("Deviation score: " + population[i].overallDeviation);
             System.out.println("Connectivity score: " + population[i].connectivityMeasure);
+            System.out.println("EdgeValue score: " + population[i].edgeValue);
             System.out.println("Weighted sum: " + population[i].score);
         }
+
         this.population = population;
     }
 
@@ -131,10 +162,12 @@ public class MOEA {
         for (int i = 0; i < this.populationSize; i++) {
             final int index = i;
             executorService.execute(() -> {
+
                 population[index] = new Individual(slic,
-                        this.overallDeviationWeight, this.connectivityMeasureWeight,
+                        this.overallDeviationWeight, this.connectivityMeasureWeight, this.edgeValueWeight,
                         this.minimumSegmentCount, this.maximumSegmentCount);
-                population[index].overallDeviationAndConnectivityMeasure();
+
+                population[index].overallDeviationAndConnectivityMeasureAndEdgeValue();
             });
         }
         executorService.shutdown();
@@ -169,15 +202,18 @@ public class MOEA {
                     if (random.nextDouble() < this.mutationRate) {
                         mutate(child);
                     }
-                    child.setVisitedAndSegments();
-                    if (child.segments.length < minimumSegmentCount || child.segments.length > maximumSegmentCount) {
+                    int numNull = 0;
+                    for (int pos = 0; pos < child.genotype.length; pos++) {
+                        if (child.genotype[pos] == null) {
+                            numNull++;
+                        }
+                    }
+                    if (numNull < minimumSegmentCount || numNull > maximumSegmentCount) {
                         child = null;
                     }
                 }
 
-                //if (random.nextDouble() < this.mutationRate) {
-                //mutate(child);
-                //}
+                child.setVisitedAndSegments();
                 offspring[index] = child;
             });
         }
@@ -190,28 +226,56 @@ public class MOEA {
     }
 
     private Individual tournamentSelection(@NotNull Individual[] individuals, int numberOfTournaments) {
-        int bestIndex = random.nextInt(individuals.length);
+        Individual best = individuals[this.random.nextInt(individuals.length)];
         for (int i = 0; i < numberOfTournaments; i++) {
-            int contender = random.nextInt(individuals.length);
+            Individual contender = individuals[this.random.nextInt(individuals.length)];
 
-            if (individuals[contender].score < individuals[bestIndex].score) {
-                bestIndex = contender;
+            if (best.isDominatedBy(contender)) {
+                best = contender;
+            } else if (contender.dominationRank < best.dominationRank) {
+                best = contender;
             }
         }
-        return individuals[bestIndex];
+        return best;
     }
 
     private void mutate(@NotNull Individual individual) {
-        for (int i = 0; i < 3; i++) {
 
 
-            int randomPos = individual.random.nextInt(individual.genotype.length);
-            ArrayList<SuperPixel> neighbours = this.slic.superPixels.get(randomPos).neighbours;
-            int randomPointer = neighbours.get(this.random.nextInt(neighbours.size())).id;
-            individual.genotype[randomPos] = randomPointer;
+        int randomPos = individual.random.nextInt(individual.genotype.length);
+        double prob = this.random.nextDouble();
+        if (prob > 0.6) {
+            individual.genotype[randomPos] = null;
+        } else if (prob > 0.3) {
+            int randomPointer = this.random.nextInt(this.slic.superPixels.get(randomPos).neighbours.size());
+            SuperPixel randomNeighbour = this.slic.superPixels.get(randomPos).neighbours.get(randomPointer);
+            individual.genotype[randomPos] = randomNeighbour.id;
+
+        } else {
+            SuperPixelEdge spEdge = this.slic.superPixels.get(0).edges.get(0);
+            for (SuperPixel sp : this.slic.superPixels) {
+                for (SuperPixelEdge newSpEdge : sp.edges) {
+                    try {
+
+                        if (spEdge.distance < newSpEdge.distance &&
+                                individual.genotype[newSpEdge.U.id] != null &&
+                                individual.genotype[newSpEdge.V.id] != null &&
+                                individual.genotype[newSpEdge.U.id] != newSpEdge.V.id &&
+                                individual.genotype[newSpEdge.V.id] != newSpEdge.U.id) {
+                            spEdge = newSpEdge;
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+            individual.genotype[spEdge.U.id] = spEdge.V.id;
         }
 
+
     }
+
 
     private void evaluate(@NotNull Individual[] individuals) {
         final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
@@ -219,7 +283,7 @@ public class MOEA {
         for (int i = 0; i < individuals.length; i++) {
             final int index = i;
             executorService.execute(() -> {
-                individuals[index].overallDeviationAndConnectivityMeasure();
+                individuals[index].overallDeviationAndConnectivityMeasureAndEdgeValue();
             });
         }
         executorService.shutdown();
@@ -227,6 +291,7 @@ public class MOEA {
         //noinspection StatementWithEmptyBody
         while (!executorService.isTerminated()) ;
     }
+
 
     // This method ranks the individuals based on the weighted sum
     @NotNull
@@ -331,10 +396,12 @@ public class MOEA {
 
         ArrayList<Individual> deviationSort = new ArrayList<>(dominationEdge);
         ArrayList<Individual> connectivitySort = new ArrayList<>(dominationEdge);
+        //ArrayList<Individual> edgeValueSort = new ArrayList<>(dominationEdge);
 
 
         deviationSort.sort(overallDeviationComparator);
         connectivitySort.sort(connectivityMeasureComparator);
+        //edgeValueSort.sort(edgeValueComparator);
         PriorityQueue<Individual> pq = new PriorityQueue<>(crowdingDistanceComparator);
 
         // First we reset the crowding distance for each individual
@@ -353,15 +420,22 @@ public class MOEA {
         double connectivityMax = connectivitySort.get(connectivitySort.size() - 1).connectivityMeasure;
         double connectivityMin = connectivitySort.get(0).connectivityMeasure;
 
+        //double edgeValueMax = -edgeValueSort.get(edgeValueSort.size() - 1).edgeValue;
+        //double edgeValueMin = -edgeValueSort.get(0).edgeValue;
+
         for (int i = 1; i < deviationSort.size() - 1; i++) {
             deviationSort.get(i).crowdingDistance = Math.abs(
                     deviationSort.get(i - 1).overallDeviation /
                             deviationSort.get(i + 1).overallDeviation /
                             (deviationMax - deviationMin))
                     + Math.abs(
-                    (deviationSort.get(i - 1).connectivityMeasure) /
-                            (deviationSort.get(i + 1).connectivityMeasure) /
-                            (connectivityMax - connectivityMin));
+                    deviationSort.get(i - 1).connectivityMeasure /
+                            deviationSort.get(i + 1).connectivityMeasure /
+                            (connectivityMax - connectivityMin)) /*
+                    + Math.abs(
+                    -deviationSort.get(i - 1).edgeValue /
+                            (-deviationSort.get(i + 1).edgeValue) /
+                            (edgeValueMax - edgeValueMin))*/;
             pq.add(deviationSort.get(i));
         }
 
@@ -388,34 +462,42 @@ public class MOEA {
         final int width = this.imageParser.getWidth();
         final int height = this.imageParser.getHeight();
         final WritableImage writableImageBlack = new WritableImage(width, height);
+        final WritableImage writableImageLimeGreen = new WritableImage(width, height);
         final PixelWriter pixelWriterBlack = writableImageBlack.getPixelWriter();
+        final PixelWriter pixelWriterLimeGreen = writableImageLimeGreen.getPixelWriter();
 
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 if (y == 0 || y == height - 1 || x == 0 || x == width - 1) {
                     pixelWriterBlack.setColor(x, y, Color.BLACK);
+                    pixelWriterLimeGreen.setColor(x, y, Color.LIMEGREEN);
                 } else if (!segmentContainsAllNeighbours(individual, y, x)) {
                     pixelWriterBlack.setColor(x, y, Color.BLACK);
+                    pixelWriterLimeGreen.setColor(x, y, Color.LIMEGREEN);
                 } else {
                     pixelWriterBlack.setColor(x, y, Color.WHITE);
+                    pixelWriterLimeGreen.setArgb(x, y, this.slic.pixelMatrix.getPixel(y, x).argb);
                 }
             }
         }
         BufferedImage bImage = SwingFXUtils.fromFXImage(writableImageBlack, null);
+        BufferedImage lmImage = SwingFXUtils.fromFXImage(writableImageLimeGreen, null);
         this.imagesWritten++;
-        File file = new File("./Student Images/" +
+        File bFile = new File("./Segmentation Evaluation/Student_Segmentation_Files/BlackAndWhite/" +
+                this.imagesWritten + "_segments" +
+                individual.segments.length + ".png");
+        File lmFile = new File("./Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/" +
                 this.imagesWritten + "_segments" +
                 individual.segments.length + ".png");
         try {
-            ImageIO.write(bImage, "png", file);
+            ImageIO.write(bImage, "png", bFile);
+            ImageIO.write(lmImage, "png", lmFile);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private boolean segmentContainsAllNeighbours(Individual individual, int y, int x) {
-        //TODO: Cleanup
-
 
         if (slic.neighboursInSameSuperPixel(y, x)) {
             return true;

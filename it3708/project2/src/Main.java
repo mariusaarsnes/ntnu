@@ -6,7 +6,6 @@ import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import java.io.File;
-import java.util.Random;
 
 public class Main extends Application {
 
@@ -17,18 +16,16 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        MOEA moea = new MOEA("./216066/Test image.jpg",
+        MOEA moea = new MOEA("./176035/Test image.jpg",
                 100, 50,
                 0.5, 0.5, 0.1,
-                1, 1,
-                5, 50, 2, false, false);
+                1, 1, 1,
+                8, 30, 2, 35, 1000, false, true);
         moea.run();
         drawImage(moea.slic, moea);
         System.out.println("Done");
-        //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-        //primaryStage.setTitle("Hello World");
-        //primaryStage.setScene(new Scene(root, 2000, 2000));
-        //primaryStage.show();
+
+        primaryStage.close();
     }
 
 

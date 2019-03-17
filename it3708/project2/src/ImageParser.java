@@ -63,7 +63,7 @@ public class ImageParser {
                 this.pixelArgb[row][col] = argb;
                 Color color = new Color(argb);
                 this.pixelColor[row][col] = color;
-                this.pixelCielab[row][col] = ci.fromRGB(new float[]{color.getRed(), color.getGreen(), color.getBlue()});
+                this.pixelCielab[row][col] = ci.fromRGB(new float[]{color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha()});
 
                 col++;
                 if (col == width) {

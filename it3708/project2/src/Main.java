@@ -19,11 +19,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         deleteExistingSegmentations();
-        MOEA moea = new MOEA("./353013/Test image.jpg",
-                100, 100,
+        MOEA moea = new MOEA("./Test Image/test image_1.jpg",
+                100, 50,
                 0.3, 0.5, 0.1,
-                0.6, 0.3, 0.0,
-                1, 50, 5, 200, 0.01, true, true);
+                0.0, 0.6, 0.0,
+                3, 50, 5, 500, 0.01, true, true);
         moea.run();
         drawImage(moea.slic, moea);
         System.out.println("Done");

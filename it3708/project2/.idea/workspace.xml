@@ -2,32 +2,114 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Plotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/Segmentation Evaluation/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/ConnectivityMeasureComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/ConnectivityMeasureComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/CrowdingDistanceComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/CrowdingDistanceComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/EdgeValueComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/EdgeValueComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/Individual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/MOEA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/MOEA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_7_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/100_segments5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/10_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/11_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/12_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/13_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/14_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/15_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/16_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/17_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/18_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/19_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/1_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/20_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/21_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/22_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/23_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/24_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/25_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/26_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/27_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/28_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/29_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/2_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/30_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/31_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/32_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/33_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/34_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/35_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/36_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/37_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/38_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/39_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/3_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/40_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/41_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/42_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/43_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/44_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/45_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/46_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/47_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/48_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/49_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/4_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/50_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/51_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/52_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/53_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/54_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/55_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/56_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/57_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/58_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/59_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/5_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/60_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/61_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/62_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/63_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/64_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/65_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/66_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/67_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/68_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/69_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/6_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/70_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/71_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/72_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/73_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/74_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/75_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/76_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/77_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/78_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/79_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/7_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/80_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/81_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/82_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/83_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/84_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/85_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/86_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/87_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/88_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/89_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/8_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/90_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/91_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/92_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/93_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/94_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/95_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/96_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/97_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/98_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/99_segments4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/9_segments4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/OverallDeviationComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/OverallDeviationComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/SLIC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/SLIC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/Segment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/Segment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/WeightedSumComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/WeightedSumComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MOEA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MOEA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SLIC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLIC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test2.png" beforeDir="false" afterPath="$PROJECT_DIR$/test2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" afterDir="false" />
@@ -120,8 +202,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            <state relative-caret-position="667">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -253,13 +335,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="project2" type="b2602c69:ProjectViewProjectNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="For Demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project2" type="b2602c69:ProjectViewProjectNode" />
@@ -271,6 +357,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,11 +534,14 @@
       <workItem from="1552733627427" duration="59969000" />
       <workItem from="1552822537249" duration="30843000" />
       <workItem from="1552854805458" duration="1286000" />
+      <workItem from="1552856712920" duration="5233000" />
+      <workItem from="1552908320286" duration="833000" />
+      <workItem from="1552910370203" duration="840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469747000" />
+    <option name="totallyTimeSpent" value="476653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,7 +556,7 @@
     <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20232558" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21096346" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32990032" />
       <window_info id="Designer" order="3" />
@@ -475,7 +565,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.45496997" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6150767" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39359573" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33422282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,9 +679,7 @@
     <entry file="file://$PROJECT_DIR$/Segmentering/erling2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png" />
     <entry file="file://$PROJECT_DIR$/kuseknuser.png" />
     <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Comparable.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -817,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        <state relative-caret-position="667">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

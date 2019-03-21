@@ -2,84 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbc56a7-8239-4325-9b97-ac262aed66a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/project1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../it3708/project1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../it3708/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/Benchmarks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/Description for files.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/data_files/p23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/it3708.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Depot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/GeneticAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Genotype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/GenotypeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/META-INF/it3708.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Meta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/out/production/it3708/Problem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p01.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p02.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p03.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p04.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p05.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p06.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p07.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p08.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p09.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p10.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p11.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p12.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p13.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p14.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p15.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p16.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p17.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p18.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p19.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p20.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p21.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p22.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/solution_files/p23.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Depot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/GeneticAlgorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Genotype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/GenotypeComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Meta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../it3708/src/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../it3708/project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../it3708/project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2" beforeDir="false" afterPath="$PROJECT_DIR$/project2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project2/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,40 +91,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
               <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
-              <item name="project1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
-              <item name="project1" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
-              <item name="project1" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="sec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tdt4237" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tdt4237" type="462c0819:PsiDirectoryNode" />
-              <item name="project1" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="sec" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,7 +109,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -242,17 +141,17 @@
       <workItem from="1550502946860" duration="692000" />
       <workItem from="1550506987512" duration="653000" />
       <workItem from="1550585715570" duration="393000" />
+      <workItem from="1551091339174" duration="55000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15340000" />
+    <option name="totallyTimeSpent" value="15395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30664453" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31096345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -395,21 +294,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="939">
           <caret line="313" column="33" selection-start-line="313" selection-start-column="33" selection-end-line="313" selection-end-column="33" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1/source/sec/projects/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

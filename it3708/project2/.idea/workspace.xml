@@ -2,118 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../project3/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project3/src/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project3/src/Particle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../project3/src/ParticleElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_7_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/GT_8_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/100_segments5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/10_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/11_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/12_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/13_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/14_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/15_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/16_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/17_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/18_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/19_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/1_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/20_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/21_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/22_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/23_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/24_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/25_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/26_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/27_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/28_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/29_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/2_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/30_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/31_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/32_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/33_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/34_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/35_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/36_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/37_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/38_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/39_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/3_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/40_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/41_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/42_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/43_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/44_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/45_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/46_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/47_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/48_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/49_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/4_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/50_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/51_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/52_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/53_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/54_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/55_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/56_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/57_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/58_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/59_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/5_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/60_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/61_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/62_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/63_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/64_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/65_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/66_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/67_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/68_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/69_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/6_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/70_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/71_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/72_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/73_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/74_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/75_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/76_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/77_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/78_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/79_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/7_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/80_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/81_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/82_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/83_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/84_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/85_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/86_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/87_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/88_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/89_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/8_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/90_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/91_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/92_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/93_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/94_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/95_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/96_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/97_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/98_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/99_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segmentation Evaluation/Student_Segmentation_Files/LimeGreen/9_segments4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.png" beforeDir="false" afterPath="$PROJECT_DIR$/test2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../tdt4237/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tdt4237/project2" beforeDir="false" afterPath="$PROJECT_DIR$/../../tdt4237/project2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/out/production/project3/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/out/production/project3/Job.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/out/production/project3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/out/production/project3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/out/production/project3/PSO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/out/production/project3/PSO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/project3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/project3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project3/src/PSO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/src/PSO.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -176,22 +77,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Segment.java">
+        <entry file="file://$PROJECT_DIR$/src/Individual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SuperPixel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="6815">
+              <caret line="238" column="48" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,20 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Individual.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6815">
-              <caret line="238" column="48" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="48" />
+            <state relative-caret-position="725">
+              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -320,11 +197,11 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="102" />
-    <option name="y" value="35" />
-    <option name="width" value="1549" />
-    <option name="height" value="1765" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="134" />
+    <option name="y" value="41" />
+    <option name="width" value="1533" />
+    <option name="height" value="1759" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -345,19 +222,14 @@
             <path>
               <item name="project2" type="b2602c69:ProjectViewProjectNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
-              <item name="For Demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,11 +244,12 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552853921907" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tdt4237/project2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -537,11 +410,15 @@
       <workItem from="1552856712920" duration="5233000" />
       <workItem from="1552908320286" duration="833000" />
       <workItem from="1552910370203" duration="840000" />
+      <workItem from="1553766352659" duration="184000" />
+      <workItem from="1553799812304" duration="187000" />
+      <workItem from="1553800045549" duration="10000" />
+      <workItem from="1553893613978" duration="1030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476653000" />
+    <option name="totallyTimeSpent" value="478064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,10 +430,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="102" y="35" width="3098" height="1765" extended-state="6" />
+    <frame x="134" y="41" width="1533" height="1759" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21096346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.22296843" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32990032" />
       <window_info id="Designer" order="3" />
@@ -594,6 +471,45 @@
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22296843" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" weight="0.32990032" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.45496997" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39359573" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33422282" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.2928619" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" weight="0.32955304" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32955304" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Terminal" order="16" weight="0.32955304" />
+      <window_info anchor="bottom" id="Duplicate detector" order="17" weight="0.32955304" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -681,63 +597,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.png" />
     <entry file="file://$PROJECT_DIR$/kuseknuser.png" />
-    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Comparable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1384">
-          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/com/sun/javafx/application/PlatformImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="454" selection-start-line="454" selection-end-line="454" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/paint/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="1873" column="35" selection-start-line="1873" selection-start-column="35" selection-end-line="1873" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/image/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="553" selection-start-line="553" selection-end-line="553" />
-          <folding>
-            <element signature="e#18798#18799#0" expanded="true" />
-            <element signature="e#19482#19483#0" expanded="true" />
-            <element signature="e#19535#19536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/image/WritableImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.base/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#2719#2720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="329" column="24" selection-start-line="329" selection-start-column="24" selection-end-line="329" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Comparable.java" />
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/com/sun/javafx/application/PlatformImpl.java" />
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/paint/Color.java" />
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/image/Image.java" />
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.graphics/javafx/scene/image/WritableImage.java" />
+    <entry file="file:///usr/lib/jvm/javafx-sdk-11.0.2/lib/javafx.base/javafx/beans/property/ReadOnlyObjectPropertyBase.java" />
+    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/io/FileOutputStream.java" />
     <entry file="file://$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/40 seg_1.jpg" />
     <entry file="file://$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/30 seg_1.jpg" />
     <entry file="file://$PROJECT_DIR$/Segmentation Evaluation/Optimal_Segmentation_Files/25 seg_1.jpg" />
@@ -748,27 +614,9 @@
     <entry file="file://$PROJECT_DIR$/Segmentation Evaluation/ReadMe.rtf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/util/PriorityQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="709" selection-start-line="709" selection-end-line="709" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/nio/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/util/PriorityQueue.java" />
+    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.base/java/nio/Buffer.java" />
+    <entry file="jar:///usr/lib/jvm/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/Color.java" />
     <entry file="file://$PROJECT_DIR$/src/SegmentSuperPixelEdge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
@@ -801,16 +649,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/it3708-bio-inspired-artificial-intelligence-master/project3/src/main/java/utility/Plotter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/it3708-bio-inspired-artificial-intelligence-master/project3/src/main/java/utility/Plotter.java" />
     <entry file="file://$PROJECT_DIR$/src/SLIC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2958">
@@ -873,20 +712,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Segment.java">
+    <entry file="file://$PROJECT_DIR$/src/SuperPixel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="58">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuperPixel.java">
+    <entry file="file://$PROJECT_DIR$/src/Segment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="464">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -905,8 +744,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="725">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

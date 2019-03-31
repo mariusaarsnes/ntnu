@@ -11,12 +11,12 @@ public class BeeSolution extends Solution{
         super(schedule);
         this.path = path;
     }
+}
 
-    class MakespanComparator implements Comparator<BeeSolution> {
-        @Override
-        public int compare(BeeSolution x , BeeSolution y) {
-            return Double.compare(y.makespan,x.makespan);
-        }
+class MakespanComparator implements Comparator<BeeSolution> {
+    @Override
+    public int compare(BeeSolution x , BeeSolution y) {
+        return Double.compare(y.makespan,x.makespan);
     }
 }
 

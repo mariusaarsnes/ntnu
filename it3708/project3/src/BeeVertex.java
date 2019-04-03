@@ -3,7 +3,7 @@ public class BeeVertex{
 
     BeeVertex[] edges;
     
-    public BeeVertex(int machineNumber, int jobNumber, int timeRequired){
+    public BeeVertex(int machineNumber,int jobNumber, int timeRequired){
         this.machineNumber = machineNumber;
         this.jobNumber = jobNumber;
         this.timeRequired = timeRequired;

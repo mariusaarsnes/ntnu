@@ -23,7 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         GUI gui = new GUI(stage);
-        String fileName = "1";
+        String fileName = "6";
         boolean runPso = false;
         FileParser fp = new FileParser(fileName);
 
@@ -37,7 +37,10 @@ public class Main extends Application {
             System.out.println(pso.globalBest.solution);
             gui.drawGantt(pso.globalBest.solutionBest, this.MAKESPAN_VALUES.get(fileName));
         } else {
-            BA ba = new BA(fp,);
+            BA ba = new BA(fp,200,1000,50,10,MAKESPAN_VALUES.get(fileName),true);
+            ba.run();
+            System.out.println(ba.bestGlobalBeeSolution);
+            gui.drawGantt(ba.bestGlobalBeeSolution,this.MAKESPAN_VALUES.get(fileName));
         }
 
 

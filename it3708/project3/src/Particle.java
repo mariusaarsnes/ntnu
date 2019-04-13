@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Particle {
     FileParser fp;
-    ParticleElement[] local;
+    ParticleElement[] X; // current particle
+    ParticleElement[] P; // Best local particle
     Solution solution;
-    ParticleElement[] localBest;
     Solution solutionBest;
     ParticleElementPositionComparator particleElementPositionComparator;
     Random random;
@@ -14,38 +14,55 @@ public class Particle {
     int[] positionBounds;
     int[] velocityBounds;
 
-
     public Particle(FileParser fp, int[] positionBounds, int[] velocityBounds) {
         this.fp = fp;
         this.positionBounds = positionBounds;
         this.velocityBounds = velocityBounds;
-        this.local = new ParticleElement[fp.jobCount * fp.machineCount];
         this.random = new Random();
         this.particleElementPositionComparator = new ParticleElementPositionComparator();
 
         initializeParticle();
-        this.solution = decode();
-        this.solutionBest = this.solution;
+        int[][][] schedule = decode(this.X);
+        this.solution = new Solution(schedule);
+        this.solutionBest = new Solution(schedule);
     }
 
     private void initializeParticle() {
+        ParticleElement[] X = new ParticleElement[this.fp.jobCount*this.fp.machineCount];
         for (int i = 0; i < fp.jobCount; i++) {
             for (int j = 0; j < fp.machineCount; j++) {
-                this.local[i * fp.machineCount + j] = new ParticleElement(i,
+                X[i * fp.machineCount + j] = new ParticleElement(i,
                         (Math.random() * (this.positionBounds[1] - this.positionBounds[0] + 1)) + this.positionBounds[0],
                         (Math.random() * (this.velocityBounds[1] - this.velocityBounds[0] + 1)) + this.velocityBounds[0]);
             }
         }
-        this.localBest = this.local.clone();
+        this.X = X;
+        this.P = copy(X);
     }
 
-    public Solution decode() {
+    /**
+     * Copys an array containing ParticleElement objects
+     * @param X array of ParticleElement objects
+     * @return new array containing copies of the elements in X
+     */
+    private ParticleElement[] copy(ParticleElement[] X) {
+        ParticleElement[] copy = new ParticleElement[this.fp.jobCount*this.fp.machineCount];
+        for(int i = 0; i < fp.jobCount;i++) {
+            for(int j = 0; j< fp.machineCount;j++) {
+                ParticleElement elem = X[i*fp.machineCount+j];
+                copy[i*fp.machineCount+j] = new ParticleElement(elem.operation,elem.position,elem.velocity);
+            }
+        }
+        return copy;
+    }
+
+    public int[][][] decode(ParticleElement[] X) {
         int[] jobOperationCounter = new int[fp.jobCount];
         int[] prevOperationfinishedAt = new int[fp.jobCount];
         int[] availableAt = new int[fp.machineCount];
         int[][][] schedule = new int[fp.machineCount][fp.jobCount][2];
 
-        ParticleElement[] sortedRepresentation = this.local.clone();
+        ParticleElement[] sortedRepresentation = X.clone();
         Arrays.sort(sortedRepresentation, this.particleElementPositionComparator);
         for (ParticleElement elem : sortedRepresentation) {
             int machine = this.fp.jobs[elem.operation].requirements[jobOperationCounter[elem.operation]][0];
@@ -57,26 +74,30 @@ public class Particle {
             prevOperationfinishedAt[elem.operation] = startTime + requiredTime;
             jobOperationCounter[elem.operation]++;
         }
-        return new Solution(schedule);
+        return schedule;
     }
 
-    public void update(Particle globalBest, double omega, double c1, double c2) {
-        for (int i = 0; i < this.local.length; i++) {
-            this.local[i].velocity = (omega * this.local[i].velocity)
-                        + (c1 * Math.random() * (this.localBest[i].position - this.local[i].position))
-                        + (c2 * Math.random() * (globalBest.localBest[i].position - this.local[i].position));
-            if (this.local[i].velocity < this.velocityBounds[0]) {
-                this.local[i].velocity = this.velocityBounds[0];
-            } else if (this.local[i].velocity > this.velocityBounds[1]) {
-                this.local[i].velocity = this.velocityBounds[1];
+    public void update(Particle G, double omega, double c1, double c2) {
+
+        for (int i = 0; i < this.X.length; i++) {
+            this.X[i].velocity = (omega * this.X[i].velocity)
+                        + (c1 * Math.random() * (this.P[i].position - this.X[i].position))
+                        + (c2 * Math.random() * (G.P[i].position - this.X[i].position));
+
+            if (this.X[i].velocity < this.velocityBounds[0]) {
+                this.X[i].velocity = this.velocityBounds[0];
+            } else if (this.X[i].velocity > this.velocityBounds[1]) {
+                this.X[i].velocity = this.velocityBounds[1];
             }
 
-            this.local[i].position = this.local[i].position + this.local[i].velocity;
+            this.X[i].position = this.X[i].position + this.X[i].velocity;
         }
 
-        this.solution = decode();
+        int[][][] schedule = decode(this.X);
+        this.solution = new Solution(schedule);
         if (this.solution.makespan < this.solutionBest.makespan) {
-            this.solutionBest = this.solution;
+            this.solutionBest = new Solution(schedule);
+            this.P = copy(this.X);
         }
     }
 
@@ -93,6 +114,6 @@ class ParticleMakespanComparator implements Comparator<Particle> {
 
     @Override
     public int compare(Particle p1, Particle p2) {
-        return Double.compare(p1.solution.makespan, p2.solution.makespan);
+        return Double.compare(p1.solutionBest.makespan, p2.solutionBest.makespan);
     }
 }

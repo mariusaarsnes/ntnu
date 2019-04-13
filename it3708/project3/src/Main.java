@@ -32,15 +32,21 @@ public class Main extends Application {
         }
 
         if (runPso) {
-            PSO pso = new PSO(fp, 200, 2000, 0.9, 0.2, 5, 5, new int[]{0, 2}, new int[]{-2, 2});
+            PSO pso = new PSO(fp, 200, 1000, 0.9, 0.4, 2, 2, new int[]{0, 2}, new int[]{-2, 2});
             pso.run();
             System.out.println(pso.globalBest.solution);
             gui.drawGantt(pso.globalBest.solutionBest, this.MAKESPAN_VALUES.get(fileName));
+            for(int i = 0; i < pso.bestMakespanPerGeneration.length; i++) {
+                System.out.println(pso.bestMakespanPerGeneration[i]);
+            }
         } else {
-            BA ba = new BA(fp,200,1000,50,10,MAKESPAN_VALUES.get(fileName),true);
+            BA ba = new BA(fp,200,1000,50,10,MAKESPAN_VALUES.get(fileName),false);
             ba.run();
             System.out.println(ba.bestGlobalBeeSolution);
             gui.drawGantt(ba.bestGlobalBeeSolution,this.MAKESPAN_VALUES.get(fileName));
+            for(int i = 0; i < ba.bestMakespanPerGeneration.length; i++) {
+                System.out.println(ba.bestMakespanPerGeneration[i]);
+            }
         }
 
 

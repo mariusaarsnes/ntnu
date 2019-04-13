@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class BA {
     FileParser fp;
+    int[] bestMakespanPerGeneration;
     int total,count, populationSize, generations, neighbourhoodSize, errorLimit, bestPossibleMakespan;
     Comparator<BeeSolution> makespanComparator;
     Random random;
@@ -28,6 +29,7 @@ public class BA {
         this.count = 0;
 
         this.makespanComparator = new MakespanComparator();
+        this.bestMakespanPerGeneration = new int[generations];
 
         makeGraph();
     }
@@ -58,7 +60,6 @@ public class BA {
         //Run iterations
 
         for (int i = 0; i < this.generations; i++) {
-            //TODO consider implementing dynamic sizes based on population count
             double bestSiteCount = 0.2 * flowerPatches.size(); //Number of best sites are at 20% of the population
             double eliteSiteCount = 0.1 * flowerPatches.size(); // Number of elite sites are at 10% of the population
 
@@ -96,6 +97,7 @@ public class BA {
 
             //sort and check for termination
             flowerPatches.sort(this.makespanComparator);
+            this.bestMakespanPerGeneration[i] = flowerPatches.get(0).makespan;
             if (flowerPatches.get(0).makespan < this.bestGlobalBeeSolution.makespan) {
                 this.bestGlobalBeeSolution = flowerPatches.get(0);
 

@@ -8,7 +8,7 @@ public class FileParser {
 
     public FileParser(String fileName) {
         try {
-            final BufferedReader br = new BufferedReader(new FileReader(new File("./test_data/"+fileName + ".txt")));
+            final BufferedReader br = new BufferedReader(new FileReader(new File("./demo_files/"+fileName + ".txt")));
             String line = br.readLine().trim();
             String[] split = line.split("\\s+");
             this.jobCount = Integer.parseInt(split[0]);
